@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Shield, Award, Star, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-tree-service.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional tree service crew trimming trees with safety equipment in suburban neighborhood"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Professional tree service crew trimming trees with safety equipment in suburban neighborhood" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
@@ -88,15 +82,8 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <div className="text-center">
-          <div className="text-sm mb-2">Scroll to learn more</div>
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full mx-auto">
-            <div className="w-1 h-3 bg-white/50 rounded-full mx-auto mt-2 animate-pulse" />
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
