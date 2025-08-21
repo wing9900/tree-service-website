@@ -6,67 +6,55 @@ import treeTrimmingImg from "@/assets/tree-trimming-service.jpg";
 import treeRemovalImg from "@/assets/tree-removal-service.jpg";
 import stumpGrindingImg from "@/assets/stump-grinding-service.jpg";
 import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
-
 const ServicesSection = () => {
-  const services = [
-    {
-      title: "Tree Trimming & Pruning",
-      description: "Professional pruning to maintain tree health, safety, and aesthetics. Our certified arborists ensure proper technique.",
-      icon: Scissors,
-      image: treeTrimmingImg,
-      link: "/services/tree-trimming",
-      features: ["Health assessment", "Safety pruning", "Aesthetic shaping", "Deadwood removal"]
-    },
-    {
-      title: "Tree Removal",
-      description: "Safe, efficient tree removal using advanced equipment. Complete cleanup and stump grinding available.",
-      icon: TreePine,
-      image: treeRemovalImg,
-      link: "/services/tree-removal",
-      features: ["Crane services", "Complete cleanup", "Stump grinding", "Permit assistance"]
-    },
-    {
-      title: "Stump Grinding",
-      description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
-      icon: Settings,
-      image: stumpGrindingImg,
-      link: "/services/stump-grinding",
-      features: ["Below-ground grinding", "Debris removal", "Soil restoration", "Seeding available"]
-    },
-    {
-      title: "Emergency Storm Response",
-      description: "24/7 emergency services for storm damage. Rapid response to secure your property and remove hazards.",
-      icon: Zap,
-      image: emergencyServiceImg,
-      link: "/services/emergency",
-      features: ["24/7 availability", "Insurance claims", "Hazard removal", "Property protection"]
-    },
-    {
-      title: "Land & Lot Clearing",
-      description: "Complete land clearing for construction, development, or property maintenance projects.",
-      icon: Truck,
-      image: treeTrimmingImg,
-      link: "/services/land-clearing",
-      features: ["Site preparation", "Selective clearing", "Debris removal", "Grading available"]
-    },
-    {
-      title: "Landscaping Services",
-      description: "Complete landscaping solutions including design, installation, and maintenance services.",
-      icon: Flower,
-      image: treeRemovalImg,
-      link: "/services/landscaping",
-      features: ["Landscape design", "Plant installation", "Irrigation systems", "Ongoing maintenance"]
-    }
-  ];
-
-  return (
-    <section className="section-padding bg-muted/30">
+  const services = [{
+    title: "Tree Trimming & Pruning",
+    description: "Professional pruning to maintain tree health, safety, and aesthetics. Our certified arborists ensure proper technique.",
+    icon: Scissors,
+    image: treeTrimmingImg,
+    link: "/services/tree-trimming",
+    features: ["Health assessment", "Safety pruning", "Aesthetic shaping", "Deadwood removal"]
+  }, {
+    title: "Tree Removal",
+    description: "Safe, efficient tree removal using advanced equipment. Complete cleanup and stump grinding available.",
+    icon: TreePine,
+    image: treeRemovalImg,
+    link: "/services/tree-removal",
+    features: ["Crane services", "Complete cleanup", "Stump grinding", "Permit assistance"]
+  }, {
+    title: "Stump Grinding",
+    description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
+    icon: Settings,
+    image: stumpGrindingImg,
+    link: "/services/stump-grinding",
+    features: ["Below-ground grinding", "Debris removal", "Soil restoration", "Seeding available"]
+  }, {
+    title: "Emergency Storm Response",
+    description: "24/7 emergency services for storm damage. Rapid response to secure your property and remove hazards.",
+    icon: Zap,
+    image: emergencyServiceImg,
+    link: "/services/emergency",
+    features: ["24/7 availability", "Insurance claims", "Hazard removal", "Property protection"]
+  }, {
+    title: "Land & Lot Clearing",
+    description: "Complete land clearing for construction, development, or property maintenance projects.",
+    icon: Truck,
+    image: treeTrimmingImg,
+    link: "/services/land-clearing",
+    features: ["Site preparation", "Selective clearing", "Debris removal", "Grading available"]
+  }, {
+    title: "Landscaping Services",
+    description: "Complete landscaping solutions including design, installation, and maintenance services.",
+    icon: Flower,
+    image: treeRemovalImg,
+    link: "/services/landscaping",
+    features: ["Landscape design", "Plant installation", "Irrigation systems", "Ongoing maintenance"]
+  }];
+  return <section className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section-title mb-4">
-            Complete Tree & Landscaping Services
-          </h2>
+          <h2 className="text-section-title mb-4">Complete Tree Care Services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             From routine maintenance to emergency response, we provide comprehensive tree care services 
             throughout {"{{SERVICE_AREAS}}"} with professional expertise and reliable results.
@@ -75,14 +63,11 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <Card key={service.title} className="hover-lift animate-fade-in group overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+          {services.map((service, index) => <Card key={service.title} className="hover-lift animate-fade-in group overflow-hidden" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <div className="relative overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={`${service.title} service demonstration`}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <img src={service.image} alt={`${service.title} service demonstration`} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <service.icon className="h-12 w-12 text-white" />
                 </div>
@@ -101,12 +86,10 @@ const ServicesSection = () => {
                 </p>
                 
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-muted-foreground">
+                  {service.features.map(feature => <li key={feature} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
@@ -115,8 +98,7 @@ const ServicesSection = () => {
                   </Link>
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* CTA Section */}
@@ -142,8 +124,6 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServicesSection;
