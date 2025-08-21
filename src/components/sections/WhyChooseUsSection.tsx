@@ -10,9 +10,9 @@ import {
   Star,
   TreePine
 } from "lucide-react";
-import licensedInsuredBadge from "@/assets/licensed-insured-badge.png";
-import isaArboristBadge from "@/assets/isa-certified-badge.png";
-import fiveStarBadge from "@/assets/five-star-badge.png";
+const licensedInsuredBadge = "/lovable-uploads/97ab7a8c-3f42-4e5c-9ec4-1eb86fbf52b2.png";
+const isaArboristBadge = "/lovable-uploads/f28add36-af8f-4d80-b032-5973ef512a7d.png";
+const fiveStarBadge = "/lovable-uploads/b7794721-0d3c-44e9-9056-6e19749f6858.png";
 
 const WhyChooseUsSection = () => {
   const reasons = [
