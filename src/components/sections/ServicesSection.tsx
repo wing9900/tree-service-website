@@ -6,7 +6,8 @@ const treeTrimmingImg = "/lovable-uploads/07703b17-ad7c-42e2-a727-4057abe7dd4d.p
 const treeRemovalImg = "/lovable-uploads/36151a3f-4e2e-4504-959e-8fcd51f78514.png";
 const stumpGrindingImg = "/lovable-uploads/87ea87c4-add1-4853-84ee-abb9073b13fc.png";
 const healthManagementImg = "/lovable-uploads/802ad6a4-82a4-43eb-9e60-79801d59f56e.png";
-import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
+const emergencyServiceImg = "/lovable-uploads/b13aa126-a0ea-4c35-8017-163108994333.png";
+const landClearingImg = "/lovable-uploads/0ed1b619-8b61-460d-b942-7a6166059bb9.png";
 const ServicesSection = () => {
   const services = [{
     title: "Tree Trimming & Pruning",
@@ -40,7 +41,7 @@ const ServicesSection = () => {
     title: "Land & Lot Clearing",
     description: "Complete land clearing for construction, development, or property maintenance projects.",
     icon: Construction,
-    image: treeTrimmingImg,
+    image: landClearingImg,
     link: "/services/land-clearing",
     features: ["Site preparation", "Selective clearing", "Debris removal", "Grading available"]
   }, {
