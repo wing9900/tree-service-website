@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction } from "lucide-react";
 const treeTrimmingImg = "/lovable-uploads/07703b17-ad7c-42e2-a727-4057abe7dd4d.png";
-const treeRemovalImg = "/lovable-uploads/36151a3f-4e2e-4504-959e-8fcd51f78514.png";
+const treeRemovalImg = "/lovable-uploads/802ad6a4-82a4-43eb-9e60-79801d59f56e.png";
 const stumpGrindingImg = "/lovable-uploads/87ea87c4-add1-4853-84ee-abb9073b13fc.png";
-const healthManagementImg = "/lovable-uploads/802ad6a4-82a4-43eb-9e60-79801d59f56e.png";
+const healthManagementImg = "/lovable-uploads/36151a3f-4e2e-4504-959e-8fcd51f78514.png";
 import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
 const ServicesSection = () => {
   const services = [{
