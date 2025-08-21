@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar } from "lucide-react";
-const heroImage = "/lovable-uploads/2d52e8a9-b6a5-4840-bad0-d13ded124dd6.png";
+const heroImage = "/lovable-uploads/f60dd1ab-5124-4ac2-ba31-ad13e87c46b8.png";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
 const isaArbortistBadge = "/lovable-uploads/9399cb6f-2ffd-4ab1-b2c8-5019766af479.png";
 const fiveStarBadge = "/lovable-uploads/be0e589b-9094-4e4f-8107-10a3c354efc0.png";
@@ -8,7 +8,7 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional tree service crew trimming trees with safety equipment in suburban neighborhood" className="w-full h-full object-contain scale-135" />
+        <img src={heroImage} alt="Beautiful landscaped yard with mature tree and professional garden design" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
