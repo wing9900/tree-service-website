@@ -20,7 +20,7 @@ const HeroSection = () => {
             </div>
             <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
               <Award className="h-4 w-4" />
-              <span>ISA Certified Arborists</span>
+              <span>ISA Certified Arborist</span>
             </div>
             <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
               <Star className="h-4 w-4" />
