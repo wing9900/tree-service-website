@@ -19,21 +19,21 @@ const WhyChooseUsSection = () => {
     {
       icon: Shield,
       title: "Licensed & Insured",
-      description: "Fully licensed, bonded, and insured for your peace of mind. We carry comprehensive liability and workers' compensation coverage.",
+      description: "Full coverage protection",
       badge: "Verified",
       image: licensedInsuredBadge
     },
     {
       icon: Award,
       title: "ISA Certified Arborist",
-      description: "Our team includes certified arborists who understand tree biology, proper pruning techniques, and safety protocols.",
+      description: "Professionally trained experts",
       badge: "Certified",
       image: isaArboristBadge
     },
     {
       icon: Star,
       title: "5-Star Rated",
-      description: "Consistently rated 5-stars by our customers for quality workmanship, professionalism, and exceptional service.",
+      description: "Customer satisfaction guaranteed",
       badge: "Top Rated",
       image: fiveStarBadge
     },
