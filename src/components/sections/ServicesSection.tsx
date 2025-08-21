@@ -68,7 +68,7 @@ const ServicesSection = () => {
           animationDelay: `${index * 0.1}s`
         }}>
               <div className="relative overflow-hidden">
-                <img src={service.image} alt={`${service.title} service demonstration`} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+                <img src={service.image} alt={`${service.title} service demonstration`} className="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <service.icon className="h-12 w-12 text-white" />
                 </div>
