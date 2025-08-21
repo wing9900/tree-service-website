@@ -10,9 +10,9 @@ import {
   Star,
   TreePine
 } from "lucide-react";
-import licensedInsuredBadge from "@/assets/licensed-insured-badge.jpg";
+import licensedInsuredBadge from "@/assets/licensed-insured-badge.png";
 import isaArboristBadge from "@/assets/isa-certified-badge.png";
-import fiveStarBadge from "@/assets/five-star-badge.jpg";
+import fiveStarBadge from "@/assets/five-star-badge.png";
 
 const WhyChooseUsSection = () => {
   const reasons = [
