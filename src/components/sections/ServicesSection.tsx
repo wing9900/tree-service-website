@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction } from "lucide-react";
-import treeTrimmingImg from "@/assets/tree-trimming-service.jpg";
-import treeRemovalImg from "@/assets/tree-removal-service.jpg";
-import stumpGrindingImg from "@/assets/stump-grinding-service.jpg";
+const treeTrimmingImg = "/lovable-uploads/802ad6a4-82a4-43eb-9e60-79801d59f56e.png";
+const treeRemovalImg = "/lovable-uploads/36151a3f-4e2e-4504-959e-8fcd51f78514.png";
+const stumpGrindingImg = "/lovable-uploads/87ea87c4-add1-4853-84ee-abb9073b13fc.png";
+const healthManagementImg = "/lovable-uploads/07703b17-ad7c-42e2-a727-4057abe7dd4d.png";
 import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
 const ServicesSection = () => {
   const services = [{
@@ -46,7 +47,7 @@ const ServicesSection = () => {
     title: "Health and Disease Management",
     description: "Comprehensive tree health assessments and disease management to keep your trees thriving and healthy.",
     icon: Stethoscope,
-    image: treeRemovalImg,
+    image: healthManagementImg,
     link: "/services/health-management",
     features: ["Tree Health and Risk Assessments", "Pest and Disease Diagnosis and Treatment", "Fertilization and Soil Management", "Root Zone Management"]
   }];
