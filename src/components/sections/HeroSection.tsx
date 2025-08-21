@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, Shield, Award, Star, Clock } from "lucide-react";
+import { Phone, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-tree-service.jpg";
+import licensedInsuredBadge from "@/assets/licensed-insured-badge.jpg";
+import isaArbortistBadge from "@/assets/isa-certified-badge.png";
+import fiveStarBadge from "@/assets/five-star-badge.jpg";
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -12,26 +15,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container-custom text-center text-white">
         <div className="max-w-4xl mx-auto">
-          {/* Trust Badges Row */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
-            <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
-              <Shield className="h-4 w-4" />
-              <span>Licensed & Insured</span>
-            </div>
-            <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
-              <Award className="h-4 w-4" />
-              <span>ISA Certified Arborist</span>
-            </div>
-            <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
-              <Star className="h-4 w-4" />
-              <span>5-Star Rated</span>
-            </div>
-            <div className="trust-badge bg-white/10 backdrop-blur-sm text-white border-white/20">
-              <Clock className="h-4 w-4" />
-              <span>24/7 Emergency</span>
-            </div>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-hero mb-6 animate-slide-up">
             Professional Tree Services in{" "}
@@ -65,16 +48,19 @@ const HeroSection = () => {
           {/* Value Propositions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center animate-fade-in">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Same Day</div>
-              <div className="text-white/90">Emergency Response</div>
+              <img src={licensedInsuredBadge} alt="Licensed & Insured certification badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <div className="text-lg font-bold text-white mb-1">Licensed & Insured</div>
+              <div className="text-white/90 text-sm">Full coverage protection</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Free</div>
-              <div className="text-white/90">Estimates & Consultations</div>
+              <img src={isaArbortistBadge} alt="ISA Certified Arborist badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <div className="text-lg font-bold text-white mb-1">ISA Certified Arborist</div>
+              <div className="text-white/90 text-sm">Professionally trained experts</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl font-bold text-orange-400 mb-2">100%</div>
-              <div className="text-white/90">Satisfaction Guarantee</div>
+              <img src={fiveStarBadge} alt="5-star rating badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <div className="text-lg font-bold text-white mb-1">5-Star Rated</div>
+              <div className="text-white/90 text-sm">Customer satisfaction guaranteed</div>
             </div>
           </div>
         </div>

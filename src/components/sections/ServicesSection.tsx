@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Scissors, TreePine, Settings, Zap, Truck, Flower } from "lucide-react";
+import { TreePine, Settings, Zap, Truck, Stethoscope, Unplug } from "lucide-react";
 import treeTrimmingImg from "@/assets/tree-trimming-service.jpg";
 import treeRemovalImg from "@/assets/tree-removal-service.jpg";
 import stumpGrindingImg from "@/assets/stump-grinding-service.jpg";
@@ -10,14 +10,14 @@ const ServicesSection = () => {
   const services = [{
     title: "Tree Trimming & Pruning",
     description: "Professional pruning to maintain tree health, safety, and aesthetics. Our certified arborists ensure proper technique.",
-    icon: Scissors,
+    icon: TreePine,
     image: treeTrimmingImg,
     link: "/services/tree-trimming",
-    features: ["Health assessment", "Safety pruning", "Aesthetic shaping", "Deadwood removal"]
+    features: ["Crown Cleaning", "Crown Thinning", "Hazardous Branch Removal", "Crown Reduction"]
   }, {
     title: "Tree Removal",
     description: "Safe, efficient tree removal using advanced equipment. Complete cleanup and stump grinding available.",
-    icon: TreePine,
+    icon: Unplug,
     image: treeRemovalImg,
     link: "/services/tree-removal",
     features: ["Crane services", "Complete cleanup", "Stump grinding", "Permit assistance"]
@@ -43,12 +43,12 @@ const ServicesSection = () => {
     link: "/services/land-clearing",
     features: ["Site preparation", "Selective clearing", "Debris removal", "Grading available"]
   }, {
-    title: "Landscaping Services",
-    description: "Complete landscaping solutions including design, installation, and maintenance services.",
-    icon: Flower,
+    title: "Health and Disease Management",
+    description: "Comprehensive tree health assessments and disease management to keep your trees thriving and healthy.",
+    icon: Stethoscope,
     image: treeRemovalImg,
-    link: "/services/landscaping",
-    features: ["Landscape design", "Plant installation", "Irrigation systems", "Ongoing maintenance"]
+    link: "/services/health-management",
+    features: ["Tree Health and Risk Assessments", "Pest and Disease Diagnosis and Treatment", "Fertilization and Soil Management", "Root Zone Management"]
   }];
   return <section className="section-padding bg-muted/30">
       <div className="container-custom">
