@@ -10,6 +10,9 @@ import {
   Star,
   TreePine
 } from "lucide-react";
+import licensedInsuredBadge from "@/assets/licensed-insured-badge.jpg";
+import isaArboristBadge from "@/assets/isa-certified-badge.png";
+import fiveStarBadge from "@/assets/five-star-badge.jpg";
 
 const WhyChooseUsSection = () => {
   const reasons = [
@@ -17,19 +20,22 @@ const WhyChooseUsSection = () => {
       icon: Shield,
       title: "Licensed & Insured",
       description: "Fully licensed, bonded, and insured for your peace of mind. We carry comprehensive liability and workers' compensation coverage.",
-      badge: "Verified"
+      badge: "Verified",
+      image: licensedInsuredBadge
     },
     {
       icon: Award,
-      title: "ISA Certified Arborists",
+      title: "ISA Certified Arborist",
       description: "Our team includes certified arborists who understand tree biology, proper pruning techniques, and safety protocols.",
-      badge: "Certified"
+      badge: "Certified",
+      image: isaArboristBadge
     },
     {
-      icon: Users,
-      title: "15+ Years Experience",
-      description: "Serving the Houston area for over 15 years with thousands of satisfied customers and successful projects.",
-      badge: "Experienced"
+      icon: Star,
+      title: "5-Star Rated",
+      description: "Consistently rated 5-stars by our customers for quality workmanship, professionalism, and exceptional service.",
+      badge: "Top Rated",
+      image: fiveStarBadge
     },
     {
       icon: Clock,
@@ -104,9 +110,19 @@ const WhyChooseUsSection = () => {
             >
               <CardContent className="p-8 text-center">
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <reason.icon className="h-8 w-8 text-primary" />
-                  </div>
+                  {reason.image ? (
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg">
+                      <img 
+                        src={reason.image} 
+                        alt={`${reason.title} badge`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <reason.icon className="h-8 w-8 text-primary" />
+                    </div>
+                  )}
                   <Badge variant="secondary" className="absolute -top-2 -right-2">
                     {reason.badge}
                   </Badge>
