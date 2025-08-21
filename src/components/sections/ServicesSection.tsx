@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { TreePine, Settings, Zap, Truck, Stethoscope, Unplug } from "lucide-react";
+import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction } from "lucide-react";
 import treeTrimmingImg from "@/assets/tree-trimming-service.jpg";
 import treeRemovalImg from "@/assets/tree-removal-service.jpg";
 import stumpGrindingImg from "@/assets/stump-grinding-service.jpg";
@@ -10,21 +10,21 @@ const ServicesSection = () => {
   const services = [{
     title: "Tree Trimming & Pruning",
     description: "Professional pruning to maintain tree health, safety, and aesthetics. Our certified arborists ensure proper technique.",
-    icon: TreePine,
+    icon: TreeDeciduous,
     image: treeTrimmingImg,
     link: "/services/tree-trimming",
     features: ["Crown Cleaning", "Crown Thinning", "Hazardous Branch Removal", "Crown Reduction"]
   }, {
     title: "Tree Removal",
     description: "Safe, efficient tree removal using advanced equipment. Complete cleanup and stump grinding available.",
-    icon: Unplug,
+    icon: Axe,
     image: treeRemovalImg,
     link: "/services/tree-removal",
     features: ["Crane services", "Complete cleanup", "Stump grinding", "Permit assistance"]
   }, {
     title: "Stump Grinding",
     description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
-    icon: Settings,
+    icon: TreePine,
     image: stumpGrindingImg,
     link: "/services/stump-grinding",
     features: ["Below-ground grinding", "Debris removal", "Soil restoration", "Seeding available"]
@@ -38,7 +38,7 @@ const ServicesSection = () => {
   }, {
     title: "Land & Lot Clearing",
     description: "Complete land clearing for construction, development, or property maintenance projects.",
-    icon: Truck,
+    icon: Construction,
     image: treeTrimmingImg,
     link: "/services/land-clearing",
     features: ["Site preparation", "Selective clearing", "Debris removal", "Grading available"]
