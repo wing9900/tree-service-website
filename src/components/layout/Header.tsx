@@ -3,25 +3,33 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Calendar, MapPin } from "lucide-react";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const isActive = (path: string) => location.pathname === path;
-
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Areas We Serve", href: "/service-areas" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  return (
-    <>
+  const navigationItems = [{
+    name: "Home",
+    href: "/"
+  }, {
+    name: "About",
+    href: "/about"
+  }, {
+    name: "Services",
+    href: "/services"
+  }, {
+    name: "Gallery",
+    href: "/gallery"
+  }, {
+    name: "Areas We Serve",
+    href: "/service-areas"
+  }, {
+    name: "Blog",
+    href: "/blog"
+  }, {
+    name: "Contact",
+    href: "/contact"
+  }];
+  return <>
       {/* Top Contact Bar */}
       <div className="bg-primary text-primary-foreground py-2 px-4 text-sm">
         <div className="container-custom flex justify-between items-center">
@@ -41,7 +49,7 @@ const Header = () => {
             </div>
           </div>
           <div className="ml-auto">
-            <span className="text-xs">{"{{HOURS}}"}</span>
+            
           </div>
         </div>
       </div>
@@ -59,19 +67,9 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href)
-                      ? "text-primary border-b-2 border-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
+              {navigationItems.map(item => <Link key={item.name} to={item.href} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
 
             {/* CTA Buttons - Desktop */}
@@ -99,18 +97,9 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-300">
                 <div className="flex flex-col space-y-4 mt-8">
-                  {navigationItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-sm font-medium transition-colors hover:text-primary ${
-                        isActive(item.href) ? "text-primary" : "text-muted-foreground"
-                      }`}
-                    >
+                  {navigationItems.map(item => <Link key={item.name} to={item.href} onClick={() => setIsOpen(false)} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}>
                       {item.name}
-                    </Link>
-                  ))}
+                    </Link>)}
                   
                   <div className="pt-4 border-t space-y-3">
                     <Button variant="outline" className="w-full" asChild>
@@ -150,8 +139,6 @@ const Header = () => {
           </Button>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Header;
