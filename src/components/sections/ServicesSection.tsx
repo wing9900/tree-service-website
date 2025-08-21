@@ -1,15 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction, Cog } from "lucide-react";
-
+import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction } from "lucide-react";
 const treeTrimmingImg = "/lovable-uploads/07703b17-ad7c-42e2-a727-4057abe7dd4d.png";
 const treeRemovalImg = "/lovable-uploads/802ad6a4-82a4-43eb-9e60-79801d59f56e.png";
 const stumpGrindingImg = "/lovable-uploads/87ea87c4-add1-4853-84ee-abb9073b13fc.png";
 const healthManagementImg = "/lovable-uploads/36151a3f-4e2e-4504-959e-8fcd51f78514.png";
 const emergencyServiceImg = "/lovable-uploads/b13aa126-a0ea-4c35-8017-163108994333.png";
 const landClearingImg = "/lovable-uploads/0ed1b619-8b61-460d-b942-7a6166059bb9.png";
-
 const ServicesSection = () => {
   const services = [{
     title: "Tree Trimming & Pruning",
@@ -20,7 +18,7 @@ const ServicesSection = () => {
     features: ["Crown Cleaning", "Crown Thinning", "Hazardous Branch Removal", "Crown Reduction"]
   }, {
     title: "Tree Removal",
-    description: "Safe, efficient tree removal using advanced equipment. Complete cleanup and stump grinding available.",
+    description: "Safe, efficient tree removal using advanced equipment. Safe and efficient tree removal with advanced equipment. Includes full debris cleanup for a spotless yard.",
     icon: Axe,
     image: treeRemovalImg,
     link: "/services/tree-removal",
@@ -28,7 +26,7 @@ const ServicesSection = () => {
   }, {
     title: "Stump Grinding",
     description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
-    icon: Cog,
+    icon: TreePine,
     image: stumpGrindingImg,
     link: "/services/stump-grinding",
     features: ["Below-ground grinding", "Debris removal", "Soil restoration", "Seeding available"]
@@ -54,7 +52,6 @@ const ServicesSection = () => {
     link: "/services/health-management",
     features: ["Tree Health and Risk Assessments", "Pest and Disease Diagnosis and Treatment", "Fertilization and Soil Management", "Root Zone Management"]
   }];
-
   return <section className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Section Header */}
@@ -131,5 +128,4 @@ const ServicesSection = () => {
       </div>
     </section>;
 };
-
 export default ServicesSection;
