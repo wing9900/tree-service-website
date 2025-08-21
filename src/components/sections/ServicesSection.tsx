@@ -15,14 +15,14 @@ const ServicesSection = () => {
     icon: TreeDeciduous,
     image: treeTrimmingImg,
     link: "/services/tree-trimming",
-    features: ["Crown Cleaning", "Crown Thinning", "Hazardous Branch Removal", "Crown Reduction"]
+    features: ["Crown cleaning", "Crown thinning", "Hazardous branch removal", "Crown reduction"]
   }, {
     title: "Tree Removal",
     description: "Safe, efficient tree removal using advanced equipment. Complete cleanup for a spotless yard.",
     icon: Axe,
     image: treeRemovalImg,
     link: "/services/tree-removal",
-    features: ["Technical removal specialists", "Crane services", "Permit assistance", "Environmentally Responsible Disposal"]
+    features: ["Crane services", "Complete cleanup", "Stump grinding", "Insurance claim support"]
   }, {
     title: "Stump Grinding",
     description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
