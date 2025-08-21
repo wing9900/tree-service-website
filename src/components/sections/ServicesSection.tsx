@@ -22,7 +22,7 @@ const ServicesSection = () => {
     icon: Axe,
     image: treeRemovalImg,
     link: "/services/tree-removal",
-    features: ["Technical removal specialists", "Crane service", "Insurance claim support", "Environmentally Responsible Disposal"]
+    features: ["Technical removal specialists", "Crane service", "Insurance claim support", "Environmentally responsible disposal"]
   }, {
     title: "Stump Grinding",
     description: "Professional stump removal to reclaim your yard space. All debris removed and area restored.",
