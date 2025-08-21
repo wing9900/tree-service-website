@@ -8,7 +8,7 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional tree service crew trimming trees with safety equipment in suburban neighborhood" className="w-full h-full object-contain" />
+        <img src={heroImage} alt="Professional tree service crew trimming trees with safety equipment in suburban neighborhood" className="w-full h-full object-contain scale-125" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
