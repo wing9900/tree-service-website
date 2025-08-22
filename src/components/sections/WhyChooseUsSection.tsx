@@ -27,48 +27,75 @@ const WhyChooseUsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Dana Bennet",
-      avatar: "D",
-      date: "2024-10-04",
+      name: "Michael R.",
+      avatar: "M",
+      date: "2025-08-15",
       rating: 5,
-      text: "H&H helped us with a stump removal we had from Beryl. I would highly highly recommend them. They were quick and professional, and provided reasonable prices. They also did a great job cleaning up after they finished...",
-      readMore: true
+      text: "After a big storm, we had a massive oak branch hanging dangerously over our driveway. I called in a panic, and they had a crew out here the same afternoon. They were professional, worked incredibly fast, and left the yard cleaner than they found it. Truly a top-notch emergency service.",
+      readMore: false
     },
     {
       id: 2,
-      name: "Aj Mac",
-      avatar: "AJ",
-      date: "2024-10-03", 
+      name: "Sarah Chen",
+      avatar: "S",
+      date: "2025-08-02", 
       rating: 5,
-      text: "I needed a 25-30 foot tall tree removed and another trimmed. I called and received a quote the same day as well as good customer service. The crew arrived on time and were very professional...",
-      readMore: true
+      text: "I needed two large pine trees removed that were too close to the house. The team was amazing from start to finish. They provided a fair and transparent quote, arrived on time, and took down the trees with surgical precision. I would highly recommend this company to anyone.",
+      readMore: false
     },
     {
       id: 3,
-      name: "Jasodra Mansaram",
-      avatar: "J",
-      date: "2024-09-24",
+      name: "David Garcia",
+      avatar: "D",
+      date: "2025-07-28",
       rating: 5,
-      text: "I would highly recommend this company. This is my 3rd time using them and they delivered what was promised at a fair price. They did excellent work and cleaned up perfectly. Very professional team...",
-      readMore: true
+      text: "We used them for stump grinding on three old stumps in our backyard, and the results were fantastic. The technician was skilled and made quick work of them. It's like they were never there. Excellent service and very reasonable pricing.",
+      readMore: false
     },
     {
       id: 4,
-      name: "Michael Rodriguez",
-      avatar: "M",
-      date: "2024-09-18",
+      name: "Emily Johnson",
+      avatar: "E",
+      date: "2025-07-19",
       rating: 5,
-      text: "Exceptional tree trimming service! The crew was professional, punctual, and left our property spotless. They provided great advice on tree health and maintenance. Will definitely use again...",
-      readMore: true
+      text: "This is my 2nd time using this service and they continue to impress. This time it was for routine tree trimming to get more light into our yard. They did an excellent job shaping the trees and provided great advice on how to keep them healthy. Very professional team.",
+      readMore: false
     },
     {
       id: 5,
-      name: "Sarah Johnson",
-      avatar: "S",
-      date: "2024-09-12",
+      name: "Chris Lee",
+      avatar: "C",
+      date: "2025-07-11",
       rating: 5,
-      text: "Outstanding emergency tree removal after the storm. They responded quickly, worked safely, and handled everything professionally. Fair pricing and excellent cleanup. Highly recommended...",
-      readMore: true
+      text: "I was extremely impressed with the crew's attention to safety and detail. They had to remove a tree that was awkwardly positioned near power lines, and they handled it flawlessly. The entire process was smooth and stress-free. A very reliable and skilled company.",
+      readMore: false
+    },
+    {
+      id: 6,
+      name: "Jessica Martinez",
+      avatar: "J",
+      date: "2025-06-30",
+      rating: 5,
+      text: "From the initial call for a quote to the final cleanup, every interaction was professional and courteous. They delivered on every promise at a fair price. They did excellent work and cleaned up perfectly. So glad we chose them!",
+      readMore: false
+    },
+    {
+      id: 7,
+      name: "Tom Williams",
+      avatar: "T",
+      date: "2025-06-21",
+      rating: 5,
+      text: "Needed a large plot of land cleared of overgrown brush and small trees. The crew arrived with impressive equipment and worked tirelessly to get the job done ahead of schedule. The transformation is incredible. Highly recommend for any land clearing projects.",
+      readMore: false
+    },
+    {
+      id: 8,
+      name: "Olivia Brown",
+      avatar: "O",
+      date: "2025-06-14",
+      rating: 5,
+      text: "Quick, efficient, and professional. They helped us with a stump removal we had been putting off for years. I would highly recommend them. They provided reasonable prices and did a great job cleaning up after they finished. Wish we had called them sooner!",
+      readMore: false
     }
   ];
 
@@ -86,8 +113,8 @@ const WhyChooseUsSection = () => {
       title: "Safety First",
       description: "Your property and well-being are our top priorities. We follow strict safety protocols and use the latest equipment to ensure every job is completed carefully, efficiently, and without incident.",
       badge: "Safe",
-      bgColor: "bg-red-50 dark:bg-red-950/50",
-      borderColor: "border-red-200 dark:border-red-800"
+      bgColor: "bg-orange-50 dark:bg-orange-950/50",
+      borderColor: "border-orange-200 dark:border-orange-800"
     },
     {
       icon: Clock,
@@ -110,8 +137,8 @@ const WhyChooseUsSection = () => {
       title: "Personalized Service",
       description: "Every tree and yard is different. We tailor our approach to your property, offering solutions that make sense for your landscape and lifestyle.",
       badge: "Custom",
-      bgColor: "bg-stone-50 dark:bg-stone-950/50",
-      borderColor: "border-stone-200 dark:border-stone-800"
+      bgColor: "bg-stone-100 dark:bg-stone-900/50",
+      borderColor: "border-stone-300 dark:border-stone-700"
     },
     {
       icon: Home,
@@ -126,16 +153,16 @@ const WhyChooseUsSection = () => {
       title: "Transparent Communication",
       description: "Clear estimates, straightforward explanations, and consistent updates. We make sure you know what's happening and why, every step of the way.",
       badge: "Clear",
-      bgColor: "bg-slate-50 dark:bg-slate-950/50",
-      borderColor: "border-slate-200 dark:border-slate-800"
+      bgColor: "bg-slate-100 dark:bg-slate-900/50",
+      borderColor: "border-slate-300 dark:border-slate-700"
     },
     {
       icon: Wrench,
       title: "Innovative Equipment & Techniques",
       description: "We invest in modern tools and proven methods to provide faster, safer, and more precise tree care for your property.",
       badge: "Advanced",
-      bgColor: "bg-gray-50 dark:bg-gray-950/50",
-      borderColor: "border-gray-200 dark:border-gray-800"
+      bgColor: "bg-gray-100 dark:bg-gray-900/50",
+      borderColor: "border-gray-300 dark:border-gray-700"
     },
     {
       icon: Calendar,
@@ -198,9 +225,6 @@ const WhyChooseUsSection = () => {
         {/* Reviews Section */}
         <div className="mt-16">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Recent Reviews
-            </div>
             <h3 className="text-3xl font-bold mb-4">
               What Our Clients Are Saying
             </h3>
