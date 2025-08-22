@@ -31,19 +31,19 @@ const GalleryPreview = () => {
     {
       title: "Emergency Storm Response",
       category: "Emergency Services",
-      image: emergencyServiceImg,
+      image: "/lovable-uploads/182b236d-176e-44b4-a435-6c2995d9ba6e.png",
       description: "24/7 storm damage cleanup and removal"
     },
     {
-      title: "Large Tree Maintenance",
+      title: "Professional Lot Clearing",
       category: "Tree Care",
-      image: heroImage,
+      image: "/lovable-uploads/a5a66b16-056d-41ff-8b60-0a424ed3fc35.png",
       description: "Comprehensive care for mature trees"
     },
     {
       title: "Residential Tree Services",
       category: "Residential",
-      image: treeTrimmingImg,
+      image: "/lovable-uploads/936c37b0-984a-42f7-953c-ec7b8747ed94.png",
       description: "Complete tree care for homeowners"
     }
   ];
