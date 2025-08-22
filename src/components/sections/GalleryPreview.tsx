@@ -12,7 +12,7 @@ const GalleryPreview = () => {
   const galleryItems = [
     {
       title: "Professional Tree Pruning",
-      category: "Tree Trimming",
+      category: "Tree Pruning",
       image: "/lovable-uploads/9b457fbe-2c47-4b38-a85e-5b87bc017dec.png",
       description: "Crown thinning and elevation project in Houston, TX"
     },
