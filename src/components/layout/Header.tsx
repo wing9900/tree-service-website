@@ -82,7 +82,7 @@ const Header = () => {
                   return (
                     <a 
                       key={item.name} 
-                      href="#services" 
+                      href="/#services" 
                       className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
                     >
                       {item.name}
@@ -131,7 +131,7 @@ const Header = () => {
                       return (
                         <a 
                           key={item.name} 
-                          href="#services" 
+                          href="/#services" 
                           onClick={() => setIsOpen(false)} 
                           className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
                         >
