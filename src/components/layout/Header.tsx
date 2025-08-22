@@ -6,7 +6,12 @@ import { Menu, Phone, Calendar, MapPin } from "lucide-react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path.startsWith('/#')) {
+      return location.pathname === '/' && location.hash === path.substring(1);
+    }
+    return location.pathname === path;
+  };
   const navigationItems = [{
     name: "Home",
     href: "/"
