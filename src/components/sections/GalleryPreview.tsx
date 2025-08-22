@@ -20,13 +20,13 @@ const GalleryPreview = () => {
       title: "Safe Tree Removal",
       category: "Tree Removal", 
       image: "/lovable-uploads/5cc39ea9-d1d2-4f97-a49f-a63c91e470f0.png",
-      description: "Complete removal of a hazardous tree in Pasadena, TX"
+      description: "Removal of a hazardous tree in Pasadena, TX"
     },
     {
       title: "Stump Grinding Service",
       category: "Stump Grinding",
       image: "/lovable-uploads/83e4a60f-a3ad-4031-b013-6de73703af69.png",
-      description: "Professional stump removal and cleanup in Conroe, TX"
+      description: "Large stump removal and cleanup in Conroe, TX"
     },
     {
       title: "Emergency Storm Response",
