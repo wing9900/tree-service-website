@@ -77,9 +77,28 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map(item => <Link key={item.name} to={item.href} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
-                  {item.name}
-                </Link>)}
+              {navigationItems.map(item => {
+                if (item.href === "/#services") {
+                  return (
+                    <a 
+                      key={item.name} 
+                      href="#services" 
+                      className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                }
+                return (
+                  <Link 
+                    key={item.name} 
+                    to={item.href} 
+                    className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* CTA Buttons - Desktop */}
@@ -107,9 +126,30 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-300">
                 <div className="flex flex-col space-y-4 mt-8">
-                  {navigationItems.map(item => <Link key={item.name} to={item.href} onClick={() => setIsOpen(false)} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}>
-                      {item.name}
-                    </Link>)}
+                  {navigationItems.map(item => {
+                    if (item.href === "/#services") {
+                      return (
+                        <a 
+                          key={item.name} 
+                          href="#services" 
+                          onClick={() => setIsOpen(false)} 
+                          className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
+                        >
+                          {item.name}
+                        </a>
+                      );
+                    }
+                    return (
+                      <Link 
+                        key={item.name} 
+                        to={item.href} 
+                        onClick={() => setIsOpen(false)} 
+                        className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
                   
                   <div className="pt-4 border-t space-y-3">
                     <Button variant="cta" className="w-full" asChild>
