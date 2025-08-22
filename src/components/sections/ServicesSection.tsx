@@ -36,7 +36,7 @@ const ServicesSection = () => {
     icon: Zap,
     image: emergencyServiceImg,
     link: "/services/emergency",
-    features: ["24/7 availability", "Insurance claims", "Hazard removal", "Property protection"]
+    features: ["24/7 availability", "Insurance claims assistance", "Hazard removal", "Property protection"]
   }, {
     title: "Land & Lot Clearing",
     description: "Complete land clearing for construction, development, or property maintenance projects.",
@@ -108,7 +108,10 @@ const ServicesSection = () => {
           <h3 className="text-2xl font-bold mb-4">
             Need a Custom Quote for Your Project?
           </h3>
-          <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">Every property is unique. Our certified arborist will assess your specific needs and provide a detailed, no-obligation estimate.</p>
+          <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
+            Every property is unique. Our certified arborists will assess your specific needs 
+            and provide a detailed, no-obligation estimate.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <a href="tel:{{PHONE}}">
