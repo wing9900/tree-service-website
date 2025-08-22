@@ -10,7 +10,8 @@ import {
   MessageSquare, 
   Wrench,
   Star,
-  TreePine
+  TreePine,
+  Shield
 } from "lucide-react";
 
 const WhyChooseUsSection = () => {
@@ -19,49 +20,73 @@ const WhyChooseUsSection = () => {
       icon: MapPin,
       title: "Local Houston Expertise",
       description: "We know Houston and the surrounding areas. From soil types to seasonal growth patterns, our experience with local trees and landscapes ensures services that suit your neighborhood's unique needs.",
-      badge: "Local"
+      badge: "Local",
+      bgColor: "bg-blue-50 dark:bg-blue-950/50",
+      borderColor: "border-blue-200 dark:border-blue-800"
     },
     {
-      icon: Heart,
-      title: "Personalized Service",
-      description: "Every tree and yard is different. We tailor our approach to your property, offering solutions that make sense for your landscape and lifestyle.",
-      badge: "Custom"
+      icon: Shield,
+      title: "Safety First",
+      description: "Your property and well-being are our top priorities. We follow strict safety protocols and use the latest equipment to ensure every job is completed carefully, efficiently, and without incident.",
+      badge: "Safe",
+      bgColor: "bg-red-50 dark:bg-red-950/50",
+      borderColor: "border-red-200 dark:border-red-800"
     },
     {
       icon: Clock,
       title: "Reliability You Can Count On",
       description: "We value your time and property. Expect punctual, organized, and efficient service that minimizes disruption and keeps your yard looking its best.",
-      badge: "Dependable"
+      badge: "Dependable",
+      bgColor: "bg-green-50 dark:bg-green-950/50",
+      borderColor: "border-green-200 dark:border-green-800"
     },
     {
       icon: Leaf,
       title: "Commitment to Sustainability",
       description: "Our methods protect both your trees and the environment. We prioritize eco-conscious techniques, including responsible pruning, recycling debris, and minimizing chemical use.",
-      badge: "Eco-Friendly"
+      badge: "Eco-Friendly",
+      bgColor: "bg-emerald-50 dark:bg-emerald-950/50",
+      borderColor: "border-emerald-200 dark:border-emerald-800"
     },
     {
-      icon: Calendar,
-      title: "Long-Term Care Focus",
-      description: "We don't just trim or remove trees—we ensure their health and longevity with proactive care and practical advice for your property.",
-      badge: "Proactive"
+      icon: Heart,
+      title: "Personalized Service",
+      description: "Every tree and yard is different. We tailor our approach to your property, offering solutions that make sense for your landscape and lifestyle.",
+      badge: "Custom",
+      bgColor: "bg-purple-50 dark:bg-purple-950/50",
+      borderColor: "border-purple-200 dark:border-purple-800"
     },
     {
       icon: Home,
       title: "Respect for Your Property",
       description: "Your home and yard are important to you, and they're important to us. We maintain clean work areas, minimize impact, and leave your property better than we found it.",
-      badge: "Careful"
+      badge: "Careful",
+      bgColor: "bg-amber-50 dark:bg-amber-950/50",
+      borderColor: "border-amber-200 dark:border-amber-800"
     },
     {
       icon: MessageSquare,
       title: "Transparent Communication",
       description: "Clear estimates, straightforward explanations, and consistent updates. We make sure you know what's happening and why, every step of the way.",
-      badge: "Clear"
+      badge: "Clear",
+      bgColor: "bg-cyan-50 dark:bg-cyan-950/50",
+      borderColor: "border-cyan-200 dark:border-cyan-800"
     },
     {
       icon: Wrench,
       title: "Innovative Equipment & Techniques",
       description: "We invest in modern tools and proven methods to provide faster, safer, and more precise tree care for your property.",
-      badge: "Advanced"
+      badge: "Advanced",
+      bgColor: "bg-indigo-50 dark:bg-indigo-950/50",
+      borderColor: "border-indigo-200 dark:border-indigo-800"
+    },
+    {
+      icon: Calendar,
+      title: "Long-Term Care Focus",
+      description: "We don't just trim or remove trees—we ensure their health and longevity with proactive care and practical advice for your property.",
+      badge: "Proactive",
+      bgColor: "bg-teal-50 dark:bg-teal-950/50",
+      borderColor: "border-teal-200 dark:border-teal-800"
     }
   ];
 
@@ -88,7 +113,7 @@ const WhyChooseUsSection = () => {
           {reasons.map((reason, index) => (
             <Card 
               key={reason.title} 
-              className="hover-lift animate-fade-in border-0 shadow-soft"
+              className={`hover-lift animate-fade-in shadow-soft ${reason.bgColor} ${reason.borderColor}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 text-center">
