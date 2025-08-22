@@ -10,7 +10,23 @@ const ServiceAreasSection = () => {
     { name: "Richmond", href: "/areas/richmond" },
     { name: "Rosenberg", href: "/areas/rosenberg" },
     { name: "Fulshear", href: "/areas/fulshear" },
-    { name: "Cypress", href: "/areas/cypress" }
+    { name: "Cypress", href: "/areas/cypress" },
+    { name: "Pasadena", href: "/areas/pasadena" },
+    { name: "Baytown", href: "/areas/baytown" },
+    { name: "Pearland", href: "/areas/pearland" },
+    { name: "League City", href: "/areas/league-city" },
+    { name: "Galveston", href: "/areas/galveston" },
+    { name: "Texas City", href: "/areas/texas-city" },
+    { name: "The Woodlands", href: "/areas/the-woodlands" },
+    { name: "Conroe", href: "/areas/conroe" },
+    { name: "Missouri City", href: "/areas/missouri-city" },
+    { name: "Friendswood", href: "/areas/friendswood" },
+    { name: "Humble", href: "/areas/humble" },
+    { name: "Spring", href: "/areas/spring" },
+    { name: "Stafford", href: "/areas/stafford" },
+    { name: "La Porte", href: "/areas/la-porte" },
+    { name: "Deer Park", href: "/areas/deer-park" },
+    { name: "Bellaire", href: "/areas/bellaire" }
   ];
 
   return (

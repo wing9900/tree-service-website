@@ -149,7 +149,7 @@ const GalleryPreview = () => {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="accent" size="lg" asChild>
               <Link to="/contact">
                 Get Your Free Estimate
               </Link>
