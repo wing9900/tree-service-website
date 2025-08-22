@@ -22,11 +22,7 @@ const ServiceAreasSection = () => {
     { name: "Missouri City", href: "/areas/missouri-city" },
     { name: "Friendswood", href: "/areas/friendswood" },
     { name: "Humble", href: "/areas/humble" },
-    { name: "Spring", href: "/areas/spring" },
-    { name: "Stafford", href: "/areas/stafford" },
-    { name: "La Porte", href: "/areas/la-porte" },
-    { name: "Deer Park", href: "/areas/deer-park" },
-    { name: "Bellaire", href: "/areas/bellaire" }
+    { name: "Spring", href: "/areas/spring" }
   ];
 
   return (

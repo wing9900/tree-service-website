@@ -21,20 +21,7 @@ const Footer = () => {
     { name: "Cypress", href: "/areas/cypress" },
     { name: "Pasadena", href: "/areas/pasadena" },
     { name: "Baytown", href: "/areas/baytown" },
-    { name: "Pearland", href: "/areas/pearland" },
-    { name: "League City", href: "/areas/league-city" },
-    { name: "Galveston", href: "/areas/galveston" },
-    { name: "Texas City", href: "/areas/texas-city" },
-    { name: "The Woodlands", href: "/areas/the-woodlands" },
-    { name: "Conroe", href: "/areas/conroe" },
-    { name: "Missouri City", href: "/areas/missouri-city" },
-    { name: "Friendswood", href: "/areas/friendswood" },
-    { name: "Humble", href: "/areas/humble" },
-    { name: "Spring", href: "/areas/spring" },
-    { name: "Stafford", href: "/areas/stafford" },
-    { name: "La Porte", href: "/areas/la-porte" },
-    { name: "Deer Park", href: "/areas/deer-park" },
-    { name: "Bellaire", href: "/areas/bellaire" }
+    { name: "Pearland", href: "/areas/pearland" }
   ];
 
   const quickLinks = [
@@ -59,7 +46,7 @@ const Footer = () => {
               Get your free, no-obligation estimate today. Our certified arborists are standing by to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="accent" size="xl" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="h-5 w-5" />
                   Call {"{{PHONE}}"}
