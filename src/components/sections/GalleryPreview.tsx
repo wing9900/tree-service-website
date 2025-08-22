@@ -25,7 +25,7 @@ const GalleryPreview = () => {
     {
       title: "Stump Grinding Service",
       category: "Stump Grinding",
-      image: stumpGrindingImg,
+      image: "/lovable-uploads/83e4a60f-a3ad-4031-b013-6de73703af69.png",
       description: "Professional stump removal and cleanup"
     },
     {
