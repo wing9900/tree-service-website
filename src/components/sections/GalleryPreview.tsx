@@ -13,13 +13,13 @@ const GalleryPreview = () => {
     {
       title: "Professional Tree Trimming",
       category: "Tree Trimming",
-      image: treeTrimmingImg,
+      image: "/lovable-uploads/9b457fbe-2c47-4b38-a85e-5b87bc017dec.png",
       description: "Expert pruning for health and aesthetics"
     },
     {
       title: "Safe Tree Removal",
       category: "Tree Removal", 
-      image: treeRemovalImg,
+      image: "/lovable-uploads/5cc39ea9-d1d2-4f97-a49f-a63c91e470f0.png",
       description: "Complete removal with crane services"
     },
     {
