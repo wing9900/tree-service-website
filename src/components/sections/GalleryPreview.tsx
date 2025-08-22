@@ -10,11 +10,18 @@ import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
 
 const GalleryPreview = () => {
   const galleryItems = [
+
     {
-      title: "Professional Tree Pruning",
-      category: "Tree Pruning",
-      image: "/lovable-uploads/9b457fbe-2c47-4b38-a85e-5b87bc017dec.png",
-      description: "Crown thinning and elevation project in Houston, TX"
+      title: "Professional Trimming",
+      category: "Hedge Shaping",
+      image: "/lovable-uploads/11a3b252-343e-454b-8e6e-cd2af1d8bd6a.png",
+      description: "Large hedge trimming completed for a resident in Katy, TX"
+    },
+    {
+      title: "Emergency Storm Response",
+      category: "Emergency Services",
+      image: "/lovable-uploads/7813c07a-6621-4cf6-81ab-1687b9dcd97d.png",
+      description: "Emergency storm damage cleanup project in Sugar Land, TX"
     },
     {
       title: "Safe Tree Removal",
@@ -29,22 +36,16 @@ const GalleryPreview = () => {
       description: "Large stump removal and cleanup in Conroe, TX"
     },
     {
-      title: "Emergency Storm Response",
-      category: "Emergency Services",
-      image: "/lovable-uploads/7813c07a-6621-4cf6-81ab-1687b9dcd97d.png",
-      description: "Emergency storm damage cleanup project in Sugar Land, TX"
+      title: "Professional Tree Pruning",
+      category: "Tree Pruning",
+      image: "/lovable-uploads/9b457fbe-2c47-4b38-a85e-5b87bc017dec.png",
+      description: "Crown thinning and elevation project in Houston, TX"
     },
     {
       title: "Professional Lot Clearing",
-      category: "Tree Care",
+      category: "Lot Clearing",
       image: "/lovable-uploads/f9d7952b-990f-4d19-85ca-4612d04564da.png",
-      description: "Comprehensive care for mature trees"
-    },
-    {
-      title: "Residential Tree Services",
-      category: "Residential",
-      image: "/lovable-uploads/11a3b252-343e-454b-8e6e-cd2af1d8bd6a.png",
-      description: "Complete tree care for homeowners"
+      description: "Comprehensive lot clearing project in Houston, TX"
     }
   ];
 
