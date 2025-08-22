@@ -11,39 +11,39 @@ import emergencyServiceImg from "@/assets/emergency-storm-service.jpg";
 const GalleryPreview = () => {
   const galleryItems = [
     {
-      title: "Professional Tree Trimming",
+      title: "Professional Tree Pruning",
       category: "Tree Trimming",
       image: "/lovable-uploads/9b457fbe-2c47-4b38-a85e-5b87bc017dec.png",
-      description: "Expert pruning for health and aesthetics"
+      description: "Crown thinning and elevation project in Houston, TX"
     },
     {
       title: "Safe Tree Removal",
       category: "Tree Removal", 
       image: "/lovable-uploads/5cc39ea9-d1d2-4f97-a49f-a63c91e470f0.png",
-      description: "Complete removal with crane services"
+      description: "Complete removal of a hazardous tree in Pasadena, TX"
     },
     {
       title: "Stump Grinding Service",
       category: "Stump Grinding",
       image: "/lovable-uploads/83e4a60f-a3ad-4031-b013-6de73703af69.png",
-      description: "Professional stump removal and cleanup"
+      description: "Professional stump removal and cleanup in Conroe, TX"
     },
     {
       title: "Emergency Storm Response",
       category: "Emergency Services",
-      image: "/lovable-uploads/182b236d-176e-44b4-a435-6c2995d9ba6e.png",
-      description: "24/7 storm damage cleanup and removal"
+      image: emergencyServiceImg,
+      description: "Emergency storm damage cleanup project in Sugar Land, TX"
     },
     {
-      title: "Professional Lot Clearing",
+      title: "Large Tree Maintenance",
       category: "Tree Care",
-      image: "/lovable-uploads/a5a66b16-056d-41ff-8b60-0a424ed3fc35.png",
+      image: heroImage,
       description: "Comprehensive care for mature trees"
     },
     {
       title: "Residential Tree Services",
       category: "Residential",
-      image: "/lovable-uploads/936c37b0-984a-42f7-953c-ec7b8747ed94.png",
+      image: treeTrimmingImg,
       description: "Complete tree care for homeowners"
     }
   ];
