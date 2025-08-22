@@ -73,17 +73,13 @@ const Contact = () => {
               for a comprehensive assessment and customized solution.
             </p>
             
-            {/* Quick Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            {/* Quick Action Button */}
+            <div className="flex justify-center mb-8">
               <Button variant="accent" size="xl" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="h-5 w-5" />
                   Call {"{{PHONE}}"}
                 </a>
-              </Button>
-              <Button variant="hero" size="xl">
-                <MessageSquare className="h-5 w-5" />
-                24/7 Emergency Service
               </Button>
             </div>
 
@@ -113,13 +109,13 @@ const Contact = () => {
             
             {/* Contact Form */}
             <div>
-              <Card className="shadow-medium">
+              <Card className="shadow-medium bg-form-steel border-form-steel">
                 <CardHeader>
-                  <CardTitle className="text-2xl flex items-center gap-2">
-                    <Send className="h-6 w-6 text-primary" />
+                  <CardTitle className="text-2xl flex items-center gap-2 text-form-steel-foreground">
+                    <Send className="h-6 w-6 text-form-steel-foreground" />
                     Request Your Free Estimate
                   </CardTitle>
-                  <p className="text-muted-foreground">
+                  <p className="text-form-steel-foreground/80">
                     Fill out the form below and we'll contact you within 24 hours to schedule your consultation.
                   </p>
                 </CardHeader>
@@ -127,7 +123,7 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name" className="flex items-center gap-2">
+                        <Label htmlFor="name" className="flex items-center gap-2 text-form-steel-foreground">
                           <User className="h-4 w-4" />
                           Full Name *
                         </Label>
@@ -137,13 +133,13 @@ const Contact = () => {
                           value={formData.name}
                           onChange={(e) => handleChange("name", e.target.value)}
                           required
-                          className="mt-1"
+                          className="mt-1 bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground placeholder:text-form-steel-foreground/60"
                           placeholder="Your full name"
                         />
                       </div>
                       
                       <div>
-                        <Label htmlFor="email">
+                        <Label htmlFor="email" className="text-form-steel-foreground">
                           <Mail className="h-4 w-4 inline mr-2" />
                           Email Address *
                         </Label>
@@ -153,50 +149,30 @@ const Contact = () => {
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
                           required
-                          className="mt-1"
+                          className="mt-1 bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground placeholder:text-form-steel-foreground/60"
                           placeholder="your.email@example.com"
                         />
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone">
-                          <Phone className="h-4 w-4 inline mr-2" />
-                          Phone Number *
-                        </Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
-                          required
-                          className="mt-1"
-                          placeholder="(555) 123-4567"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="service">Service Needed</Label>
-                        <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
-                          <SelectTrigger className="mt-1">
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="tree-trimming">Tree Trimming & Pruning</SelectItem>
-                            <SelectItem value="tree-removal">Tree Removal</SelectItem>
-                            <SelectItem value="stump-grinding">Stump Grinding</SelectItem>
-                            <SelectItem value="emergency">Emergency Service</SelectItem>
-                            <SelectItem value="land-clearing">Land Clearing</SelectItem>
-                            <SelectItem value="health-management">Tree Health Management</SelectItem>
-                            <SelectItem value="consultation">General Consultation</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
+                    <div>
+                      <Label htmlFor="phone" className="text-form-steel-foreground">
+                        <Phone className="h-4 w-4 inline mr-2" />
+                        Phone Number *
+                      </Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleChange("phone", e.target.value)}
+                        required
+                        className="mt-1 bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground placeholder:text-form-steel-foreground/60"
+                        placeholder="(555) 123-4567"
+                      />
                     </div>
 
                     <div>
-                      <Label htmlFor="address">
+                      <Label htmlFor="address" className="text-form-steel-foreground">
                         <Home className="h-4 w-4 inline mr-2" />
                         Property Address
                       </Label>
@@ -205,18 +181,18 @@ const Contact = () => {
                         type="text"
                         value={formData.address}
                         onChange={(e) => handleChange("address", e.target.value)}
-                        className="mt-1"
+                        className="mt-1 bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground placeholder:text-form-steel-foreground/60"
                         placeholder="123 Main St, City, State ZIP"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="urgency">Project Timeline</Label>
+                      <Label htmlFor="urgency" className="text-form-steel-foreground">Project Timeline</Label>
                       <Select value={formData.urgency} onValueChange={(value) => handleChange("urgency", value)}>
-                        <SelectTrigger className="mt-1">
+                        <SelectTrigger className="mt-1 bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground">
                           <SelectValue placeholder="When do you need service?" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-form-steel-foreground border-form-steel-foreground/20">
                           <SelectItem value="emergency">Emergency (ASAP)</SelectItem>
                           <SelectItem value="urgent">Within 1 week</SelectItem>
                           <SelectItem value="soon">Within 1 month</SelectItem>
@@ -226,12 +202,12 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Project Details</Label>
+                      <Label htmlFor="message" className="text-form-steel-foreground">Project Details</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
                         onChange={(e) => handleChange("message", e.target.value)}
-                        className="mt-1 min-h-[120px]"
+                        className="mt-1 min-h-[120px] bg-form-steel-foreground/10 border-form-steel-foreground/20 text-form-steel-foreground placeholder:text-form-steel-foreground/60"
                         placeholder="Please describe your tree service needs, any specific concerns, or questions you have..."
                       />
                     </div>
@@ -253,7 +229,7 @@ const Contact = () => {
                       )}
                     </Button>
 
-                    <p className="text-sm text-muted-foreground text-center">
+                    <p className="text-sm text-form-steel-foreground/70 text-center">
                       By submitting this form, you agree to be contacted about tree services. 
                       We respect your privacy and will never share your information.
                     </p>
@@ -266,83 +242,83 @@ const Contact = () => {
             <div className="space-y-8">
               
               {/* Contact Information */}
-              <Card className="shadow-medium">
+              <Card className="shadow-medium bg-form-charcoal border-form-charcoal">
                 <CardHeader>
-                  <CardTitle className="text-xl">Contact Information</CardTitle>
-                  <p className="text-muted-foreground">
+                  <CardTitle className="text-xl text-form-charcoal-foreground">Contact Information</CardTitle>
+                  <p className="text-form-charcoal-foreground/80">
                     Reach out to us directly for immediate assistance or questions.
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   
                   {/* Phone */}
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Phone className="h-5 w-5 text-primary" />
+                  <div className="flex items-start gap-4 p-4 rounded-lg bg-form-charcoal-foreground/10">
+                    <div className="p-2 bg-form-charcoal-foreground/20 rounded-lg">
+                      <Phone className="h-5 w-5 text-form-charcoal-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
-                      <a href="tel:{{PHONE}}" className="text-primary hover:underline font-medium">
+                      <h4 className="font-semibold mb-1 text-form-charcoal-foreground">Phone</h4>
+                      <a href="tel:{{PHONE}}" className="text-form-charcoal-foreground hover:underline font-medium">
                         {"{{PHONE}}"}
                       </a>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <p className="text-sm text-form-charcoal-foreground/70 mt-1">
                         24/7 Emergency Service Available
                       </p>
                     </div>
                   </div>
 
                   {/* Email */}
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Mail className="h-5 w-5 text-primary" />
+                  <div className="flex items-start gap-4 p-4 rounded-lg bg-form-charcoal-foreground/10">
+                    <div className="p-2 bg-form-charcoal-foreground/20 rounded-lg">
+                      <Mail className="h-5 w-5 text-form-charcoal-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Email</h4>
-                      <a href="mailto:{{EMAIL}}" className="text-primary hover:underline">
+                      <h4 className="font-semibold mb-1 text-form-charcoal-foreground">Email</h4>
+                      <a href="mailto:{{EMAIL}}" className="text-form-charcoal-foreground hover:underline">
                         {"{{EMAIL}}"}
                       </a>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <p className="text-sm text-form-charcoal-foreground/70 mt-1">
                         We respond within 2 hours during business hours
                       </p>
                     </div>
                   </div>
 
                   {/* Address */}
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <MapPin className="h-5 w-5 text-primary" />
+                  <div className="flex items-start gap-4 p-4 rounded-lg bg-form-charcoal-foreground/10">
+                    <div className="p-2 bg-form-charcoal-foreground/20 rounded-lg">
+                      <MapPin className="h-5 w-5 text-form-charcoal-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Service Area</h4>
-                      <p>{"{{ADDRESS_LINE}}"}</p>
-                      <p>{"{{CITY}}, {{STATE}} {{ZIP}}"}</p>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <h4 className="font-semibold mb-1 text-form-charcoal-foreground">Service Area</h4>
+                      <p className="text-form-charcoal-foreground">{"{{ADDRESS_LINE}}"}</p>
+                      <p className="text-form-charcoal-foreground">{"{{CITY}}, {{STATE}} {{ZIP}}"}</p>
+                      <p className="text-sm text-form-charcoal-foreground/70 mt-1">
                         Serving {"{{SERVICE_AREAS}}"}
                       </p>
                     </div>
                   </div>
 
                   {/* Business Hours */}
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Clock className="h-5 w-5 text-primary" />
+                  <div className="flex items-start gap-4 p-4 rounded-lg bg-form-charcoal-foreground/10">
+                    <div className="p-2 bg-form-charcoal-foreground/20 rounded-lg">
+                      <Clock className="h-5 w-5 text-form-charcoal-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Business Hours</h4>
-                      <p>{"{{HOURS}}"}</p>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <h4 className="font-semibold mb-1 text-form-charcoal-foreground">Business Hours</h4>
+                      <p className="text-form-charcoal-foreground">{"{{HOURS}}"}</p>
+                      <p className="text-sm text-form-charcoal-foreground/70 mt-1">
                         Emergency services available 24/7
                       </p>
                     </div>
                   </div>
 
                   {/* Social Media */}
-                  <div className="pt-4 border-t">
-                    <h4 className="font-semibold mb-3">Follow Us</h4>
+                  <div className="pt-4 border-t border-form-charcoal-foreground/20">
+                    <h4 className="font-semibold mb-3 text-form-charcoal-foreground">Follow Us</h4>
                     <div className="flex gap-3">
                       <a 
                         href="{{FACEBOOK_URL}}" 
-                        className="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors" 
+                        className="p-2 bg-form-charcoal-foreground/20 text-form-charcoal-foreground hover:bg-form-charcoal-foreground hover:text-form-charcoal rounded-lg transition-colors" 
                         aria-label="Facebook"
                       >
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -351,7 +327,7 @@ const Contact = () => {
                       </a>
                       <a 
                         href="{{INSTAGRAM_URL}}" 
-                        className="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors" 
+                        className="p-2 bg-form-charcoal-foreground/20 text-form-charcoal-foreground hover:bg-form-charcoal-foreground hover:text-form-charcoal rounded-lg transition-colors" 
                         aria-label="Instagram"
                       >
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -360,7 +336,7 @@ const Contact = () => {
                       </a>
                       <a 
                         href="{{TWITTER_URL}}" 
-                        className="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors" 
+                        className="p-2 bg-form-charcoal-foreground/20 text-form-charcoal-foreground hover:bg-form-charcoal-foreground hover:text-form-charcoal rounded-lg transition-colors" 
                         aria-label="Twitter"
                       >
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -369,7 +345,7 @@ const Contact = () => {
                       </a>
                       <a 
                         href="{{LINKEDIN_URL}}" 
-                        className="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors" 
+                        className="p-2 bg-form-charcoal-foreground/20 text-form-charcoal-foreground hover:bg-form-charcoal-foreground hover:text-form-charcoal rounded-lg transition-colors" 
                         aria-label="LinkedIn"
                       >
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

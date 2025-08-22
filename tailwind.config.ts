@@ -67,6 +67,14 @@ export default {
 					DEFAULT: 'hsl(var(--warning))',
 					foreground: 'hsl(var(--warning-foreground))'
 				},
+				'form-steel': {
+					DEFAULT: 'hsl(var(--form-steel))',
+					foreground: 'hsl(var(--form-steel-foreground))'
+				},
+				'form-charcoal': {
+					DEFAULT: 'hsl(var(--form-charcoal))',
+					foreground: 'hsl(var(--form-charcoal-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
