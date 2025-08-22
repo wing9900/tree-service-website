@@ -115,8 +115,8 @@ const WhyChooseUsSection = () => {
     title: "Transparent Communication",
     description: "Clear estimates, straightforward explanations, and consistent updates. We make sure you know what's happening and why, every step of the way.",
     badge: "Clear",
-    bgColor: "bg-purple-50 dark:bg-purple-950/50",
-    borderColor: "border-purple-200 dark:border-purple-800"
+    bgColor: "bg-slate-50 dark:bg-slate-950/50",
+    borderColor: "border-slate-200 dark:border-slate-800"
   }, {
     icon: Wrench,
     title: "Innovative Equipment & Techniques",
