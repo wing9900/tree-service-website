@@ -1,67 +1,68 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Shield, 
-  Award, 
-  Users, 
+  MapPin, 
+  Heart, 
   Clock, 
-  Wrench, 
-  CheckCircle, 
+  Leaf, 
+  Calendar, 
+  Home, 
+  MessageSquare, 
+  Wrench,
   Star,
   TreePine
 } from "lucide-react";
-const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
-const isaArboristBadge = "/lovable-uploads/9399cb6f-2ffd-4ab1-b2c8-5019766af479.png";
-const fiveStarBadge = "/lovable-uploads/be0e589b-9094-4e4f-8107-10a3c354efc0.png";
 
 const WhyChooseUsSection = () => {
   const reasons = [
     {
-      icon: Shield,
-      title: "Licensed & Insured",
-      description: "Full coverage protection",
-      badge: "Verified",
-      image: licensedInsuredBadge
+      icon: MapPin,
+      title: "Local Houston Expertise",
+      description: "We know Houston and the surrounding areas. From soil types to seasonal growth patterns, our experience with local trees and landscapes ensures services that suit your neighborhood's unique needs.",
+      badge: "Local"
     },
     {
-      icon: Award,
-      title: "ISA Certified Arborist",
-      description: "Professionally trained experts",
-      badge: "Certified",
-      image: isaArboristBadge
-    },
-    {
-      icon: Star,
-      title: "5-Star Rated",
-      description: "Customer satisfaction guaranteed",
-      badge: "Top Rated",
-      image: fiveStarBadge
+      icon: Heart,
+      title: "Personalized Service",
+      description: "Every tree and yard is different. We tailor our approach to your property, offering solutions that make sense for your landscape and lifestyle.",
+      badge: "Custom"
     },
     {
       icon: Clock,
-      title: "24/7 Emergency Service",
-      description: "Storm damage doesn't wait for business hours. We provide round-the-clock emergency response when you need it most.",
-      badge: "Available"
+      title: "Reliability You Can Count On",
+      description: "We value your time and property. Expect punctual, organized, and efficient service that minimizes disruption and keeps your yard looking its best.",
+      badge: "Dependable"
+    },
+    {
+      icon: Leaf,
+      title: "Commitment to Sustainability",
+      description: "Our methods protect both your trees and the environment. We prioritize eco-conscious techniques, including responsible pruning, recycling debris, and minimizing chemical use.",
+      badge: "Eco-Friendly"
+    },
+    {
+      icon: Calendar,
+      title: "Long-Term Care Focus",
+      description: "We don't just trim or remove trees—we ensure their health and longevity with proactive care and practical advice for your property.",
+      badge: "Proactive"
+    },
+    {
+      icon: Home,
+      title: "Respect for Your Property",
+      description: "Your home and yard are important to you, and they're important to us. We maintain clean work areas, minimize impact, and leave your property better than we found it.",
+      badge: "Careful"
+    },
+    {
+      icon: MessageSquare,
+      title: "Transparent Communication",
+      description: "Clear estimates, straightforward explanations, and consistent updates. We make sure you know what's happening and why, every step of the way.",
+      badge: "Clear"
     },
     {
       icon: Wrench,
-      title: "Professional Equipment",
-      description: "State-of-the-art equipment including cranes, bucket trucks, and specialized tools for safe, efficient work.",
+      title: "Innovative Equipment & Techniques",
+      description: "We invest in modern tools and proven methods to provide faster, safer, and more precise tree care for your property.",
       badge: "Advanced"
-    },
-    {
-      icon: CheckCircle,
-      title: "100% Satisfaction Guarantee",
-      description: "We stand behind our work with a complete satisfaction guarantee. Your property and satisfaction are our priorities.",
-      badge: "Guaranteed"
     }
-  ];
-
-  const stats = [
-    { number: "2,500+", label: "Trees Serviced" },
-    { number: "15+", label: "Years Experience" },
-    { number: "100%", label: "Satisfaction Rate" },
-    { number: "24/7", label: "Emergency Response" }
   ];
 
   return (
@@ -71,33 +72,15 @@ const WhyChooseUsSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <TreePine className="h-4 w-4" />
-            Why Choose Professional Tree Services
+            Your Houston Tree Care Specialists
           </div>
           <h2 className="text-section-title mb-6">
-            Trusted Tree Care Experts in Houston Area
+            What Sets Our Tree Services Apart
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            When it comes to your property's trees, experience and expertise matter. 
-            Here's why homeowners and businesses choose us for their tree care needs.
+            Experience the difference that comes from working with Houston's most trusted tree care professionals. 
+            Here's what makes our approach unique to your local landscape needs.
           </p>
-        </div>
-
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <div 
-              key={stat.label} 
-              className="text-center p-6 bg-muted/50 rounded-xl animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                {stat.number}
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Reasons Grid */}
@@ -110,19 +93,9 @@ const WhyChooseUsSection = () => {
             >
               <CardContent className="p-8 text-center">
                 <div className="relative mb-6">
-                  {reason.image ? (
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg">
-                      <img 
-                        src={reason.image} 
-                        alt={`${reason.title} badge`}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <reason.icon className="h-8 w-8 text-primary" />
-                    </div>
-                  )}
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <reason.icon className="h-8 w-8 text-primary" />
+                  </div>
                   <Badge variant="secondary" className="absolute -top-2 -right-2">
                     {reason.badge}
                   </Badge>
