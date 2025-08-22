@@ -41,7 +41,7 @@ const About = () => {
                     Call Today
                   </a>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="cta" asChild>
                   <Link to="/contact">
                     Get Free Estimate
                   </Link>

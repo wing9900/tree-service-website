@@ -153,16 +153,16 @@ const WhyChooseUsSection = () => {
       title: "Transparent Communication",
       description: "Clear estimates, straightforward explanations, and consistent updates. We make sure you know what's happening and why, every step of the way.",
       badge: "Clear",
-      bgColor: "bg-slate-100 dark:bg-slate-900/50",
-      borderColor: "border-slate-300 dark:border-slate-700"
+      bgColor: "bg-purple-50 dark:bg-purple-950/50",
+      borderColor: "border-purple-200 dark:border-purple-800"
     },
     {
       icon: Wrench,
       title: "Innovative Equipment & Techniques",
       description: "We invest in modern tools and proven methods to provide faster, safer, and more precise tree care for your property.",
       badge: "Advanced",
-      bgColor: "bg-gray-100 dark:bg-gray-900/50",
-      borderColor: "border-gray-300 dark:border-gray-700"
+      bgColor: "bg-indigo-50 dark:bg-indigo-950/50",
+      borderColor: "border-indigo-200 dark:border-indigo-800"
     },
     {
       icon: Calendar,
