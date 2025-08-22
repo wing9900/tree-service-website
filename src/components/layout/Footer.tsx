@@ -49,7 +49,7 @@ const Footer = () => {
                   Call {"{{PHONE}}"}
                 </a>
               </Button>
-              <Button variant="secondary" size="xl" asChild>
+              <Button variant="accent" size="xl" asChild>
                 <Link to="/contact">
                   Get Free Estimate
                 </Link>
@@ -171,7 +171,7 @@ const Footer = () => {
               <p className="text-sm text-primary-foreground/80 mb-3">
                 24/7 emergency storm response available
               </p>
-              <Button variant="emergency" size="sm" asChild>
+              <Button variant="cta" size="sm" asChild>
                 <a href="tel:{{PHONE}}">Emergency Call</a>
               </Button>
             </div>
