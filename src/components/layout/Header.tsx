@@ -7,8 +7,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isActive = (path: string) => {
+    // If we have a hash in the URL, only hash-based navigation should be active
+    if (location.hash) {
+      return path === `/${location.hash}`;
+    }
+    // If no hash, check normal path matching
     if (path.startsWith('/#')) {
-      return location.pathname === '/' && location.hash === path.substring(1);
+      return false; // Hash-based paths are not active when there's no hash
     }
     return location.pathname === path;
   };
