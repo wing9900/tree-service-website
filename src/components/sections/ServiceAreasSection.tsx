@@ -5,6 +5,7 @@ import { MapPin, Clock, Phone } from "lucide-react";
 
 const ServiceAreasSection = () => {
   const serviceAreas = [
+    { name: "Houston", href: "/areas/houston" },
     { name: "Katy", href: "/areas/katy" },
     { name: "Sugar Land", href: "/areas/sugar-land" },
     { name: "Richmond", href: "/areas/richmond" },
@@ -21,8 +22,7 @@ const ServiceAreasSection = () => {
     { name: "Conroe", href: "/areas/conroe" },
     { name: "Missouri City", href: "/areas/missouri-city" },
     { name: "Friendswood", href: "/areas/friendswood" },
-    { name: "Humble", href: "/areas/humble" },
-    { name: "Spring", href: "/areas/spring" }
+    { name: "Humble", href: "/areas/humble" }
   ];
 
   return (

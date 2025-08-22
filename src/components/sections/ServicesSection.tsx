@@ -52,7 +52,7 @@ const ServicesSection = () => {
     link: "/services/health-management",
     features: ["Tree Health and Risk Assessments", "Pest and Disease Diagnosis and Treatment", "Fertilization and Soil Management", "Root Zone Management"]
   }];
-  return <section className="section-padding bg-muted/30">
+  return <section id="services" className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">

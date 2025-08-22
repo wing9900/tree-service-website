@@ -9,10 +9,11 @@ const Footer = () => {
     { name: "Stump Grinding", href: "/services/stump-grinding" },
     { name: "Emergency Storm Response", href: "/services/emergency" },
     { name: "Land & Lot Clearing", href: "/services/land-clearing" },
-    { name: "Landscaping Services", href: "/services/landscaping" },
+    { name: "Health and Disease Management", href: "/services/health-management" },
   ];
 
   const serviceAreas = [
+    { name: "Houston", href: "/areas/houston" },
     { name: "Katy", href: "/areas/katy" },
     { name: "Sugar Land", href: "/areas/sugar-land" },
     { name: "Richmond", href: "/areas/richmond" },
