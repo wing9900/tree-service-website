@@ -31,19 +31,19 @@ const GalleryPreview = () => {
     {
       title: "Emergency Storm Response",
       category: "Emergency Services",
-      image: emergencyServiceImg,
+      image: "/lovable-uploads/7813c07a-6621-4cf6-81ab-1687b9dcd97d.png",
       description: "Emergency storm damage cleanup project in Sugar Land, TX"
     },
     {
-      title: "Large Tree Maintenance",
+      title: "Professional Lot Clearing",
       category: "Tree Care",
-      image: heroImage,
+      image: "/lovable-uploads/f9d7952b-990f-4d19-85ca-4612d04564da.png",
       description: "Comprehensive care for mature trees"
     },
     {
       title: "Residential Tree Services",
       category: "Residential",
-      image: treeTrimmingImg,
+      image: "/lovable-uploads/11a3b252-343e-454b-8e6e-cd2af1d8bd6a.png",
       description: "Complete tree care for homeowners"
     }
   ];
