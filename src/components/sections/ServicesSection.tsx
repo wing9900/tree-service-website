@@ -110,7 +110,7 @@ const ServicesSection = () => {
           </h3>
           <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">Each property deserves personalized care. Our certified arborist will assess your specific needs and provide a detailed, no-obligation estimate.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" asChild>
+            <Button variant="secondary" size="lg" asChild>
               <a href="tel:{{PHONE}}">
                 Call for Immediate Service
               </a>
