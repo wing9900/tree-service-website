@@ -37,7 +37,7 @@ const HeroSection = () => {
                 Call Now: {"{{PHONE}}"}
               </a>
             </Button>
-            <Button variant="hero" size="xl" className="text-lg" asChild>
+            <Button variant="cta" size="xl" className="text-lg" asChild>
               <a href="/contact">
                 <Calendar className="h-6 w-6" />
                 Get Free Estimate
