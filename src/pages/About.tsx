@@ -123,31 +123,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom text-center">
-          <h2 className="text-section-title mb-6">
-            Ready to Work with Houston's Most Trusted Tree Service?
-          </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free consultation and estimate. We're here to help with all your tree care needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
-              <a href="tel:{{PHONE}}">
-                <Phone className="h-5 w-5" />
-                Call {"{{PHONE}}"}
-              </a>
-            </Button>
-            <Button variant="secondary" size="xl" asChild>
-              <Link to="/contact">
-                <Calendar className="h-5 w-5" />
-                Schedule Consultation  
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </Layout>;
 };
 export default About;
