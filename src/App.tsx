@@ -22,13 +22,16 @@ const ScrollToTop = () => {
         if (servicesElement) {
           const headerElement = servicesElement.querySelector("h2");
           if (headerElement) {
-            headerElement.scrollIntoView({ behavior: "smooth", block: "start" });
+            const headerRect = headerElement.getBoundingClientRect();
+            const absoluteTop = window.pageYOffset + headerRect.top;
+            window.scrollTo({ top: absoluteTop - 100, behavior: "smooth" });
           }
         }
       }, 100);
       return;
     }
     
+    // Scroll to top for all other page navigation
     window.scrollTo(0, 0);
   }, [location.pathname, location.hash]);
   
