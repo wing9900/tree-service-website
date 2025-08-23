@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Award, Users, Clock, Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-custom text-center">
@@ -88,9 +86,7 @@ const About = () => {
               <CardContent className="p-8">
                 <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Licensed & Insured</h3>
-                <p className="text-sm text-muted-foreground">
-                  Fully licensed and bonded with comprehensive liability coverage
-                </p>
+                <p className="text-sm text-muted-foreground">Fully licensed and insured with comprehensive liability coverage</p>
               </CardContent>
             </Card>
             
@@ -152,8 +148,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;
