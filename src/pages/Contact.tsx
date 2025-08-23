@@ -63,7 +63,7 @@ const Contact = () => {
       {/* Hero Section with Background Image and Overlaid Form */}
       <section 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
-        style={{ backgroundImage: `url(${contactHeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}
+        style={{ backgroundImage: `url(${contactHeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center top' }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -77,7 +77,7 @@ const Contact = () => {
               <p className="text-primary text-lg font-semibold mb-4 tracking-wide">Contact Us</p>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Contact {"{{COMPANY_NAME}}"} -<br />
-                <span className="text-primary">Your Tree Care Experts</span>
+                <span className="text-emergency">Your Tree Care Experts</span>
               </h1>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Whether you need safe tree removal, professional pruning, or stump grinding, we're here to help. Call us today or fill out the form below to schedule your free consultation—our friendly crew is ready to keep your trees healthy and your property looking its best.
@@ -298,7 +298,7 @@ const Contact = () => {
                     aria-label="Yelp"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21.111 18.226c-.141.969-2.119 1.482-3.413 1.482-4.091 0-7.703-2.508-7.703-6.566 0-1.191.207-2.313.582-3.371.133-.374.279-.742.436-1.104C8.55 6.374 6.474 4.953 3.907 4.953c-1.296 0-3.274.513-3.415 1.482C.351 7.404.911 8.378 1.733 8.378c.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943C3.219 4.466 1.241 3.953-.053 3.953S-3.327 4.466-3.468 5.435c-.141.969.419 1.943 1.241 1.943.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943"/>
+                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.624 5.367 11.99 11.988 11.99s11.99-5.366 11.99-11.99C24.007 5.367 18.641.001 12.017.001zM8.449 19.64c-.172 0-.366-.006-.506-.034-.657-.134-.657-.134-.657-.502 0-.179.179-.387.208-.477.208-.716.208-.716 1.075-.716.716 0 .895.268.895.6 0 .417-.298.895-.895 1.075-.208.06-.597.06-.716.06l-.179-.006zm2.391-1.792c-.537 0-1.254-.387-1.254-1.344 0-.656.388-1.165 1.076-1.165.656 0 1.075.388 1.075 1.075 0 1.045-.656 1.434-1.075 1.434h-.178zm2.957-3.748c-.746 0-1.881-.567-1.881-1.702 0-.865.656-1.403 1.403-1.403.745 0 1.522.358 1.522 1.403 0 1.135-1.045 1.702-1.045 1.702z"/>
                     </svg>
                   </a>
                 </div>
