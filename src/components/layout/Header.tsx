@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Calendar, MapPin } from "lucide-react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isActive = (path: string) => {
     // If we have a hash in the URL, only hash-based navigation should be active
     if (location.hash) {
@@ -90,14 +91,13 @@ const Header = () => {
             {navigationItems.map(item => {
                 if (item.href === "/#services") {
                   return (
-                    <a 
+                    <button 
                       key={item.name} 
-                      href="/#services" 
                       onClick={(e) => {
+                        e.preventDefault();
                         if (location.pathname !== '/') {
-                          window.location.href = '/#services';
+                          navigate('/#services');
                         } else {
-                          e.preventDefault();
                           const servicesElement = document.getElementById('services');
                           if (servicesElement) {
                             const headerElement = servicesElement.querySelector("h2");
@@ -112,7 +112,7 @@ const Header = () => {
                       className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
                     >
                       {item.name}
-                    </a>
+                    </button>
                   );
                 }
                 return (
@@ -171,15 +171,14 @@ const Header = () => {
                   {navigationItems.map(item => {
                     if (item.href === "/#services") {
                       return (
-                        <a 
+                        <button 
                           key={item.name} 
-                          href="/#services" 
                           onClick={(e) => {
+                            e.preventDefault();
                             setIsOpen(false);
                             if (location.pathname !== '/') {
-                              window.location.href = '/#services';
+                              navigate('/#services');
                             } else {
-                              e.preventDefault();
                               const servicesElement = document.getElementById('services');
                               if (servicesElement) {
                                 const headerElement = servicesElement.querySelector("h2");
@@ -194,7 +193,7 @@ const Header = () => {
                           className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
                         >
                           {item.name}
-                        </a>
+                        </button>
                       );
                     }
                     return (

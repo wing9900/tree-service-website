@@ -18,17 +18,15 @@ const ScrollToTop = () => {
   useEffect(() => {
     // Handle services section scrolling
     if (location.pathname === "/" && location.hash === "#services") {
-      setTimeout(() => {
-        const servicesElement = document.getElementById("services");
-        if (servicesElement) {
-          const headerElement = servicesElement.querySelector("h2");
-          if (headerElement) {
-            const headerRect = headerElement.getBoundingClientRect();
-            const absoluteTop = window.pageYOffset + headerRect.top;
-            window.scrollTo({ top: absoluteTop - 100, behavior: "smooth" });
-          }
+      const servicesElement = document.getElementById("services");
+      if (servicesElement) {
+        const headerElement = servicesElement.querySelector("h2");
+        if (headerElement) {
+          const headerRect = headerElement.getBoundingClientRect();
+          const absoluteTop = window.pageYOffset + headerRect.top;
+          window.scrollTo({ top: absoluteTop - 100, behavior: "smooth" });
         }
-      }, 100);
+      }
       return;
     }
     
