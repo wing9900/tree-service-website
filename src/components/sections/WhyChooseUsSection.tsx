@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Heart, Clock, Leaf, Calendar, Home, MessageSquare, Wrench, Star, TreePine, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Heart, Clock, Leaf, Calendar, Home, Pencil, MessageSquare, Wrench, Star, TreePine, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 const WhyChooseUsSection = () => {
   const reviews = [{
@@ -97,7 +97,7 @@ const WhyChooseUsSection = () => {
     bgColor: "bg-emerald-50 dark:bg-emerald-950/50",
     borderColor: "border-emerald-200 dark:border-emerald-800"
   }, {
-    icon: Heart,
+    icon: Pencil,
     title: "Personalized Service",
     description: "Every tree and yard is different. We tailor our approach to your property, offering solutions that make sense for your landscape and lifestyle.",
     badge: "Custom",
