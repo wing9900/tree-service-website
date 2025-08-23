@@ -86,7 +86,7 @@ const About = () => {
               <CardContent className="p-8">
                 <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Licensed & Insured</h3>
-                <p className="text-sm text-muted-foreground">Fully licensed and insured with comprehensive liability coverage</p>
+                <p className="text-sm text-muted-foreground">Fully licensed and insured with comprehensive liability coverage</p>
               </CardContent>
             </Card>
             
