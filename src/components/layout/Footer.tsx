@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, Star, Shield, Award } from "lucide-react";
 
-const Footer = () => {
+const Footer = ({ hideCTA = false }: { hideCTA?: boolean }) => {
   const serviceLinks = [
     { name: "Tree Trimming & Pruning", href: "/services/tree-trimming" },
     { name: "Tree Removal", href: "/services/tree-removal" },
@@ -37,31 +37,33 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* CTA Section */}
-      <div className="border-b border-primary-foreground/20">
-        <div className="container-custom section-padding-sm">
-          <div className="text-center">
-            <h2 className="text-section-title mb-4">
-              Ready to Transform Your Property?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
-              Get your free, no-obligation estimate today. Our certified arborists are standing by to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="accent" size="xl" asChild>
-                <a href="tel:{{PHONE}}">
-                  <Phone className="h-5 w-5" />
-                  Call {"{{PHONE}}"}
-                </a>
-              </Button>
-              <Button variant="accent" size="xl" asChild>
-                <Link to="/contact">
-                  Get Free Estimate
-                </Link>
-              </Button>
+      {!hideCTA && (
+        <div className="border-b border-primary-foreground/20">
+          <div className="container-custom section-padding-sm">
+            <div className="text-center">
+              <h2 className="text-section-title mb-4">
+                Ready to Transform Your Property?
+              </h2>
+              <p className="text-lg text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
+                Get your free, no-obligation estimate today. Our certified arborists are standing by to help.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="accent" size="xl" asChild>
+                  <a href="tel:{{PHONE}}">
+                    <Phone className="h-5 w-5" />
+                    Call {"{{PHONE}}"}
+                  </a>
+                </Button>
+                <Button variant="accent" size="xl" asChild>
+                  <Link to="/contact">
+                    Get Free Estimate
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Footer Content */}
       <div className="container-custom section-padding">
@@ -134,6 +136,11 @@ const Footer = () => {
                   <a href="{{LINKEDIN_URL}}" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors" aria-label="LinkedIn">
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </a>
+                  <a href="{{YELP_URL}}" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors" aria-label="Yelp">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M21.111 18.226c-.141.969-2.119 1.482-3.413 1.482-4.091 0-7.703-2.508-7.703-6.566 0-1.191.207-2.313.582-3.371.133-.374.279-.742.436-1.104C8.55 6.374 6.474 4.953 3.907 4.953c-1.296 0-3.274.513-3.415 1.482C.351 7.404.911 8.378 1.733 8.378c.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943C3.219 4.466 1.241 3.953-.053 3.953S-3.327 4.466-3.468 5.435c-.141.969.419 1.943 1.241 1.943.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943"/>
                     </svg>
                   </a>
                 </div>

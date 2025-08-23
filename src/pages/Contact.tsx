@@ -59,11 +59,11 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <Layout hideCTA={true}>
       {/* Hero Section with Background Image and Overlaid Form */}
       <section 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
-        style={{ backgroundImage: `url(${contactHeroImage})` }}
+        style={{ backgroundImage: `url(${contactHeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -76,11 +76,11 @@ const Contact = () => {
             <div className="text-center mb-12">
               <p className="text-primary text-lg font-semibold mb-4 tracking-wide">Contact Us</p>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Contact H&H Tree Service -<br />
+                Contact {"{{COMPANY_NAME}}"} -<br />
                 <span className="text-primary">Your Tree Care Experts</span>
               </h1>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Contact us for expert tree care and landscaping services tailored to meet your property's needs.
+                Whether you need safe tree removal, professional pruning, or stump grinding, we're here to help. Call us today or fill out the form below to schedule your free consultation—our friendly crew is ready to keep your trees healthy and your property looking its best.
               </p>
             </div>
 
@@ -183,7 +183,9 @@ const Contact = () => {
 
                     <Button 
                       type="submit" 
-                      className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-lg transition-colors duration-200" 
+                      variant="accent"
+                      size="xl" 
+                      className="w-full" 
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Processing..." : "Submit"}
@@ -216,7 +218,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      15906 Pasadero Dr. Houston TX, 77083
+                      {"{{ADDRESS_LINE}}, {{CITY}}, {{STATE}} {{ZIP}}"}
                     </p>
                   </div>
                 </div>
@@ -228,8 +230,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                    <a href="mailto:hhtsl.tx@gmail.com" className="text-gray-600 hover:text-primary transition-colors">
-                      hhtsl.tx@gmail.com
+                    <a href="mailto:{{EMAIL}}" className="text-gray-600 hover:text-primary transition-colors">
+                      {"{{EMAIL}}"}
                     </a>
                   </div>
                 </div>
@@ -241,8 +243,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Call</h3>
-                    <a href="tel:(832) 606-3666" className="text-gray-600 hover:text-primary transition-colors font-medium">
-                      (832) 606-3666
+                    <a href="tel:{{PHONE}}" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                      {"{{PHONE}}"}
                     </a>
                   </div>
                 </div>
@@ -254,7 +256,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Hour of Operation</h3>
-                    <p className="text-gray-600">Mon - Sun : 7 AM to 8 PM</p>
+                    <p className="text-gray-600">{"{{HOURS}}"}</p>
                   </div>
                 </div>
               </div>
@@ -278,16 +280,25 @@ const Contact = () => {
                     aria-label="Instagram"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM15.156 12.504c0 1.747-1.413 3.16-3.16 3.16s-3.16-1.413-3.16-3.16 1.413-3.16 3.16-3.16 3.16 1.413 3.16 3.16zM18.407 8.19c-.413 0-.747-.334-.747-.747s.334-.747.747-.747.747.334.747.747-.334.747-.747.747zM12.017 6.423c-3.259 0-5.897 2.638-5.897 5.897s2.638 5.897 5.897 5.897 5.897-2.638 5.897-5.897-2.638-5.897-5.897-5.897zM20.956 5.592c-.947-.947-2.064-1.421-3.338-1.421H6.463c-1.274 0-2.391.474-3.338 1.421-.947.947-1.421 2.064-1.421 3.338v11.155c0 1.274.474 2.391 1.421 3.338.947.947 2.064 1.421 3.338 1.421h11.155c1.274 0 2.391-.474 3.338-1.421.947-.947 1.421-2.064 1.421-3.338V8.93c0-1.274-.474-2.391-1.421-3.338z"/>
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                   </a>
                   <a 
                     href="{{TWITTER_URL}}" 
                     className="w-12 h-12 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors" 
+                    aria-label="Twitter"
+                  >
+                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="{{YELP_URL}}" 
+                    className="w-12 h-12 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors" 
                     aria-label="Yelp"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.326-1.297l-.272-.272-.408.816c-.272.544-.816.816-1.36.816-.544 0-1.088-.272-1.36-.816L.907 14.419c-.272-.544-.272-1.088 0-1.632l.816-1.632c.272-.544.816-.816 1.36-.816.544 0 1.088.272 1.36.816l.408.816.272-.272c.878-.807 2.029-1.297 3.326-1.297 2.594 0 4.623 2.029 4.623 4.623s-2.029 4.623-4.623 4.623zm7.347-1.297l-.408-.816-.272.272c-.878.807-2.029 1.297-3.326 1.297-2.594 0-4.623-2.029-4.623-4.623s2.029-4.623 4.623-4.623c1.297 0 2.448.49 3.326 1.297l.272.272.408-.816c.272-.544.816-.816 1.36-.816.544 0 1.088.272 1.36.816l.816 1.632c.272.544.272 1.088 0 1.632l-.816 1.632c-.272.544-.816.816-1.36.816-.544 0-1.088-.272-1.36-.816z"/>
+                      <path d="M21.111 18.226c-.141.969-2.119 1.482-3.413 1.482-4.091 0-7.703-2.508-7.703-6.566 0-1.191.207-2.313.582-3.371.133-.374.279-.742.436-1.104C8.55 6.374 6.474 4.953 3.907 4.953c-1.296 0-3.274.513-3.415 1.482C.351 7.404.911 8.378 1.733 8.378c.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943C3.219 4.466 1.241 3.953-.053 3.953S-3.327 4.466-3.468 5.435c-.141.969.419 1.943 1.241 1.943.411 0 .789-.154 1.094-.426.291-.259.666-.518 1.124-.518.426 0 .816.232 1.079.637.275.422.42.926.42 1.456 0 .684-.244 1.31-.69 1.759-.48.482-1.146.744-1.834.744-.688 0-1.354-.262-1.834-.744-.446-.449-.69-1.075-.69-1.759 0-.53.145-1.034.42-1.456.263-.405.653-.637 1.079-.637.458 0 .833.259 1.124.518.305.272.683.426 1.094.426.822 0 1.382-.974 1.241-1.943"/>
                     </svg>
                   </a>
                 </div>
