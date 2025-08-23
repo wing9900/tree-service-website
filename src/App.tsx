@@ -15,7 +15,7 @@ const ScrollToTop = () => {
   const location = useLocation();
   
   useEffect(() => {
-    // Scroll to services section header if navigating to services hash
+    // Handle services section scrolling
     if (location.pathname === "/" && location.hash === "#services") {
       setTimeout(() => {
         const servicesElement = document.getElementById("services");
@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       return;
     }
     
-    // Scroll to top for all other page navigation
+    // Scroll to top for all other page navigation (cross-page only)
     window.scrollTo(0, 0);
   }, [location.pathname, location.hash]);
   

@@ -69,7 +69,17 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-3"
+              onClick={(e) => {
+                // If already on home page, scroll to top
+                if (location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
               <div className="text-2xl font-bold text-primary">
                 {"{{COMPANY_NAME}}"}
               </div>
@@ -88,7 +98,15 @@ const Header = () => {
                           window.location.href = '/#services';
                         } else {
                           e.preventDefault();
-                          document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                          const servicesElement = document.getElementById('services');
+                          if (servicesElement) {
+                            const headerElement = servicesElement.querySelector("h2");
+                            if (headerElement) {
+                              const headerRect = headerElement.getBoundingClientRect();
+                              const absoluteTop = window.pageYOffset + headerRect.top;
+                              window.scrollTo({ top: absoluteTop - 100, behavior: "smooth" });
+                            }
+                          }
                         }
                       }}
                       className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
@@ -100,7 +118,14 @@ const Header = () => {
                 return (
                   <Link 
                     key={item.name} 
-                    to={item.href} 
+                    to={item.href}
+                    onClick={(e) => {
+                      // If already on this page, scroll to top
+                      if (location.pathname === item.href) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
                     className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
                   >
                     {item.name}
@@ -118,7 +143,16 @@ const Header = () => {
                 </a>
               </Button>
               <Button variant="cta" size="sm" asChild>
-                <Link to="/contact">
+                <Link 
+                  to="/contact"
+                  onClick={(e) => {
+                    // If already on contact page, scroll to top
+                    if (location.pathname === '/contact') {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                >
                   <Calendar className="h-4 w-4" />
                   Get Quote
                 </Link>
@@ -146,7 +180,15 @@ const Header = () => {
                               window.location.href = '/#services';
                             } else {
                               e.preventDefault();
-                              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                              const servicesElement = document.getElementById('services');
+                              if (servicesElement) {
+                                const headerElement = servicesElement.querySelector("h2");
+                                if (headerElement) {
+                                  const headerRect = headerElement.getBoundingClientRect();
+                                  const absoluteTop = window.pageYOffset + headerRect.top;
+                                  window.scrollTo({ top: absoluteTop - 100, behavior: "smooth" });
+                                }
+                              }
                             }
                           }}
                           className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
@@ -159,7 +201,14 @@ const Header = () => {
                       <Link 
                         key={item.name} 
                         to={item.href} 
-                        onClick={() => setIsOpen(false)} 
+                        onClick={(e) => {
+                          setIsOpen(false);
+                          // If already on this page, scroll to top
+                          if (location.pathname === item.href) {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }} 
                         className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
                       >
                         {item.name}
@@ -175,7 +224,17 @@ const Header = () => {
                       </a>
                     </Button>
                     <Button variant="cta" className="w-full" asChild>
-                      <Link to="/contact">
+                      <Link 
+                        to="/contact"
+                        onClick={(e) => {
+                          setIsOpen(false);
+                          // If already on contact page, scroll to top
+                          if (location.pathname === '/contact') {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }}
+                      >
                         <Calendar className="h-4 w-4" />
                         Get Quote
                       </Link>
@@ -198,7 +257,16 @@ const Header = () => {
             </a>
           </Button>
           <Button variant="cta" className="flex-1 rounded-none h-14" asChild>
-            <Link to="/contact">
+            <Link 
+              to="/contact"
+              onClick={(e) => {
+                // If already on contact page, scroll to top
+                if (location.pathname === '/contact') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
               <Calendar className="h-5 w-5" />
               Get Quote
             </Link>
