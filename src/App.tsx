@@ -15,13 +15,22 @@ const ScrollToTop = () => {
   const location = useLocation();
   
   useEffect(() => {
-    // Don't scroll to top if navigating to services section
+    // Scroll to services section header if navigating to services hash
     if (location.pathname === "/" && location.hash === "#services") {
+      setTimeout(() => {
+        const servicesElement = document.getElementById("services");
+        if (servicesElement) {
+          const headerElement = servicesElement.querySelector("h2");
+          if (headerElement) {
+            headerElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      }, 100);
       return;
     }
     
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
   
   return null;
 };
