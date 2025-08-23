@@ -77,12 +77,20 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map(item => {
+            {navigationItems.map(item => {
                 if (item.href === "/#services") {
                   return (
                     <a 
                       key={item.name} 
                       href="/#services" 
+                      onClick={(e) => {
+                        if (location.pathname !== '/') {
+                          window.location.href = '/#services';
+                        } else {
+                          e.preventDefault();
+                          document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}
                     >
                       {item.name}
@@ -132,7 +140,15 @@ const Header = () => {
                         <a 
                           key={item.name} 
                           href="/#services" 
-                          onClick={() => setIsOpen(false)} 
+                          onClick={(e) => {
+                            setIsOpen(false);
+                            if (location.pathname !== '/') {
+                              window.location.href = '/#services';
+                            } else {
+                              e.preventDefault();
+                              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
                           className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
                         >
                           {item.name}
