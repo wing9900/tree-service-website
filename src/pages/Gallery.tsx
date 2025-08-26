@@ -66,7 +66,7 @@ const Gallery = () => {
       category: "Tree Pruning",
       location: "The Woodlands, TX",
       image: "/lovable-uploads/8b7ff4ea-2009-4747-934a-12ebcf276408.png",
-      description: "Professional pruning and maintenance of a mature oak tree for optimal health, safety, and view enhancement"
+      description: "Professional pruning and maintenance of a mature oak tree for optimal health, safety, and view enjoyment"
     },
   
     {
