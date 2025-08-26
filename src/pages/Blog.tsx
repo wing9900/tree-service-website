@@ -13,7 +13,7 @@ const Blog = () => {
       excerpt: "Living in Houston and the surrounding Harris County areas, we know the beauty and importance of our trees. Learn why professional tree services are essential for hurricane preparation.",
       date: "2024-08-15",
       readTime: "5 min read",
-      author: "Tree Care Experts",
+      author: "Tree Care Expert",
       category: "Hurricane Preparation",
       content: [
         {
@@ -84,7 +84,7 @@ const Blog = () => {
       excerpt: "In Houston, our trees are magnificent assets. Learn to spot the subtle signs of tree distress before they become major hazards.",
       date: "2024-08-10",
       readTime: "4 min read",
-      author: "Certified Arborists",
+      author: "Certified Arborist",
       category: "Tree Health",
       content: [
         {
