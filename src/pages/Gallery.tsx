@@ -31,10 +31,10 @@ const Gallery = () => {
     {
       id: 3,
       title: "Landscape Tree Maintenance",
-      category: "Tree Trimming",
+      category: "Tree Pruning",
       location: "The Woodlands, TX",
       image: "/lovable-uploads/8b7ff4ea-2009-4747-934a-12ebcf276408.png",
-      description: "Professional pruning and maintenance of mature oak trees for optimal health and safety"
+      description: "Professional vista pruning and maintenance of a mature oak tree for optimal health, safety, and view clearance"
     },
     {
       id: 4,
