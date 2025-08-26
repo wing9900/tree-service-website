@@ -244,6 +244,20 @@ const Blog = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Expert insights and tips for maintaining healthy trees in Houston's unique climate
           </p>
+          
+          {/* Badges Section */}
+          <div className="flex justify-center items-center gap-6 mt-8 mb-4">
+            <div className="bg-gradient-primary p-4 rounded-full shadow-elegant">
+              <Badge className="bg-white/90 text-primary font-semibold px-4 py-2 text-sm hover:bg-white transition-colors">
+                🌪️ Hurricane Preparation
+              </Badge>
+            </div>
+            <div className="bg-gradient-subtle p-4 rounded-full shadow-soft">
+              <Badge className="bg-success/10 text-success font-semibold px-4 py-2 text-sm border border-success/20">
+                🌳 Tree Health
+              </Badge>
+            </div>
+          </div>
         </header>
 
         {/* Blog Posts */}
