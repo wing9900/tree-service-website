@@ -50,7 +50,7 @@ const Gallery = () => {
       category: "Tree Care",
       location: "Conroe, TX",
       image: "/lovable-uploads/e0fa01c9-67f7-4b35-9696-dd91d85fc80e.png",
-      description: "Expert care establishing a young tree and maximizing its odds of success in residential landscape settings"
+      description: "Expert care establishing a young tree and maximizing its odds of success in a residential landscape setting"
     },
     {
       id: 6,
