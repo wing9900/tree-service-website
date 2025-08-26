@@ -286,12 +286,12 @@ const Gallery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="shadow-md hover:shadow-lg">
+              <Button size="lg" className="shadow-md hover:shadow-lg hover:bg-primary/80">
                 Get Free Estimate
               </Button>
             </Link>
             <Link to="/">
-              <Button variant="outline" size="lg">
+              <Button size="lg" className="shadow-md hover:shadow-lg hover:bg-primary/80">
                 Learn More About Our Services
               </Button>
             </Link>
