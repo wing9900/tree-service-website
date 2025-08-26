@@ -14,11 +14,11 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      title: "Selective Lot Clearing",
+      title: "Professional Lot Clearing",
       category: "Lot Clearing",
       location: "Houston, TX",
       image: "/lovable-uploads/c560043f-b9f2-45db-bea6-329e65825c95.png",
-      description: "Selective lot clearing project showcasing our professional forest management services"
+      description: "Comprehensive lot clearing project showcasing our professional forest management services"
     },
     {
       id: 2,
@@ -72,7 +72,7 @@ const Gallery = () => {
       id: 8,
       title: "Forest Management",
       category: "Forest Management",
-      location: "Montgomery County, TX",
+      location: "Rosenberg, TX",
       image: "/lovable-uploads/9b409e51-e319-4d2f-a64f-0db55d5b4e73.png",
       description: "Large-scale forest management and selective clearing for residential developments"
     }
