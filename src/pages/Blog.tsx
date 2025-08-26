@@ -244,34 +244,20 @@ const Blog = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Expert insights and tips for maintaining healthy trees in Houston's unique climate
           </p>
-          
-          {/* Badges Section */}
-          <div className="flex justify-center items-center gap-6 mt-8 mb-4">
-            <div className="bg-gradient-primary p-4 rounded-full shadow-elegant">
-              <Badge className="bg-white/90 text-primary font-semibold px-4 py-2 text-sm hover:bg-white transition-colors">
-                🌪️ Hurricane Preparation
-              </Badge>
-            </div>
-            <div className="bg-gradient-subtle p-4 rounded-full shadow-soft">
-              <Badge className="bg-success/10 text-success font-semibold px-4 py-2 text-sm border border-success/20">
-                🌳 Tree Health
-              </Badge>
-            </div>
-          </div>
         </header>
 
         {/* Blog Posts */}
         <div className="space-y-12">
           {blogPosts.map((post) => (
             <article key={post.id} className="max-w-4xl mx-auto">
+              <div className="flex justify-center mb-6">
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                  {post.category === "Hurricane Preparation" ? "🌪️ Hurricane Preparation" : "🌳 Tree Health"}
+                </Badge>
+              </div>
+              
               <Card className="border-0 shadow-soft bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                      {post.category}
-                    </Badge>
-                  </div>
-                  
                   <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
                     {post.title}
                   </CardTitle>
