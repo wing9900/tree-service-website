@@ -28,13 +28,13 @@ const Gallery = () => {
       image: "/lovable-uploads/5944f598-0061-466f-8e06-320c8005941e.png",
       description: "Beautiful example of how proper tree care enhances property value and curb appeal"
     },
-    {
-      id: 3,
-      title: "Landscape Tree Maintenance",
-      category: "Tree Pruning",
-      location: "The Woodlands, TX",
-      image: "/lovable-uploads/8b7ff4ea-2009-4747-934a-12ebcf276408.png",
-      description: "Professional pruning and maintenance of mature oak trees for optimal health and safety"
+     {
+      id: 7,
+      title: "Landscape Design Integration",
+      category: "Landscape Design",
+      location: "Houston, TX",
+      image: "/lovable-uploads/eda396dd-d8a3-4d24-9117-15aaad371689.png",
+      description: "Professional integration of tree care with landscape design and garden features"
     },
     {
       id: 4,
@@ -61,13 +61,14 @@ const Gallery = () => {
       description: "Customized fertilization programs providing key nutrients to promote lush, green growth and build resilience against our hot summers."
     },
     {
-      id: 7,
-      title: "Landscape Design Integration",
-      category: "Landscape Design",
-      location: "Houston, TX",
-      image: "/lovable-uploads/eda396dd-d8a3-4d24-9117-15aaad371689.png",
-      description: "Professional integration of tree care with landscape design and garden features"
+      id: 3,
+      title: "Landscape Tree Maintenance",
+      category: "Tree Trimming",
+      location: "The Woodlands, TX",
+      image: "/lovable-uploads/8b7ff4ea-2009-4747-934a-12ebcf276408.png",
+      description: "Professional pruning and maintenance of mature oak trees for optimal health and safety"
     },
+  
     {
       id: 8,
       title: "Forest Management",
