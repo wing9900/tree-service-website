@@ -14,11 +14,11 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      title: "Professional Lot Clearing",
+      title: "Selective Lot Clearing",
       category: "Lot Clearing",
       location: "Houston, TX",
       image: "/lovable-uploads/c560043f-b9f2-45db-bea6-329e65825c95.png",
-      description: "Comprehensive lot clearing project showcasing our professional forest management services"
+      description: "Selective lot clearing project showcasing our professional forest management services"
     },
     {
       id: 2,
