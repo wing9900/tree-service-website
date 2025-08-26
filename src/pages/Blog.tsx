@@ -250,14 +250,15 @@ const Blog = () => {
         <div className="space-y-12">
           {blogPosts.map((post) => (
             <article key={post.id} className="max-w-4xl mx-auto">
+              {/* Centered Category Badge */}
+              <div className="flex justify-center mb-6">
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                  {post.category}
+                </Badge>
+              </div>
+              
               <Card className="border-0 shadow-soft bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                      {post.category}
-                    </Badge>
-                  </div>
-                  
                   <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
                     {post.title}
                   </CardTitle>

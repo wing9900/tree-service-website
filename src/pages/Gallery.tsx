@@ -143,7 +143,7 @@ const Gallery = () => {
                 variant={selectedFilter === category ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedFilter(category)}
-                className="transition-all duration-200"
+                className="transition-all duration-200 hover:bg-primary hover:text-primary-foreground"
               >
                 {category}
               </Button>
