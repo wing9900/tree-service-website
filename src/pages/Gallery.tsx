@@ -31,10 +31,10 @@ const Gallery = () => {
     {
       id: 3,
       title: "Landscape Tree Maintenance",
-      category: "Tree Pruning",
+      category: "Tree Trimming",
       location: "The Woodlands, TX",
       image: "/lovable-uploads/8b7ff4ea-2009-4747-934a-12ebcf276408.png",
-      description: "Professional vista pruning and maintenance of a mature oak tree for optimal health, safety, and view clearance"
+      description: "Professional pruning and maintenance of mature oak trees for optimal health and safety"
     },
     {
       id: 4,
@@ -46,11 +46,11 @@ const Gallery = () => {
     },
     {
       id: 5,
-      title: "Mature Tree Care",
+      title: "Tree Establishment",
       category: "Tree Care",
       location: "Conroe, TX",
       image: "/lovable-uploads/e0fa01c9-67f7-4b35-9696-dd91d85fc80e.png",
-      description: "Expert care for mature trees in residential landscape settings"
+      description: "Expert care establishing a young tree and maximizing its odds of success in residential landscape settings"
     },
     {
       id: 6,
