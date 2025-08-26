@@ -30,7 +30,7 @@ const Blog = () => {
         },
         {
           type: "heading",
-          text: "1. Promote Robust Tree Health in Houston's Humid Climate 💪"
+          text: "1. Promote Robust Tree Health in Houston's Humid Climate"
         },
         {
           type: "paragraph",
@@ -46,7 +46,7 @@ const Blog = () => {
         },
         {
           type: "heading",
-          text: "2. Minimize Hurricane Damage and Ensure Property Safety ⛈️"
+          text: "2. Minimize Hurricane Damage and Ensure Property Safety"
         },
         {
           type: "paragraph",
@@ -62,7 +62,7 @@ const Blog = () => {
         },
         {
           type: "heading",
-          text: "3. Enhance Your Houston Landscape and Property Value ✨"
+          text: "3. Enhance Your Houston Landscape and Property Value"
         },
         {
           type: "paragraph",
@@ -250,14 +250,14 @@ const Blog = () => {
         <div className="space-y-12">
           {blogPosts.map((post) => (
             <article key={post.id} className="max-w-4xl mx-auto">
-              <div className="flex justify-center mb-6">
-                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                  {post.category === "Hurricane Preparation" ? "🌪️ Hurricane Preparation" : "🌳 Tree Health"}
-                </Badge>
-              </div>
-              
               <Card className="border-0 shadow-soft bg-card/50 backdrop-blur-sm">
                 <CardHeader className="pb-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      {post.category}
+                    </Badge>
+                  </div>
+                  
                   <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
                     {post.title}
                   </CardTitle>
@@ -302,7 +302,7 @@ const Blog = () => {
             Need Professional Tree Care?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Our certified professionals are ready to help with all your tree care needs in Houston and the surrounding areas.
+            Our certified arborists are ready to help with all your tree care needs in Houston and surrounding areas.
           </p>
           <Link to="/contact">
             <Button size="lg" className="shadow-md hover:shadow-lg">
