@@ -302,7 +302,7 @@ const Blog = () => {
             Need Professional Tree Care?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Our certified arborists are ready to help with all your tree care needs in Houston and surrounding areas.
+            Our certified professionals are ready to help with all your tree care needs in Houston and the surrounding areas.
           </p>
           <Link to="/contact">
             <Button size="lg" className="shadow-md hover:shadow-lg">
