@@ -54,11 +54,11 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Professional Pruning",
-      category: "Tree Pruning",
+      title: "Lawn Fertilization",
+      category: "Lawn Care",
       location: "Pasadena, TX",
       image: "/lovable-uploads/379f6253-3016-4f42-acaf-a587854ce122.png",
-      description: "Crown thinning and structural pruning for large residential trees"
+      description: "Customized fertilization programs providing key nutrients to promote lush, green growth and build resilience against our hot summers."
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ const Gallery = () => {
       id: 8,
       title: "Forest Management",
       category: "Forest Management",
-      location: "Rosenberg, TX",
+      location: "Montgomery County, TX",
       image: "/lovable-uploads/9b409e51-e319-4d2f-a64f-0db55d5b4e73.png",
       description: "Large-scale forest management and selective clearing for residential developments"
     }
