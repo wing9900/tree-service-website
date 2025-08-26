@@ -95,7 +95,7 @@ const About = () => {
                 <Award className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">ISA Certified</h3>
                 <p className="text-sm text-muted-foreground">
-                  Our arborists are certified by the International Society of Arboriculture
+                  Our arborist is certified by the International Society of Arboriculture
                 </p>
               </CardContent>
             </Card>
