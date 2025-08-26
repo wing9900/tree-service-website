@@ -54,11 +54,11 @@ const Gallery = () => {
     },
     {
       id: 6,
-      title: "Professional Pruning",
-      category: "Tree Pruning",
+      title: "Lawn Fertilization",
+      category: "Lawn Care",
       location: "Pasadena, TX",
       image: "/lovable-uploads/379f6253-3016-4f42-acaf-a587854ce122.png",
-      description: "Crown thinning and structural pruning for large residential trees"
+      description: "Customized fertilization programs providing key nutrients to promote lush, green growth and build resilience against our hot summers."
     },
     {
       id: 7,
