@@ -99,7 +99,7 @@ const GalleryPreview = () => {
                     <img
                       src={item.image}
                       alt={`${item.title} - ${item.description}`}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 border-0"
                     />
                     
                     {/* Overlay */}
@@ -145,7 +145,7 @@ const GalleryPreview = () => {
                   <img
                     src={item.image}
                     alt={`${item.title} - ${item.description}`}
-                    className="w-full h-64 object-cover rounded-lg mb-4"
+                    className="w-full h-64 object-cover rounded-lg mb-4 border-0"
                   />
                   <DialogDescription className="text-base leading-relaxed whitespace-pre-line">
                     {item.detailedDescription}

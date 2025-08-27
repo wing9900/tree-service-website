@@ -2,7 +2,33 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Heart, Clock, Leaf, Calendar, Home, Pencil, MessageSquare, Wrench, Star, TreePine, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useEffect, useRef, useState } from "react";
 const WhyChooseUsSection = () => {
+  const [api, setApi] = useState(null);
+  const [isHovering, setIsHovering] = useState(false);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const startAutoplay = () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      intervalRef.current = setInterval(() => {
+        if (!isHovering) {
+          api.scrollNext();
+        }
+      }, 5000);
+    };
+
+    startAutoplay();
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api, isHovering]);
+
   const reviews = [{
     id: 1,
     name: "Michael R.",
@@ -206,10 +232,16 @@ const WhyChooseUsSection = () => {
           </div>
 
           {/* Reviews Carousel */}
-          <Carousel opts={{
-          align: "start",
-          loop: true
-        }} className="w-full max-w-5xl mx-auto">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true
+            }} 
+            setApi={setApi}
+            className="w-full max-w-5xl mx-auto"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             <CarouselContent className="-ml-2 md:-ml-4">
               {reviews.map(review => <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="h-full bg-white dark:bg-gray-800 shadow-lg border-0">
