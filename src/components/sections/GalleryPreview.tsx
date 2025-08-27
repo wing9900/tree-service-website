@@ -99,7 +99,7 @@ const GalleryPreview = () => {
                     <img
                       src={item.image}
                       alt={`${item.title} - ${item.description}`}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 border-0"
+                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 border-0 shadow-none outline-none ml-0.5"
                     />
                     
                     {/* Overlay */}
