@@ -38,13 +38,13 @@ const HealthManagement = () => {
               Our ISA Certified Arborists serve as "tree doctors," applying a scientific approach to tree health care based on ANSI A300 standards to protect your valuable trees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="success" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="mr-2 h-5 w-5" />
                   Schedule Tree Assessment
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <Link to="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
                   Get Health Consultation
@@ -192,29 +192,6 @@ const HealthManagement = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="section-padding bg-success text-success-foreground">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Concerned About Your Trees' Health?</h2>
-            <p className="text-xl mb-8 text-success-foreground/90">Are you concerned about the health of your trees? Schedule a tree health assessment with one of our Houston-based ISA Certified Arborists today!</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:{{PHONE}}">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call for Assessment
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Schedule Health Check
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>;
 };
 export default HealthManagement;

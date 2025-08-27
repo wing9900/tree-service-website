@@ -31,12 +31,12 @@ const TreeRemoval = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-destructive/10 to-primary/10">
+      <section className="section-padding bg-gradient-to-br from-form-steel/10 to-form-charcoal/10">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 bg-destructive/10 rounded-full">
-                <Axe className="h-12 w-12 text-destructive" />
+              <div className="p-4 bg-form-steel/10 rounded-full">
+                <Axe className="h-12 w-12 text-form-steel" />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -52,7 +52,7 @@ const TreeRemoval = () => {
                   Emergency Service Available
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <Link to="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
                   Get Free Estimate
@@ -123,31 +123,6 @@ const TreeRemoval = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Need Professional Tree Removal?</h2>
-            <p className="text-xl mb-8 text-primary-foreground/90">
-              When a tree must be removed, trust the certified professionals. Call us today for a free, comprehensive estimate for your tree removal needs in Houston, TX.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:{{PHONE}}">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call for Immediate Service
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Schedule Free Estimate
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

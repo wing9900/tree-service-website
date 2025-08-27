@@ -35,7 +35,7 @@ const Emergency = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 bg-emergency/20 rounded-full animate-pulse">
+              <div className="p-4 bg-emergency/20 rounded-full">
                 <Zap className="h-12 w-12 text-emergency" />
               </div>
             </div>
@@ -52,7 +52,7 @@ const Emergency = () => {
                   EMERGENCY HOTLINE
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <Link to="/contact">
                   Request Emergency Service
                 </Link>
@@ -83,9 +83,9 @@ const Emergency = () => {
         <div className="container-custom">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <AlertTriangle className="h-8 w-8 animate-pulse" />
+              <AlertTriangle className="h-8 w-8" />
               <h2 className="text-2xl font-bold">STORM EMERGENCY?</h2>
-              <AlertTriangle className="h-8 w-8 animate-pulse" />
+              <AlertTriangle className="h-8 w-8" />
             </div>
             <p className="text-xl mb-4">Don't wait - trees under storm stress are extremely dangerous</p>
             <Button size="xl" variant="secondary" asChild>
@@ -142,26 +142,6 @@ const Emergency = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="section-padding bg-destructive text-destructive-foreground">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="h-16 w-16 animate-pulse" />
-            </div>
-            <h2 className="text-3xl font-bold mb-4">Tree Emergency? Don't Wait!</h2>
-            <p className="text-xl mb-8 text-destructive-foreground/90">
-              If you have a tree-related storm emergency, do not hesitate. Every minute counts when dealing with hazardous trees.
-            </p>
-            <Button size="xl" variant="secondary" asChild>
-              <a href="tel:{{PHONE}}" className="font-bold text-lg">
-                <Phone className="mr-3 h-6 w-6" />
-                CALL 24/7 EMERGENCY HOTLINE NOW
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

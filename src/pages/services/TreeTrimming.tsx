@@ -46,13 +46,13 @@ const TreeTrimming = () => {
               Expert tree trimming services that adhere to ANSI A300 standards, ensuring every cut enhances the health, safety, and beauty of your trees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="cta" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now for Free Estimate
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <Link to="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
                   Schedule Consultation
@@ -123,31 +123,6 @@ const TreeTrimming = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Ready to Invest in Your Trees' Health?</h2>
-            <p className="text-xl mb-8 text-primary-foreground/90">
-              Invest in the long-term health and safety of your trees. Contact us today for a professional pruning consultation in Houston or any surrounding community!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:{{PHONE}}">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call for Immediate Service
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Get Free Consultation
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

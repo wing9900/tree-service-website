@@ -46,13 +46,13 @@ const LandClearing = () => {
               Comprehensive land and lot clearing services for residential and commercial clients. We merge heavy-duty efficiency with the precision of ISA Certified Arborists.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="cta" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="mr-2 h-5 w-5" />
                   Get Project Quote
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="emergency" asChild>
                 <Link to="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
                   Schedule Site Visit
@@ -161,31 +161,6 @@ const LandClearing = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-xl mb-8 text-primary-foreground/90">
-              Ready to start your next project? Contact us for an on-site consultation and a detailed estimate for your land clearing needs in Houston, TX.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:{{PHONE}}">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call for Site Visit
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Request Detailed Estimate
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
