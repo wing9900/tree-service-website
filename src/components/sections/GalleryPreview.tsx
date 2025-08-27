@@ -124,7 +124,7 @@ const GalleryPreview = () => {
                   </div>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto border-0" style={{ border: 'none', boxShadow: 'none' }}>
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -137,8 +137,8 @@ const GalleryPreview = () => {
                     </span>
                   </div>
                 </DialogHeader>
-                <div className="mt-4">
-                  <div className="w-full bg-transparent p-0 m-0" style={{ border: 'none', boxShadow: 'none', outline: 'none' }}>
+                <div className="mt-4" style={{ border: 'none', padding: '0', margin: '16px 0 0 0' }}>
+                  <div className="w-full" style={{ border: 'none', boxShadow: 'none', outline: 'none', background: 'transparent' }}>
                     <img
                       src={item.image}
                       alt={`${item.title} - ${item.description}`}
@@ -148,8 +148,9 @@ const GalleryPreview = () => {
                         boxShadow: 'none', 
                         outline: 'none',
                         borderRadius: '0px',
-                        margin: '0',
-                        padding: '0'
+                        margin: '0 0 24px 0',
+                        padding: '0',
+                        display: 'block'
                       }}
                     />
                   </div>
