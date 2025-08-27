@@ -92,7 +92,7 @@ const GalleryPreview = () => {
             <Dialog key={item.title}>
               <DialogTrigger asChild>
                 <Card 
-                  className="group overflow-hidden hover-lift animate-fade-in cursor-pointer"
+                  className="group overflow-hidden hover-lift animate-fade-in cursor-pointer border-0"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative overflow-hidden">
