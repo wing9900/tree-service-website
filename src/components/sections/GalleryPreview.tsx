@@ -124,7 +124,7 @@ const GalleryPreview = () => {
                   </div>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="max-w-2xl">
+              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -145,7 +145,7 @@ const GalleryPreview = () => {
                   <img
                     src={item.image}
                     alt={`${item.title} - ${item.description}`}
-                    className="w-full h-64 object-cover rounded-lg mb-4 border-0"
+                    className="w-full h-auto max-h-96 object-contain rounded-lg mb-6 border-0"
                   />
                   <DialogDescription className="text-base leading-relaxed whitespace-pre-line">
                     {item.detailedDescription}
