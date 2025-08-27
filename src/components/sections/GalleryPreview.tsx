@@ -130,11 +130,7 @@ const GalleryPreview = () => {
                     <MapPin className="h-5 w-5 text-primary" />
                     {item.project}
                   </DialogTitle>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
-                      {item.location}
-                    </span>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Settings className="h-4 w-4" />
                       {item.service}
@@ -145,7 +141,8 @@ const GalleryPreview = () => {
                   <img
                     src={item.image}
                     alt={`${item.title} - ${item.description}`}
-                    className="w-full h-auto max-h-96 object-contain rounded-lg mb-6 border-0"
+                    className="w-full h-auto max-h-96 object-contain rounded-lg mb-6 border-0 shadow-none outline-none ring-0"
+                    style={{ border: 'none', boxShadow: 'none', outline: 'none' }}
                   />
                   <DialogDescription className="text-base leading-relaxed whitespace-pre-line">
                     {item.detailedDescription}
