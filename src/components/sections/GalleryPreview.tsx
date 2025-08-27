@@ -138,12 +138,21 @@ const GalleryPreview = () => {
                   </div>
                 </DialogHeader>
                 <div className="mt-4">
-                  <img
-                    src={item.image}
-                    alt={`${item.title} - ${item.description}`}
-                    className="w-full h-auto max-h-96 object-contain rounded-lg mb-6 border-0 shadow-none outline-none ring-0"
-                    style={{ border: 'none', boxShadow: 'none', outline: 'none' }}
-                  />
+                  <div className="w-full bg-transparent p-0 m-0" style={{ border: 'none', boxShadow: 'none', outline: 'none' }}>
+                    <img
+                      src={item.image}
+                      alt={`${item.title} - ${item.description}`}
+                      className="w-full h-auto max-h-96 object-contain mb-6"
+                      style={{ 
+                        border: 'none', 
+                        boxShadow: 'none', 
+                        outline: 'none',
+                        borderRadius: '0px',
+                        margin: '0',
+                        padding: '0'
+                      }}
+                    />
+                  </div>
                   <DialogDescription className="text-base leading-relaxed whitespace-pre-line">
                     {item.detailedDescription}
                   </DialogDescription>
