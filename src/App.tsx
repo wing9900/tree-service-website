@@ -11,6 +11,12 @@ import ServiceAreas from "./pages/ServiceAreas";
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
+import TreeTrimming from "./pages/services/TreeTrimming";
+import TreeRemoval from "./pages/services/TreeRemoval";
+import StumpGrinding from "./pages/services/StumpGrinding";
+import Emergency from "./pages/services/Emergency";
+import LandClearing from "./pages/services/LandClearing";
+import HealthManagement from "./pages/services/HealthManagement";
 
 const queryClient = new QueryClient();
 
