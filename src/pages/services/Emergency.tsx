@@ -46,13 +46,13 @@ const Emergency = () => {
               When storms strike and trees threaten your property, you need fast, reliable, professional emergency response. We're here 24/7 to help secure your property and safely remove hazards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="emergency" asChild>
+              <Button size="xl" variant="default" asChild>
                 <a href="tel:{{PHONE}}">
                   <AlertTriangle className="mr-2 h-6 w-6" />
                   EMERGENCY HOTLINE
                 </a>
               </Button>
-              <Button size="lg" variant="emergency" asChild>
+              <Button size="xl" variant="default" asChild>
                 <Link to="/contact">
                   Request Emergency Service
                 </Link>
@@ -66,13 +66,15 @@ const Emergency = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Living on the Gulf Coast means living with the constant threat of severe weather. Hurricanes, tropical storms, and violent thunderstorms can wreak havoc on our trees, turning them into immediate dangers. When a tree has fallen on your house, car, or is blocking your street, you need a fast, reliable, and professional team you can trust.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We provide 24/7 emergency tree services for storm damage across the entire Houston metroplex. Our rapid response crews are on standby to help you secure your property and safely remove hazards, operating with an unwavering commitment to the ANSI Z133 safety standards.
-              </p>
+            <div className="bg-destructive/5 border-l-4 border-l-destructive p-6 rounded-r-lg">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Living on the Gulf Coast means living with the constant threat of severe weather. Hurricanes, tropical storms, and violent thunderstorms can wreak havoc on our trees, turning them into immediate dangers. When a tree has fallen on your house, car, or is blocking your street, you need a fast, reliable, and professional team you can trust.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We provide 24/7 emergency tree services for storm damage across the entire Houston metroplex. Our rapid response crews are on standby to help you secure your property and safely remove hazards, operating with an unwavering commitment to the ANSI Z133 safety standards.
+                </p>
+              </div>
             </div>
           </div>
         </div>

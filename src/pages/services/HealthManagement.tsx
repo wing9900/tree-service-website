@@ -38,13 +38,13 @@ const HealthManagement = () => {
               Our ISA Certified Arborists serve as "tree doctors," applying a scientific approach to tree health care based on ANSI A300 standards to protect your valuable trees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="emergency" asChild>
+              <Button size="lg" variant="default" asChild>
                 <a href="tel:{{PHONE}}">
                   <Phone className="mr-2 h-5 w-5" />
                   Schedule Tree Assessment
                 </a>
               </Button>
-              <Button size="lg" variant="emergency" asChild>
+              <Button size="lg" variant="default" asChild>
                 <Link to="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
                   Get Health Consultation
@@ -59,13 +59,15 @@ const HealthManagement = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Your mature trees are a priceless investment, but they are also complex organisms facing numerous threats in our region. Houston's intense summer heat, high humidity, and periods of drought or flood create a challenging environment where pests and diseases can flourish. A subtle change in a tree's appearance can often be the first sign of a serious health issue.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At Houston Tree Care Experts, our ISA Certified Arborists serve as "tree doctors," applying a scientific approach to tree health care based on ANSI A300 standards. We offer comprehensive solutions to diagnose, treat, and prevent problems, protecting your valuable trees for years to come.
-              </p>
+            <div className="bg-success/5 border-l-4 border-l-success p-6 rounded-r-lg">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Your mature trees are a priceless investment, but they are also complex organisms facing numerous threats in our region. Houston's intense summer heat, high humidity, and periods of drought or flood create a challenging environment where pests and diseases can flourish. A subtle change in a tree's appearance can often be the first sign of a serious health issue.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  At Houston Tree Care Experts, our ISA Certified Arborists serve as "tree doctors," applying a scientific approach to tree health care based on ANSI A300 standards. We offer comprehensive solutions to diagnose, treat, and prevent problems, protecting your valuable trees for years to come.
+                </p>
+              </div>
             </div>
           </div>
         </div>
