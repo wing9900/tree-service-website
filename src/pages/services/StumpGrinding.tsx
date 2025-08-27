@@ -90,15 +90,13 @@ const StumpGrinding = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-accent/5 border-l-4 border-l-accent p-6 rounded-r-lg">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  After a tree removal, the remaining stump is an unsightly obstacle. In your Houston yard, it can be a stubborn tripping hazard, a nuisance to mow around, and an open invitation for pests like termites, fire ants, and roaches. Don't let an old stump compromise the safety and beauty of your landscape.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Houston Tree Care Experts provides professional stump grinding services that are fast, effective, and completely eliminate the problem. We use powerful, state-of-the-art equipment to make that stump disappear, allowing you to fully reclaim your outdoor space.
-                </p>
-              </div>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                After a tree removal, the remaining stump is an unsightly obstacle. In your Houston yard, it can be a stubborn tripping hazard, a nuisance to mow around, and an open invitation for pests like termites, fire ants, and roaches. Don't let an old stump compromise the safety and beauty of your landscape.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Houston Tree Care Experts provides professional stump grinding services that are fast, effective, and completely eliminate the problem. We use powerful, state-of-the-art equipment to make that stump disappear, allowing you to fully reclaim your outdoor space.
+              </p>
             </div>
           </div>
         </div>
@@ -116,7 +114,7 @@ const StumpGrinding = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {process.map((step, index) => (
-              <Card key={step.title} className="hover-lift animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={step.title} className="hover-lift animate-fade-in bg-accent/5 border-l-4 border-l-accent" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-accent/10 rounded-lg flex-shrink-0">

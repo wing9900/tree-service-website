@@ -67,15 +67,13 @@ const TreeRemoval = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-form-steel/5 border-l-4 border-l-form-steel p-6 rounded-r-lg">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  While our goal is always to preserve healthy trees, removal is often the only responsible choice to protect your home and family. A dead, diseased, or storm-damaged tree is a significant threat, especially in the Greater Houston area where severe weather can strike with little warning. Tree removal is the most hazardous aspect of arboriculture and demands qualified, insured professionals.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Houston Tree Care Experts specializes in safe and efficient tree removal throughout Houston, Katy, Sugar Land, and all of Harris County. Our operations are meticulously planned and executed in full compliance with ANSI Z133 safety standards, the industry's benchmark for safety, ensuring your project is completed without incident.
-                </p>
-              </div>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                While our goal is always to preserve healthy trees, removal is often the only responsible choice to protect your home and family. A dead, diseased, or storm-damaged tree is a significant threat, especially in the Greater Houston area where severe weather can strike with little warning. Tree removal is the most hazardous aspect of arboriculture and demands qualified, insured professionals.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Houston Tree Care Experts specializes in safe and efficient tree removal throughout Houston, Katy, Sugar Land, and all of Harris County. Our operations are meticulously planned and executed in full compliance with ANSI Z133 safety standards, the industry's benchmark for safety, ensuring your project is completed without incident.
+              </p>
             </div>
           </div>
         </div>

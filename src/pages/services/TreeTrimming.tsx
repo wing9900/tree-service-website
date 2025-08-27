@@ -67,15 +67,13 @@ const TreeTrimming = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-primary/5 border-l-4 border-l-primary p-6 rounded-r-lg">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  In the sprawling Houston metro area, our trees are a vital shield against the Texas sun and a cornerstone of our property values. From the majestic live oaks in Memorial Villages and River Oaks to the tall pines of The Woodlands and Kingwood, these natural assets require professional care to thrive. Unmaintained trees can quickly become a liability, especially given Houston's propensity for severe thunderstorms and hurricanes.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Houston Tree Care Experts, our ISA Certified Arborists provide expert tree trimming and pruning services that adhere to the highest industry standards. All our work is performed in strict accordance with ANSI A300 standards, the nationally accepted best practices for tree care, ensuring every cut enhances the health, safety, and beauty of your trees.
-                </p>
-              </div>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                In the sprawling Houston metro area, our trees are a vital shield against the Texas sun and a cornerstone of our property values. From the majestic live oaks in Memorial Villages and River Oaks to the tall pines of The Woodlands and Kingwood, these natural assets require professional care to thrive. Unmaintained trees can quickly become a liability, especially given Houston's propensity for severe thunderstorms and hurricanes.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                At Houston Tree Care Experts, our ISA Certified Arborists provide expert tree trimming and pruning services that adhere to the highest industry standards. All our work is performed in strict accordance with ANSI A300 standards, the nationally accepted best practices for tree care, ensuring every cut enhances the health, safety, and beauty of your trees.
+              </p>
             </div>
           </div>
         </div>

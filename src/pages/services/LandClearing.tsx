@@ -67,15 +67,13 @@ const LandClearing = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-primary/5 border-l-4 border-l-primary p-6 rounded-r-lg">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Whether you're preparing a site for a new custom home in a developing area or reclaiming an overgrown part of your property, professional land clearing is the crucial first step. Clearing land in the Houston area requires powerful equipment, a strategic plan, and a deep understanding of how to manage our region's unique vegetation and soil.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Houston Tree Care Experts offers comprehensive land and lot clearing services for residential and commercial clients. We merge heavy-duty efficiency with the precision of ISA Certified Arborists to deliver a clean, build-ready site.
-                </p>
-              </div>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Whether you're preparing a site for a new custom home in a developing area or reclaiming an overgrown part of your property, professional land clearing is the crucial first step. Clearing land in the Houston area requires powerful equipment, a strategic plan, and a deep understanding of how to manage our region's unique vegetation and soil.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Houston Tree Care Experts offers comprehensive land and lot clearing services for residential and commercial clients. We merge heavy-duty efficiency with the precision of ISA Certified Arborists to deliver a clean, build-ready site.
+              </p>
             </div>
           </div>
         </div>
