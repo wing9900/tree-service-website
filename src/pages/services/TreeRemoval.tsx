@@ -91,7 +91,7 @@ const TreeRemoval = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={service.title} className="hover-lift animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={service.title} className="hover-lift animate-fade-in bg-form-steel/5 border-l-4 border-l-form-steel" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
