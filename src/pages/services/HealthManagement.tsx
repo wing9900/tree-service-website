@@ -3,33 +3,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Stethoscope, Search, Bug, Sprout, Shovel, Phone, Calendar } from "lucide-react";
-
 const HealthManagement = () => {
-  const services = [
-    {
-      title: "Tree Health and Risk Assessments",
-      description: "Thorough evaluations identifying signs of disease, pest infestations, and structural defects. Using ISA Tree Risk Assessment Qualification (TRAQ) methodology for comprehensive analysis.",
-      icon: Search
-    },
-    {
-      title: "Pest and Disease Diagnosis and Treatment", 
-      description: "Accurate diagnosis from common fungal issues to invasive pests. We prescribe targeted treatment plans using Integrated Pest Management (IPM) principles for environmentally-sensitive solutions.",
-      icon: Bug
-    },
-    {
-      title: "Fertilization and Soil Management",
-      description: "Deep-root fertilization with custom nutrient blends injected directly into the root zone to boost your tree's vigor and natural defenses against Houston's challenging conditions.",
-      icon: Sprout
-    },
-    {
-      title: "Root Zone Management",
-      description: "Using specialized tools like AirSpade to safely relieve soil compaction and inspect for girdling roots, improving water and oxygen availability for optimal tree health.",
-      icon: Shovel
-    }
-  ];
-
-  return (
-    <Layout>
+  const services = [{
+    title: "Tree Health and Risk Assessments",
+    description: "Thorough evaluations identifying signs of disease, pest infestations, and structural defects. Using ISA Tree Risk Assessment Qualification (TRAQ) methodology for comprehensive analysis.",
+    icon: Search
+  }, {
+    title: "Pest and Disease Diagnosis and Treatment",
+    description: "Accurate diagnosis from common fungal issues to invasive pests. We prescribe targeted treatment plans using Integrated Pest Management (IPM) principles for environmentally-sensitive solutions.",
+    icon: Bug
+  }, {
+    title: "Fertilization and Soil Management",
+    description: "Deep-root fertilization with custom nutrient blends injected directly into the root zone to boost your tree's vigor and natural defenses against Houston's challenging conditions.",
+    icon: Sprout
+  }, {
+    title: "Root Zone Management",
+    description: "Using specialized tools like AirSpade to safely relieve soil compaction and inspect for girdling roots, improving water and oxygen availability for optimal tree health.",
+    icon: Shovel
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-success/10 to-primary/10">
         <div className="container-custom">
@@ -90,8 +82,9 @@ const HealthManagement = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={service.title} className="hover-lift animate-fade-in border-l-4 border-l-success" style={{animationDelay: `${index * 0.1}s`}}>
+            {services.map((service, index) => <Card key={service.title} className="hover-lift animate-fade-in border-l-4 border-l-success" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-success/10 rounded-lg flex-shrink-0">
@@ -103,8 +96,7 @@ const HealthManagement = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -205,9 +197,7 @@ const HealthManagement = () => {
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Concerned About Your Trees' Health?</h2>
-            <p className="text-xl mb-8 text-success-foreground/90">
-              Are you concerned about the health of your trees? Schedule a Tree Health Assessment with one of our Houston-based ISA Certified Arborists today!
-            </p>
+            <p className="text-xl mb-8 text-success-foreground/90">Are you concerned about the health of your trees? Schedule a tree health assessment with one of our Houston-based ISA Certified Arborists today!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <a href="tel:{{PHONE}}">
@@ -225,8 +215,6 @@ const HealthManagement = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default HealthManagement;
