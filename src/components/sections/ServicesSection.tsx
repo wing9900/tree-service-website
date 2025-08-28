@@ -50,7 +50,7 @@ const ServicesSection = () => {
     icon: Stethoscope,
     image: healthManagementImg,
     link: "/services/health-management",
-    features: ["Tree Health and Risk Assessments", "Pest and Disease Diagnosis and Treatment", "Fertilization and Soil Management", "Root Zone Management"]
+    features: ["Tree health and risk assessments", "Pest and disease diagnosis and treatment", "Fertilization and soil management", "Root zone management"]
   }];
   return <section id="services" className="section-padding bg-muted/30">
       <div className="container-custom">
