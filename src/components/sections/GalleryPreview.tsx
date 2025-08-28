@@ -12,7 +12,7 @@ const GalleryPreview = () => {
       image: "/lovable-uploads/11a3b252-343e-454b-8e6e-cd2af1d8bd6a.png",
       description: "Large hedge trimming completed for a resident in Katy, TX",
       detailedDescription: "In the well-manicured neighborhoods of Katy, a crisp, clean hedge line is essential for curb appeal. This client's boxwood hedge had become overgrown and uneven due to the intense Texas summer sun and rapid growth. Our team performed a professional shaping and trimming, restoring sharp, geometric lines and uniform height. We carefully removed all clippings, leaving the property looking pristine.\n\nThe result: A perfectly sculpted hedge that dramatically enhances the home's aesthetic, promotes healthier, denser growth, and restores a sense of order and elegance to the landscape.",
-      location: "Katy, TX",
+      project: "Hedge Shaping in Katy, TX",
       service: "Professional Hedge Trimming"
     },
     {
