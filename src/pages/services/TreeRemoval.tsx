@@ -40,7 +40,7 @@ const TreeRemoval = () => {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Professional Tree Removal in Houston | Adhering to ANSI Z133 Safety Standards
+              Professional Tree Removal in Houston Adhering to ANSI Z133 Standards
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Safe and efficient tree removal throughout Houston, Katy, Sugar Land, and all of Harris County. Operations executed in full compliance with ANSI Z133 safety standards.
