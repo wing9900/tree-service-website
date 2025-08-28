@@ -33,22 +33,6 @@ const Houston = () => {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="accent" size="lg" asChild>
-                  <a href="tel:{{PHONE}}">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Get Free Estimate
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">
-                    Schedule Consultation
-                  </Link>
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
