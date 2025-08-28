@@ -17,6 +17,12 @@ import StumpGrinding from "./pages/services/StumpGrinding";
 import Emergency from "./pages/services/Emergency";
 import LandClearing from "./pages/services/LandClearing";
 import HealthManagement from "./pages/services/HealthManagement";
+import Houston from "./pages/areas/Houston";
+import Katy from "./pages/areas/Katy";
+import SugarLand from "./pages/areas/SugarLand";
+import Richmond from "./pages/areas/Richmond";
+import Rosenberg from "./pages/areas/Rosenberg";
+import Fulshear from "./pages/areas/Fulshear";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +71,12 @@ const App = () => (
           <Route path="/services/emergency" element={<Emergency />} />
           <Route path="/services/land-clearing" element={<LandClearing />} />
           <Route path="/services/health-management" element={<HealthManagement />} />
+          <Route path="/areas/houston" element={<Houston />} />
+          <Route path="/areas/katy" element={<Katy />} />
+          <Route path="/areas/sugar-land" element={<SugarLand />} />
+          <Route path="/areas/richmond" element={<Richmond />} />
+          <Route path="/areas/rosenberg" element={<Rosenberg />} />
+          <Route path="/areas/fulshear" element={<Fulshear />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

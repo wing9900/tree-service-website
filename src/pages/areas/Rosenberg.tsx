@@ -1,0 +1,59 @@
+import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const Rosenberg = () => {
+  return (
+    <Layout>
+      <section className="section-padding bg-muted/30">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <MapPin className="h-6 w-6 text-accent" />
+                <h1 className="text-4xl lg:text-5xl font-bold">Rosenberg, TX</h1>
+              </div>
+              <p className="text-xl text-muted-foreground">
+                Dedicated Tree Services for the Rosenberg Community
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="bg-card rounded-2xl p-8 shadow-soft mb-8">
+              <div className="prose prose-lg max-w-none text-foreground">
+                <p className="text-lg mb-6">
+                  At [Tree Service Company Name], we are honored to provide professional tree care to the residents of Rosenberg, a community with deep roots and a strong sense of history. We specialize in caring for the large, mature trees that grace Rosenberg's established neighborhoods, offering services like health assessments, structural pruning, and safe removal when necessary. We bring modern arboricultural science to every job, ensuring these legacy trees are preserved for future generations to enjoy.
+                </p>
+                
+                <p className="text-lg">
+                  The historic trees of Rosenberg are irreplaceable assets, but they require expert care to remain safe and healthy. Our certified arborists are skilled in identifying and mitigating potential hazards in older trees, from structural weaknesses to disease. We are committed to helping Rosenberg residents protect their homes and preserve the unique, small-town charm that these magnificent trees help create, ensuring a safe and beautiful community for years to come.
+                </p>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="accent" size="lg" asChild>
+                  <a href="tel:{{PHONE}}">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Get Free Estimate
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/contact">
+                    Schedule Consultation
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Rosenberg;
