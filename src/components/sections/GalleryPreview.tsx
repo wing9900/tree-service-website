@@ -22,7 +22,6 @@ const GalleryPreview = () => {
       detailedDescription: "After a violent thunderstorm swept through Sugar Land, this homeowner was faced with a massive oak limb that had snapped and fallen, completely blocking their driveway and crushing a section of their fence. Our 24/7 emergency crew responded immediately to assess the hazard. We safely dismantled the heavy limb using specialized rigging to prevent further damage, cleared all debris from the property, and secured the area.\n\nThe result: The client's property was made safe and accessible in a matter of hours, providing immediate peace of mind and preventing a prolonged, stressful disruption.",
       project: "Emergency Storm Response in Sugar Land, TX",
       location: "Sugar Land, TX",
-      service: "Emergency Storm Damage Cleanup"
     },
     {
       title: "Safe Tree Removal",
@@ -32,7 +31,6 @@ const GalleryPreview = () => {
       detailedDescription: "A large, mature pine tree on this Pasadena property had died, becoming a significant threat to the client's home with every gust of wind. Due to its proximity to the house and a neighboring property, this was a highly technical removal. Our certified arborists used advanced climbing and rigging techniques to carefully dismantle the tree from the top down, safely lowering each section into a designated drop zone.\n\nThe result: A major hazard was completely eliminated, protecting the client's home and family. The entire removal was executed with precision and zero impact on the surrounding property.",
       project: "Safe Tree Removal in Pasadena, TX",
       location: "Pasadena, TX",
-      service: "Hazardous Tree Removal"
     },
     {
       title: "Stump Grinding Service",
@@ -42,7 +40,6 @@ const GalleryPreview = () => {
       detailedDescription: "Following the removal of a large pine tree, this Conroe homeowner was left with a stubborn, oversized stump in the middle of their backyard. It was a constant obstacle for mowing and a tripping hazard for their children. Our team brought in a powerful stump grinder and obliterated the stump, grinding it well below the ground's surface. We then raked the area clean, hauled away the excess debris, and filled the hole with topsoil.\n\nThe result: The yard space was completely reclaimed. The lawn is now level, safe, and easy to maintain, with no trace that a large tree and stump were ever there.",
       project: "Stump Grinding in Conroe, TX",
       location: "Conroe, TX",
-      service: "Stump Grinding Service"
     },
     {
       title: "Professional Tree Pruning",
@@ -52,7 +49,6 @@ const GalleryPreview = () => {
       detailedDescription: "The magnificent live oak on this Houston property was casting dense shade, causing the lawn below to struggle. Its lower branches were also encroaching on the driveway. Following ISA and ANSI A300 standards, our arborists performed a professional crown thinning, selectively removing branches to improve airflow and allow dappled sunlight to penetrate the canopy. We also elevated the crown, providing ample clearance for vehicles and pedestrians.\n\nThe result: A healthier, more beautiful tree that is now more resilient to Houston's high winds, a brighter lawn that can thrive, and safe, usable space beneath the canopy.",
       project: "Professional Tree Pruning in Houston, TX",
       location: "Houston, TX",
-      service: "Crown Thinning & Elevation"
     },
     {
       title: "Professional Lot Clearing",
@@ -62,7 +58,6 @@ const GalleryPreview = () => {
       detailedDescription: "This client was preparing to build a new workshop on an overgrown and unusable section of their large Houston lot. The area was dense with underbrush, invasive species, and small, undesirable trees. Our crew brought in specialized equipment to clear the entire footprint of the new project, carefully working around several mature oaks the owner wanted to preserve. We cleared, chipped, and hauled away all debris, leaving a clean, graded site.\n\nThe result: An unusable, overgrown area was transformed into a build-ready site in just a few days, allowing the client to move forward with their construction project on a clean, professional foundation.",
       project: "Professional Lot Clearing in Houston, TX",
       location: "Houston, TX",
-      service: "Comprehensive Lot Clearing"
     }
   ];
 
