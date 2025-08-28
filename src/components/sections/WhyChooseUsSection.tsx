@@ -148,7 +148,7 @@ const WhyChooseUsSection = () => {
     title: "Innovative Equipment & Techniques",
     description: "We invest in modern tools and proven methods to provide faster, safer, and more precise tree care for your property.",
     badge: "Advanced",
-    bgColor: "bg-light-gray-50 dark:bg-light-gray-950/50",
+    bgColor: "bg-gray-50 dark:bg-gray-950/50",
     borderColor: "border-indigo-200 dark:border-indigo-800"
   }, {
     icon: Calendar,
