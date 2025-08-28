@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
-import { Eye, ArrowRight, Image as ImageIcon, MapPin, Settings } from "lucide-react";
+import { Eye, ArrowRight, Image as ImageIcon, MapPin } from "lucide-react";
 
 const GalleryPreview = () => {
   const galleryItems = [
@@ -128,12 +128,6 @@ const GalleryPreview = () => {
                     <MapPin className="h-5 w-5 text-primary" />
                     {item.project}
                   </DialogTitle>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Settings className="h-4 w-4" />
-                      {item.service}
-                    </span>
-                  </div>
                 </DialogHeader>
                 <div className="mt-4" style={{ border: 'none', padding: '0', margin: '16px 0 0 0' }}>
                   <div className="w-full" style={{ border: 'none', boxShadow: 'none', outline: 'none', background: 'transparent' }}>
