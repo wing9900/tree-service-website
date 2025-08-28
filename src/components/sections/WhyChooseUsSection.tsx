@@ -17,7 +17,7 @@ const WhyChooseUsSection = () => {
         if (!isHovering) {
           api.scrollNext();
         }
-      }, 5000);
+      }, 4000);
     };
 
     startAutoplay();
