@@ -1,7 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Rosenberg = () => {
   return (
@@ -11,10 +8,7 @@ const Rosenberg = () => {
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-8">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <MapPin className="h-6 w-6 text-accent" />
-                <h1 className="text-4xl lg:text-5xl font-bold">Rosenberg, TX</h1>
-              </div>
+              <h1 className="text-4xl lg:text-5xl font-bold">Rosenberg, TX</h1>
               <p className="text-xl text-muted-foreground">
                 Dedicated Tree Services for the Rosenberg Community
               </p>
