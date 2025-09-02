@@ -74,64 +74,95 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Contact Form - Centered */}
-            <div className="max-w-2xl mx-auto">
-              <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="name" className="text-gray-700 font-medium mb-2 block">
-                          First (Required)
-                        </Label>
-                        <Input id="name" type="text" value={formData.firstName} onChange={e => handleChange("firstName", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="First Name" />
+            {/* Contact Form and Booking Calendar - Side by Side */}
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Contact Form - Left Side */}
+                <div>
+                  <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-2xl font-bold text-gray-900">Send Us a Message</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-8 pt-4">
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <Label htmlFor="name" className="text-gray-700 font-medium mb-2 block">
+                              First (Required)
+                            </Label>
+                            <Input id="name" type="text" value={formData.firstName} onChange={e => handleChange("firstName", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="First Name" />
+                          </div>
+                          
+                          <div>
+                            <Label htmlFor="lastName" className="text-gray-700 font-medium mb-2 block">
+                              Last (Required)
+                            </Label>
+                            <Input id="lastName" type="text" value={formData.lastName} onChange={e => handleChange("lastName", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Last Name" />
+                          </div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <Label htmlFor="email" className="text-gray-700 font-medium mb-2 block">
+                              Email (Required)
+                            </Label>
+                            <Input id="email" type="email" value={formData.email} onChange={e => handleChange("email", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="your.email@example.com" />
+                          </div>
+
+                          <div>
+                            <Label htmlFor="phone" className="text-gray-700 font-medium mb-2 block">
+                              Phone (Required)
+                            </Label>
+                            <Input id="phone" type="tel" value={formData.phone} onChange={e => handleChange("phone", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="(555) 123-4567" />
+                          </div>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="address" className="text-gray-700 font-medium mb-2 block">
+                            Address (Required)
+                          </Label>
+                          <Input id="address" type="text" value={formData.address} onChange={e => handleChange("address", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="123 Main St, City, State ZIP" />
+                        </div>
+
+                        <div>
+                          <Label htmlFor="message" className="text-gray-700 font-medium mb-2 block">
+                            How Can We Help You?
+                          </Label>
+                          <Textarea id="message" value={formData.message} onChange={e => handleChange("message", e.target.value)} className="min-h-[120px] bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none" placeholder="Please describe your tree service needs, any specific concerns, or questions you have..." />
+                        </div>
+
+                        <Button type="submit" variant="accent" size="xl" className="w-full" disabled={isSubmitting}>
+                          {isSubmitting ? "Processing..." : "Submit"}
+                        </Button>
+                      </form>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Booking Calendar - Right Side */}
+                <div>
+                  <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-2xl font-bold text-gray-900">Schedule Your Service</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-8 pt-4">
+                      <div className="h-full min-h-[600px]">
+                        <iframe 
+                          src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
+                          style={{ width: '100%', border: 'none', overflow: 'hidden', height: '100%', minHeight: '600px' }} 
+                          scrolling="no" 
+                          id="PVAur1QLv9DSfgqPRWzn_1756787087678"
+                          title="Book Appointment"
+                        />
                       </div>
-                      
-                      <div>
-                        <Label htmlFor="lastName" className="text-gray-700 font-medium mb-2 block">
-                          Last (Required)
-                        </Label>
-                        <Input id="lastName" type="text" value={formData.lastName} onChange={e => handleChange("lastName", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Last Name" />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="email" className="text-gray-700 font-medium mb-2 block">
-                          Email (Required)
-                        </Label>
-                        <Input id="email" type="email" value={formData.email} onChange={e => handleChange("email", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="your.email@example.com" />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone" className="text-gray-700 font-medium mb-2 block">
-                          Phone (Required)
-                        </Label>
-                        <Input id="phone" type="tel" value={formData.phone} onChange={e => handleChange("phone", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="(555) 123-4567" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="address" className="text-gray-700 font-medium mb-2 block">
-                        Address (Required)
-                      </Label>
-                      <Input id="address" type="text" value={formData.address} onChange={e => handleChange("address", e.target.value)} required className="h-12 bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="123 Main St, City, State ZIP" />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message" className="text-gray-700 font-medium mb-2 block">
-                        How Can We Help You?
-                      </Label>
-                      <Textarea id="message" value={formData.message} onChange={e => handleChange("message", e.target.value)} className="min-h-[120px] bg-gray-100 border-gray-200 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none" placeholder="Please describe your tree service needs, any specific concerns, or questions you have..." />
-                    </div>
-
-                    <Button type="submit" variant="accent" size="xl" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Processing..." : "Submit"}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
+            
+            {/* Booking Calendar Script */}
+            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
           </div>
         </div>
       </section>
