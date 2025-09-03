@@ -79,7 +79,7 @@ const Contact = () => {
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Contact Form - Left Side */}
                 <div>
-                  <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
+                  <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-2xl font-bold text-gray-900">Send Us a Message</CardTitle>
                     </CardHeader>
