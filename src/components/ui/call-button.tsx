@@ -17,21 +17,6 @@ export const CallButton = ({
   variant = "default",
   size = "default"
 }: CallButtonProps) => {
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    // Detect if user is on mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-      // On mobile, use tel: link for direct calling
-      window.location.href = "tel:+19253894584";
-    } else {
-      // On desktop, open Google Voice
-      window.open("https://voice.google.com/u/0/calls?a=nc,%2B19253894584", "_blank");
-    }
-  };
-
   // Direct button styles matching the design system
   const variantClasses = {
     default: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-soft hover:shadow-medium",
@@ -57,7 +42,6 @@ export const CallButton = ({
   return (
     <a
       href="tel:+19253894584"
-      onClick={handleClick}
       className={cn(
         baseClasses,
         variantClasses[variant],
