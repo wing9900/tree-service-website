@@ -45,11 +45,6 @@ export const CallButton = ({
     <a
       href={telLink}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
-      onClick={(e) => {
-        // Ensure the tel: link works by opening it in the same window
-        e.preventDefault();
-        window.location.href = telLink;
-      }}
     >
       {showIcon && <Phone className="h-4 w-4" />}
       {children}
