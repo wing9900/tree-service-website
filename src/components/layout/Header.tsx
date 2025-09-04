@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CallButton } from "@/components/ui/call-button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Calendar, MapPin } from "lucide-react";
 const Header = () => {
@@ -136,12 +137,10 @@ const Header = () => {
 
             {/* CTA Buttons - Desktop */}
             <div className="hidden lg:flex items-center space-x-3">
-              <Button variant="cta" size="sm" asChild>
-                <a href="tel:+19253894584">
-                  <Phone className="h-4 w-4" />
-                  Call Now
-                </a>
-              </Button>
+              <CallButton variant="cta" size="sm">
+                <Phone className="h-4 w-4" />
+                Call Now
+              </CallButton>
               <Button variant="cta" size="sm" asChild>
                 <Link 
                   to="/contact"
@@ -216,12 +215,10 @@ const Header = () => {
                   })}
                   
                   <div className="pt-4 border-t space-y-3">
-                    <Button variant="cta" className="w-full" asChild>
-                       <a href="tel:+19253894584">
-                        <Phone className="h-4 w-4" />
-                        Call Now
-                      </a>
-                    </Button>
+                    <CallButton variant="cta" className="w-full">
+                      <Phone className="h-4 w-4" />
+                      Call Now
+                    </CallButton>
                     <Button variant="cta" className="w-full" asChild>
                       <Link 
                         to="/contact"
@@ -249,12 +246,10 @@ const Header = () => {
       {/* Mobile Sticky CTA Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-background border-t shadow-strong">
         <div className="flex">
-          <Button variant="cta" className="flex-1 rounded-none h-14" asChild>
-            <a href="tel:+19253894584">
-              <Phone className="h-5 w-5" />
-              Call Now
-            </a>
-          </Button>
+          <CallButton variant="cta" className="flex-1 rounded-none h-14">
+            <Phone className="h-5 w-5" />
+            Call Now
+          </CallButton>
           <Button variant="cta" className="flex-1 rounded-none h-14" asChild>
             <Link 
               to="/contact"

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { CallButton } from "@/components/ui/call-button";
 import { Phone, Calendar } from "lucide-react";
 const heroImage = "/lovable-uploads/f60dd1ab-5124-4ac2-ba31-ad13e87c46b8.png";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
@@ -31,12 +32,10 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
-            <Button variant="cta" size="xl" className="text-lg" asChild>
-              <a href="tel:+19253894584">
-                <Phone className="h-6 w-6" />
-                Call Now
-              </a>
-            </Button>
+            <CallButton variant="cta" size="xl" className="text-lg">
+              <Phone className="h-6 w-6" />
+              Call Now
+            </CallButton>
             <Button variant="cta" size="xl" className="text-lg" asChild>
               <a href="/contact">
                 <Calendar className="h-6 w-6" />
