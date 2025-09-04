@@ -6,14 +6,17 @@
     <title>Professional Tree Services in Houston | {{COMPANY_NAME}}</title>
     <meta name="description" content="Expert tree trimming, removal & emergency services in Houston, Katy, Sugar Land. Licensed arborists, 24/7 emergency response. Call {{PHONE}} for free estimate!" />
     <meta name="author" content="Lovable" />
+
     <meta property="og:title" content="aa0faec2-1316-4966-b286-314f201c2820" />
     <meta property="og:description" content="Lovable Generated Project" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
@@ -22,40 +25,15 @@
   data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
  data-widget-id="68b7c42cb832cc195dbea55a"   > 
  </script>
-
-<style>
-  @media (max-width: 1024px) {
-    div[style*="position: fixed"] {
-      bottom: 50px !important;
-      right: 15px !important;
-      transform: none !important;
-    }
-  }
-</style>
-
-<script>
-function moveWidget() {
-  const allDivs = document.querySelectorAll('div');
-  allDivs.forEach(div => {
-    const style = window.getComputedStyle(div);
-    if (style.position === 'fixed') {
-      const rect = div.getBoundingClientRect();
-      if (rect.bottom > window.innerHeight - 100 && rect.right > window.innerWidth - 100) {
-        if (window.innerWidth <= 1024) {
-          div.style.setProperty('bottom', '1000px', 'important');
-          div.style.setProperty('right', '5px', 'important');
-          console.log('Moved widget:', div);
-        }
-      }
-    }
-  });
-}
-
-setTimeout(moveWidget, 3000);
-setTimeout(moveWidget, 6000);
-setInterval(moveWidget, 10000);
-</script>
-
+  <style>
+     /* Adjust chatbot widget positioning for mobile only */
+     @media (max-width: 1024px) {
+       [data-widget-id="68b7c42cb832cc195dbea55a"] {
+         bottom: 50px !important;
+         right: 50px !important;
+         z-index: 20 !important;
+       }
+     }
+ </style>
   </body>
 </html>
-  
