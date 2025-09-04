@@ -17,9 +17,24 @@ export const CallButton = ({
   variant = "default",
   size = "default"
 }: CallButtonProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Check if user is on mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // On mobile, use tel: link
+      window.location.href = "tel:+19253894584";
+    } else {
+      // On desktop, open Google Voice
+      window.open("https://voice.google.com/calls?a=nc,%2B19253894584", "_blank");
+    }
+  };
+
   return (
     <Button variant={variant} size={size} className={className} asChild>
-      <a href="tel:+19253894584">
+      <a href="tel:+19253894584" onClick={handleClick}>
         {showIcon && <Phone className="h-4 w-4" />}
         {children}
       </a>
