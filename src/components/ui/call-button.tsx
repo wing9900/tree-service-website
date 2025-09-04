@@ -17,6 +17,12 @@ export const CallButton = ({
   variant = "default",
   size = "default"
 }: CallButtonProps) => {
+  const handleClick = () => {
+    console.log("CallButton clicked!");
+    // Force the call to happen
+    window.location.href = "tel:+19253894584";
+  };
+
   // Direct button styles matching the design system
   const variantClasses = {
     default: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-soft hover:shadow-medium",
@@ -40,17 +46,18 @@ export const CallButton = ({
   const baseClasses = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 [&_svg]:shrink-0 cursor-pointer";
 
   return (
-    <a
-      href="tel:+19253894584"
+    <button
+      onClick={handleClick}
       className={cn(
         baseClasses,
         variantClasses[variant],
         sizeClasses[size],
         className
       )}
+      type="button"
     >
       {showIcon && <Phone className="h-4 w-4" />}
       {children}
-    </a>
+    </button>
   );
 };
