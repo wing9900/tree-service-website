@@ -34,7 +34,7 @@ const About = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="cta" asChild>
-                  <a href="tel:+19163822904">
+                  <a href="tel:+19253894584">
                     <Phone className="h-4 w-4" />
                     Call Today
                   </a>

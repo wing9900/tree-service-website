@@ -32,9 +32,9 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
             <Button variant="cta" size="xl" className="text-lg" asChild>
-              <a href="tel:+19163822904">
+              <a href="tel:+19253894584">
                 <Phone className="h-6 w-6" />
-                Call Now: (916) 382-2904
+                Call Now
               </a>
             </Button>
             <Button variant="cta" size="xl" className="text-lg" asChild>
