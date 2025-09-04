@@ -23,42 +23,81 @@
  data-widget-id="68b7c42cb832cc195dbea55a"   > 
  </script>
   <style>
-     /* Target LeadConnector chat widget */
-     .leadconnector-chat-widget,
-     .lc-chat-widget,
-     div[style*="position: fixed"][style*="bottom"][style*="right"] {
-       bottom: 120px !important;
-       right: 20px !important;
-       z-index: 9999 !important;
-     }
-
-     /* Mobile specific adjustments */
+     /* Adjust chatbot widget positioning for mobile only */
      @media (max-width: 1024px) {
-       .leadconnector-chat-widget,
-       .lc-chat-widget,
-       div[style*="position: fixed"][style*="bottom"][style*="right"] {
-         bottom: 80px !important;
-         right: 15px !important;
+       [data-widget-id="68b7c42cb832cc195dbea55a"] {
+         bottom: 50px !important;
+         right: 50px !important;
+         z-index: 20 !important;
        }
      }
  </style>
 
+ <!-- STEP 1: Diagnostic Script to find GoHighLevel widget -->
  <script>
-   function repositionWidget() {
-     setTimeout(() => {
-       const widgets = document.querySelectorAll('div[style*="position: fixed"]');
-       widgets.forEach(widget => {
-         const style = widget.getAttribute('style');
-         if (style && style.includes('bottom') && style.includes('right')) {
-           widget.style.setProperty('bottom', window.innerWidth <= 1024 ? '80px' : '120px', 'important');
-           widget.style.setProperty('right', window.innerWidth <= 1024 ? '15px' : '20px', 'important');
-         }
-       });
-     }, 3000);
-   }
-   
-   window.addEventListener('load', repositionWidget);
-   setTimeout(repositionWidget, 5000);
+   setTimeout(() => {
+     console.log("=== DIAGNOSTIC: All fixed position elements ===");
+     
+     // Method 1: Look for elements with inline fixed positioning
+     const allFixed = document.querySelectorAll('div[style*="position: fixed"], div[style*="position:fixed"]');
+     console.log(`Found ${allFixed.length} elements with inline fixed positioning:`);
+     allFixed.forEach((el, index) => {
+       console.log(`Fixed Element ${index + 1}:`, el);
+       console.log(`  Classes: "${el.className}"`);
+       console.log(`  ID: "${el.id}"`);
+       console.log(`  Style: "${el.getAttribute('style')}"`);
+       console.log(`  HTML preview: ${el.outerHTML.substring(0, 300)}...`);
+       console.log("  ---------------");
+     });
+
+     // Method 2: Look for elements with computed fixed positioning
+     console.log("\n=== DIAGNOSTIC: All computed fixed position elements ===");
+     const allElements = document.querySelectorAll('*');
+     let computedFixedCount = 0;
+     
+     allElements.forEach((el, index) => {
+       const computedStyle = window.getComputedStyle(el);
+       if (computedStyle.position === 'fixed') {
+         computedFixedCount++;
+         console.log(`Computed Fixed Element ${computedFixedCount}:`, el);
+         console.log(`  Tag: ${el.tagName}`);
+         console.log(`  Classes: "${el.className}"`);
+         console.log(`  ID: "${el.id}"`);
+         console.log(`  Computed bottom: ${computedStyle.bottom}`);
+         console.log(`  Computed right: ${computedStyle.right}`);
+         console.log(`  Computed z-index: ${computedStyle.zIndex}`);
+         console.log(`  HTML preview: ${el.outerHTML.substring(0, 300)}...`);
+         console.log("  ---------------");
+       }
+     });
+
+     // Method 3: Look specifically for GoHighLevel/LeadConnector elements
+     console.log("\n=== DIAGNOSTIC: Looking for GoHighLevel/LeadConnector specific elements ===");
+     const ghlSelectors = [
+       '[data-widget-id]',
+       '[class*="widget"]',
+       '[class*="chat"]',
+       '[id*="widget"]',
+       '[id*="chat"]',
+       'iframe[src*="leadconnector"]',
+       'iframe[src*="gohighlevel"]'
+     ];
+
+     ghlSelectors.forEach(selector => {
+       const elements = document.querySelectorAll(selector);
+       if (elements.length > 0) {
+         console.log(`Found ${elements.length} elements matching "${selector}":`);
+         elements.forEach((el, index) => {
+           console.log(`  Element ${index + 1}:`, el);
+           console.log(`  Parent:`, el.parentElement);
+           console.log("  ---------------");
+         });
+       }
+     });
+
+     console.log("\n=== END DIAGNOSTIC ===");
+   }, 5000); // Wait 5 seconds for widget to load
  </script>
+
   </body>
 </html>
