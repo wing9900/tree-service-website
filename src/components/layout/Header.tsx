@@ -47,10 +47,7 @@ const Header = () => {
         <div className="container-custom flex justify-between items-center">
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+19253894584" className="hover:underline">
-                (925) 389-4584
-              </a>
+              <span>Phone Number</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
