@@ -26,14 +26,19 @@
  data-widget-id="68b7c42cb832cc195dbea55a"   > 
  </script>
   <style>
-     /* Adjust chatbot widget positioning for mobile only */
-     @media (max-width: 1024px) {
-       [data-widget-id="68b7c42cb832cc195dbea55a"] {
-         bottom: 50px !important;
-         right: 50px !important;
-         z-index: 20 !important;
-       }
-     }
+    <style>
+  /* Apply only on mobile */
+  @media screen and (max-width: 768px) {
+    .hl-widget-container, 
+    iframe[src*="leadconnectorhq"],
+    #GHL_widget, 
+    [id^="GHL"] {
+      right: 20px !important;  /* move it to the right */
+      bottom: 100px !important; /* move it up */
+    }
+  }
+</style>
+
  </style>
   </body>
 </html>
