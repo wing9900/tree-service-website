@@ -22,154 +22,40 @@
   data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
  data-widget-id="68b7c42cb832cc195dbea55a"   > 
  </script>
-  
-  <style>
-    /* Ultra aggressive CSS - target everything that could be the widget */
-    div[style*="position: fixed"],
-    div[style*="position:fixed"],
-    [style*="z-index: 999"],
-    [style*="z-index:999"],
-    [style*="bottom: 20px"],
-    [style*="bottom:20px"],
-    [style*="right: 20px"],
-    [style*="right:20px"] {
-      bottom: 100px !important;
-      right: 20px !important;
-    }
 
-    /* Target common chat widget patterns */
-    div[style*="border-radius"][style*="position"],
-    div[style*="background"][style*="position: fixed"] {
-      bottom: 100px !important;
-      right: 20px !important;
+<style>
+  @media (max-width: 1024px) {
+    div[style*="position: fixed"] {
+      bottom: 80px !important;
+      right: 15px !important;
+      transform: none !important;
     }
+  }
+</style>
 
-    /* Mobile only repositioning */
-    @media (max-width: 1024px) {
-      div[style*="position: fixed"],
-      div[style*="position:fixed"],
-      [style*="z-index: 999"],
-      [style*="z-index:999"],
-      [style*="bottom: 20px"],
-      [style*="bottom:20px"],
-      [style*="right: 20px"],
-      [style*="right:20px"],
-      div[style*="border-radius"][style*="position"],
-      div[style*="background"][style*="position: fixed"] {
-        bottom: 80px !important;
-        right: 15px !important;
+<script>
+function moveWidget() {
+  const allDivs = document.querySelectorAll('div');
+  allDivs.forEach(div => {
+    const style = window.getComputedStyle(div);
+    if (style.position === 'fixed') {
+      const rect = div.getBoundingClientRect();
+      if (rect.bottom > window.innerHeight - 100 && rect.right > window.innerWidth - 100) {
+        if (window.innerWidth <= 1024) {
+          div.style.setProperty('bottom', '80px', 'important');
+          div.style.setProperty('right', '15px', 'important');
+          console.log('Moved widget:', div);
+        }
       }
     }
-  </style>
+  });
+}
 
-  <script>
-    function aggressiveWidgetReposition() {
-      console.log('Running aggressive widget reposition...');
-      
-      // Method 1: Target all fixed positioned elements
-      document.querySelectorAll('*').forEach(el => {
-        const style = window.getComputedStyle(el);
-        const inline = el.getAttribute('style') || '';
-        
-        if (style.position === 'fixed' || inline.includes('position') || 
-            inline.includes('z-index') || inline.includes('bottom') || inline.includes('right')) {
-          
-          // Check if it looks like a chat widget (small, positioned in bottom-right)
-          const rect = el.getBoundingClientRect();
-          if (rect.width > 0 && rect.width < 200 && rect.height > 0 && rect.height < 200) {
-            if (rect.bottom > window.innerHeight - 100 && rect.right > window.innerWidth - 100) {
-              console.log('Found potential chat widget:', el, rect);
-              
-              const isMobile = window.innerWidth <= 1024;
-              if (isMobile) {
-                el.style.setProperty('bottom', '80px', 'important');
-                el.style.setProperty('right', '15px', 'important');
-                el.style.setProperty('transform', 'none', 'important');
-                el.style.setProperty('position', 'fixed', 'important');
-              }
-            }
-          }
-        }
-      });
-
-      // Method 2: Look for green circular elements (chat bubble color)
-      document.querySelectorAll('*').forEach(el => {
-        const computed = window.getComputedStyle(el);
-        const bgColor = computed.backgroundColor;
-        const borderRadius = computed.borderRadius;
-        
-        // Look for green-ish circular elements
-        if (borderRadius.includes('%') || borderRadius.includes('50') || 
-            bgColor.includes('rgb(34, 197, 94)') || bgColor.includes('green') ||
-            el.style.borderRadius.includes('%')) {
-          
-          const rect = el.getBoundingClientRect();
-          if (rect.width > 30 && rect.width < 100 && rect.height > 30 && rect.height < 100) {
-            console.log('Found potential chat bubble:', el);
-            
-            const isMobile = window.innerWidth <= 1024;
-            if (isMobile) {
-              el.style.setProperty('bottom', '80px', 'important');
-              el.style.setProperty('right', '15px', 'important');
-              el.style.setProperty('position', 'fixed', 'important');
-            }
-          }
-        }
-      });
-
-      // Method 3: Direct iframe targeting (sometimes widgets use iframes)
-      document.querySelectorAll('iframe').forEach(iframe => {
-        const rect = iframe.getBoundingClientRect();
-        if (rect.bottom > window.innerHeight - 100 && rect.right > window.innerWidth - 100) {
-          console.log('Found potential widget iframe:', iframe);
-          
-          const isMobile = window.innerWidth <= 1024;
-          if (isMobile) {
-            iframe.style.setProperty('bottom', '80px', 'important');
-            iframe.style.setProperty('right', '15px', 'important');
-            iframe.style.setProperty('position', 'fixed', 'important');
-          }
-        }
-      });
-    }
-
-    // Run multiple times with different delays
-    setTimeout(aggressiveWidgetReposition, 1000);
-    setTimeout(aggressiveWidgetReposition, 3000);
-    setTimeout(aggressiveWidgetReposition, 5000);
-    setTimeout(aggressiveWidgetReposition, 7000);
-    setTimeout(aggressiveWidgetReposition, 10000);
-
-    // Run on events
-    window.addEventListener('load', aggressiveWidgetReposition);
-    window.addEventListener('resize', aggressiveWidgetReposition);
-    document.addEventListener('DOMContentLoaded', aggressiveWidgetReposition);
-
-    // Continuous monitoring
-    setInterval(aggressiveWidgetReposition, 8000);
-
-    // Watch for DOM changes
-    const observer = new MutationObserver(aggressiveWidgetReposition);
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ['style', 'class']
-    });
-
-    // Override any attempts by GoHighLevel to reset position
-    const originalSetAttribute = Element.prototype.setAttribute;
-    Element.prototype.setAttribute = function(name, value) {
-      if (name === 'style' && value && value.includes('position') && value.includes('bottom')) {
-        console.log('Intercepted style change:', this, value);
-        // Allow the change but then reposition
-        const result = originalSetAttribute.call(this, name, value);
-        setTimeout(aggressiveWidgetReposition, 100);
-        return result;
-      }
-      return originalSetAttribute.call(this, name, value);
-    };
-  </script>
+setTimeout(moveWidget, 3000);
+setTimeout(moveWidget, 6000);
+setInterval(moveWidget, 10000);
+</script>
 
   </body>
 </html>
+  
