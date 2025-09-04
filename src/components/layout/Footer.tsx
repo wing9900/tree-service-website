@@ -84,9 +84,9 @@ const Footer = ({
               <p className="text-lg text-primary-foreground/80 mb-6 max-w-2xl mx-auto">Contact us today for a free consultation and estimate. We're here to help with all your tree care needs.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="accent" size="xl" asChild>
-                  <a href="tel:{{PHONE}}">
+                  <a href="tel:+19163822904">
                     <Phone className="h-5 w-5" />
-                    Call {"{{PHONE}}"}
+                    Call (916) 382-2904
                   </a>
                 </Button>
                 <Button variant="accent" size="xl" asChild>
@@ -129,8 +129,8 @@ const Footer = ({
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:{{PHONE}}" className="hover:underline">
-                  {"{{PHONE}}"}
+                <a href="tel:+19163822904" className="hover:underline">
+                  (916) 382-2904
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -216,7 +216,7 @@ const Footer = ({
                 24/7 emergency storm response available
               </p>
               <Button variant="cta" size="sm" asChild>
-                <a href="tel:{{PHONE}}">Emergency Call</a>
+                <a href="tel:+19163822904">Emergency Call</a>
               </Button>
             </div>
           </div>
