@@ -6,17 +6,14 @@
     <title>Professional Tree Services in Houston | {{COMPANY_NAME}}</title>
     <meta name="description" content="Expert tree trimming, removal & emergency services in Houston, Katy, Sugar Land. Licensed arborists, 24/7 emergency response. Call {{PHONE}} for free estimate!" />
     <meta name="author" content="Lovable" />
-
     <meta property="og:title" content="aa0faec2-1316-4966-b286-314f201c2820" />
     <meta property="og:description" content="Lovable Generated Project" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
@@ -26,14 +23,42 @@
  data-widget-id="68b7c42cb832cc195dbea55a"   > 
  </script>
   <style>
-     /* Adjust chatbot widget positioning for mobile only */
+     /* Target LeadConnector chat widget */
+     .leadconnector-chat-widget,
+     .lc-chat-widget,
+     div[style*="position: fixed"][style*="bottom"][style*="right"] {
+       bottom: 120px !important;
+       right: 20px !important;
+       z-index: 9999 !important;
+     }
+
+     /* Mobile specific adjustments */
      @media (max-width: 1024px) {
-       [data-widget-id="68b7c42cb832cc195dbea55a"] {
-         bottom: 50px !important;
-         right: 50px !important;
-         z-index: 20 !important;
+       .leadconnector-chat-widget,
+       .lc-chat-widget,
+       div[style*="position: fixed"][style*="bottom"][style*="right"] {
+         bottom: 80px !important;
+         right: 15px !important;
        }
      }
  </style>
+
+ <script>
+   function repositionWidget() {
+     setTimeout(() => {
+       const widgets = document.querySelectorAll('div[style*="position: fixed"]');
+       widgets.forEach(widget => {
+         const style = widget.getAttribute('style');
+         if (style && style.includes('bottom') && style.includes('right')) {
+           widget.style.setProperty('bottom', window.innerWidth <= 1024 ? '80px' : '120px', 'important');
+           widget.style.setProperty('right', window.innerWidth <= 1024 ? '15px' : '20px', 'important');
+         }
+       });
+     }, 3000);
+   }
+   
+   window.addEventListener('load', repositionWidget);
+   setTimeout(repositionWidget, 5000);
+ </script>
   </body>
 </html>
