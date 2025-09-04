@@ -32,10 +32,10 @@ export const CallButton = ({
   };
 
   const sizeClasses = {
-    default: "h-10 px-4 py-2 text-lg",
+    default: "h-10 px-4 py-2 text-base",
     sm: "h-9 rounded-md px-3 text-sm", 
-    lg: "h-11 rounded-md px-8 text-lg",
-    xl: "h-14 rounded-lg px-10 text-xl",
+    lg: "h-11 rounded-md px-8 text-base",
+    xl: "h-14 rounded-lg px-10 text-lg",
     icon: "h-10 w-10"
   };
 
