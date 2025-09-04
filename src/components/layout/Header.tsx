@@ -186,7 +186,7 @@ const Header = () => {
                               }
                             }
                           }}
-                          className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
+                          className={`text-sm font-medium transition-colors hover:text-primary text-left ${isActive(item.href) ? "text-primary" : "text-foreground"}`}
                         >
                           {item.name}
                         </button>
@@ -204,7 +204,7 @@ const Header = () => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }
                         }} 
-                        className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"}`}
+                        className={`text-sm font-medium transition-colors hover:text-primary text-left ${isActive(item.href) ? "text-primary" : "text-foreground"}`}
                       >
                         {item.name}
                       </Link>
