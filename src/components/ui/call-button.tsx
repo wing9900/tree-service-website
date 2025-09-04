@@ -11,7 +11,7 @@ interface CallButtonProps {
 
 export const CallButton = ({ 
   children = "Call Now", 
-  showIcon = false, 
+  showIcon = true, 
   className = "",
   variant = "default",
   size = "default"
@@ -39,14 +39,19 @@ export const CallButton = ({
     icon: "h-10 w-10"
   };
 
-  const baseClasses = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0";
+  const baseClasses = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0";
 
   return (
     <a
       href={telLink}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      onClick={(e) => {
+        // Ensure the tel: link works by opening it in the same window
+        e.preventDefault();
+        window.location.href = telLink;
+      }}
     >
-      {showIcon && <Phone className="h-4 w-4" />}
+      {showIcon && <Phone className="h-6 w-6" />}
       {children}
     </a>
   );
