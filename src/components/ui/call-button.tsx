@@ -27,8 +27,18 @@ export const CallButton = ({
       // On mobile, use tel: link
       window.location.href = "tel:+19253894584";
     } else {
-      // On desktop, open Google Voice
-      window.open("https://voice.google.com/calls?a=nc,%2B19253894584", "_blank");
+      // On desktop, try multiple fallbacks
+      try {
+        // Try opening system's default calling app
+        window.open("tel:+19253894584", "_self");
+      } catch (error) {
+        // Fallback to copying number to clipboard and showing alert
+        navigator.clipboard.writeText("(925) 389-4584").then(() => {
+          alert("Phone number (925) 389-4584 copied to clipboard!");
+        }).catch(() => {
+          alert("Please call (925) 389-4584");
+        });
+      }
     }
   };
 
