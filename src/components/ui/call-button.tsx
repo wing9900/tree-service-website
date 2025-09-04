@@ -21,7 +21,14 @@ export const CallButton = ({
 
   return (
     <Button variant={variant} size={size} className={className} asChild>
-      <a href={telLink}>
+      <a 
+        href={telLink}
+        onClick={(e) => {
+          console.log("CallButton clicked!", telLink);
+          console.log("Event:", e);
+          // Let the browser handle the tel: link naturally
+        }}
+      >
         {showIcon && <Phone className="h-4 w-4" />}
         {children}
       </a>
