@@ -50,15 +50,12 @@ const Contact = () => {
   };
   return <Layout hideCTA={true}>
       {/* Hero Section with Background Image and Overlaid Form */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${contactHeroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <section className="relative min-h-screen flex items-center justify-center" style={{
+      backgroundImage: `url(${contactHeroImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat'
+    }}>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         
@@ -147,22 +144,16 @@ const Contact = () => {
                 <div>
                   <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
                     <CardHeader className="pb-4">
-                      <CardTitle className="text-2xl font-bold text-gray-900">Tree Service Calendar</CardTitle>
+                      
                     </CardHeader>
                     <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
                       <div className="w-full relative">
-                        <iframe 
-                          src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
-                          style={{ 
-                            width: '100%', 
-                            height: '600px',
-                            border: 'none',
-                            display: 'block'
-                          }} 
-                          scrolling="no" 
-                          id="PVAur1QLv9DSfgqPRWzn_1756787087678"
-                          title="Book Appointment"
-                        />
+                        <iframe src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" style={{
+                        width: '100%',
+                        height: '600px',
+                        border: 'none',
+                        display: 'block'
+                      }} scrolling="no" id="PVAur1QLv9DSfgqPRWzn_1756787087678" title="Book Appointment" />
                         
                         {/* Time Zone Selector positioned below calendar date */}
                         <div className="mt-4 pt-4 border-t border-gray-200">
