@@ -9,7 +9,11 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Beautiful landscaped yard with mature tree and professional garden design" className="w-full h-full object-cover" />
+        <img 
+          src={heroImage} 
+          alt="Beautiful landscaped yard with mature tree and professional garden design" 
+          className="w-full h-full object-cover object-center md:object-center" 
+        />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 

@@ -34,5 +34,14 @@ export const CallButton = ({
     icon: "h-10 w-10"
   };
   const baseClasses = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 [&_svg]:shrink-0 cursor-pointer";
-  return;
+  
+  return (
+    <a
+      href="tel:{{Phone Number}}"
+      className={cn(baseClasses, variantClasses[variant], sizeClasses[size], className)}
+    >
+      {showIcon && <Phone className="h-4 w-4" />}
+      {children}
+    </a>
+  );
 };

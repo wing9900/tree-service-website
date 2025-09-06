@@ -231,7 +231,10 @@ const Header = () => {
             Call Now
           </CallButton>
           <Button variant="cta" className="flex-1 rounded-none h-14" asChild>
-            
+            <Link to="/contact">
+              <Calendar className="h-4 w-4" />
+              Get Quote
+            </Link>
           </Button>
         </div>
       </div>

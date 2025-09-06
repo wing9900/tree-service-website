@@ -50,11 +50,13 @@ const Contact = () => {
   };
   return <Layout hideCTA={true}>
       {/* Hero Section with Background Image and Overlaid Form */}
-      <section className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center" style={{
-      backgroundImage: `url(${contactHeroImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center top'
-    }}>
+      <section className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center" 
+        style={{
+          backgroundImage: `url(${contactHeroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'
+        }}
+      >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         
@@ -65,8 +67,8 @@ const Contact = () => {
             {/* Hero Title */}
             <div className="text-center mb-12">
               <p className="text-lg mb-4 tracking-wide font-bold text-slate-100">Contact Us</p>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Contact {"{{COMPANY_NAME}}"} -<br />
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Contact {"{{COMPANY_NAME}}"} -<br className="hidden sm:block" />
                 <span className="text-emergency">Your Tree Care Experts</span>
               </h1>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -145,11 +147,11 @@ const Contact = () => {
                     <CardHeader className="pb-4">
                       <CardTitle className="text-2xl font-bold text-gray-900">Schedule Your Service</CardTitle>
                     </CardHeader>
-                    <CardContent className="p-8 pt-4">
-                      <div className="h-full min-h-[700px]">
+                    <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
+                      <div className="h-full min-h-[500px] sm:min-h-[600px] lg:min-h-[700px]">
                         <iframe 
                           src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
-                          style={{ width: '100%', border: 'none', height: '700px' }} 
+                          style={{ width: '100%', border: 'none', height: '100%', minHeight: '500px' }} 
                           scrolling="yes" 
                           id="PVAur1QLv9DSfgqPRWzn_1756787087678"
                           title="Book Appointment"
