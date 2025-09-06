@@ -148,12 +148,13 @@ const Contact = () => {
                     scrolling="no" 
                     id="PVAur1QLv9DSfgqPRWzn_1757128091113"
                   />
+                  <br />
+                  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
                 </div>
               </div>
             </div>
             
             {/* Booking Calendar Script */}
-            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
           </div>
         </div>
       </section>
