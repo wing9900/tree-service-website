@@ -39,28 +39,49 @@
 
     <script>
       function adjustChatWidget() {
-        // Look for the outer container GoHighLevel injects
-        const widgetContainer = document.querySelector('div[id^="lc_widget_"]');
-        if (widgetContainer) {
+        // Try multiple selectors because GHL often changes IDs
+        const widget =
+          document.querySelector('iframe[src*="leadconnectorhq"]') ||
+          document.querySelector('[id*="lc_widget"]') ||
+          document.querySelector('[id*="GHL"]');
+
+        console.log("Found widget element:", widget);
+
+        if (widget) {
+          const styleTarget = widget.style || widget; // fallback
           if (window.innerWidth <= 1024) {
-            // Mobile positioning
-            widgetContainer.style.bottom = "60px";
-            widgetContainer.style.right = "5px";
-            widgetContainer.style.left = "auto";
-            widgetContainer.style.zIndex = "9999";
+            // Mobile
+            styleTarget.position = "fixed";
+            styleTarget.bottom = "100px";
+            styleTarget.right = "10px";
+            styleTarget.left = "auto";
+            styleTarget.zIndex = "999999";
           } else {
-            // Desktop positioning
-            widgetContainer.style.bottom = "20px";
-            widgetContainer.style.right = "20px";
-            widgetContainer.style.left = "auto";
-            widgetContainer.style.zIndex = "9999";
+            // Desktop
+            styleTarget.position = "fixed";
+            styleTarget.bottom = "30px";
+            styleTarget.right = "30px";
+            styleTarget.left = "auto";
+            styleTarget.zIndex = "999999";
           }
         }
       }
 
-      // Run after widget loads and on resize
+      // Keep retrying until widget appears
+      function waitForWidget() {
+        const widget =
+          document.querySelector('iframe[src*="leadconnectorhq"]') ||
+          document.querySelector('[id*="lc_widget"]') ||
+          document.querySelector('[id*="GHL"]');
+        if (widget) {
+          adjustChatWidget();
+        } else {
+          setTimeout(waitForWidget, 1000); // retry every second
+        }
+      }
+
       window.addEventListener("load", () => {
-        setTimeout(adjustChatWidget, 2000); // give it time to fully render
+        waitForWidget();
       });
       window.addEventListener("resize", adjustChatWidget);
     </script>
