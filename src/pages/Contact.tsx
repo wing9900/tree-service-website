@@ -142,21 +142,12 @@ const Contact = () => {
 
                 {/* Booking Calendar - Right Side */}
                 <div>
-                  <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-2xl font-bold text-gray-900">Tree Service Calendar</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
-                      <div className="w-full relative">
-                        <iframe src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" style={{
-                        width: '100%',
-                        height: '600px',
-                        border: 'none',
-                        display: 'block'
-                      }} scrolling="no" id="PVAur1QLv9DSfgqPRWzn_1756787087678" title="Book Appointment" />
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <iframe 
+                    src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
+                    style={{width: '100%', border: 'none', overflow: 'hidden'}} 
+                    scrolling="no" 
+                    id="PVAur1QLv9DSfgqPRWzn_1757128091113"
+                  />
                 </div>
               </div>
             </div>
