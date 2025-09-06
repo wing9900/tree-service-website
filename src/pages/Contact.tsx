@@ -144,11 +144,10 @@ const Contact = () => {
                 <div>
                   <iframe 
                     src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
-                    style={{width: '100%', border: 'none', overflow: 'hidden'}} 
+                    style={{width: '100%', height: '600px', border: 'none', overflow: 'hidden'}} 
                     scrolling="no" 
                     id="PVAur1QLv9DSfgqPRWzn_1757128091113"
                   />
-                  <br />
                   <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
                 </div>
               </div>
