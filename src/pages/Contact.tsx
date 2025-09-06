@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="text-center mb-12">
               <p className="text-lg mb-4 tracking-wide font-bold text-slate-100">Contact Us</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Contact {"{{COMPANY_NAME}}"} <br className="hidden sm:block" />
+                {"{{COMPANY_NAME}}"} <br className="hidden sm:block" />
                 <span className="text-emergency">Your Tree Care Experts</span>
               </h1>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
