@@ -150,22 +150,7 @@ const Contact = () => {
                       <CardTitle className="text-2xl font-bold text-gray-900">Tree Service Calendar</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
-                      {/* Time Zone Selector */}
-                      <div className="mb-4">
-                        <Label className="text-gray-700 font-medium mb-2 block">
-                          Select Your Time Zone
-                        </Label>
-                        <select className="w-full h-10 px-3 py-2 bg-gray-100 border border-gray-200 rounded-md text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary">
-                          <option value="America/New_York">Eastern Time (ET)</option>
-                          <option value="America/Chicago">Central Time (CT)</option>
-                          <option value="America/Denver">Mountain Time (MT)</option>
-                          <option value="America/Los_Angeles">Pacific Time (PT)</option>
-                          <option value="America/Anchorage">Alaska Time (AKT)</option>
-                          <option value="Pacific/Honolulu">Hawaii Time (HT)</option>
-                        </select>
-                      </div>
-                      
-                      <div className="w-full">
+                      <div className="w-full relative">
                         <iframe 
                           src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
                           style={{ 
@@ -178,6 +163,21 @@ const Contact = () => {
                           id="PVAur1QLv9DSfgqPRWzn_1756787087678"
                           title="Book Appointment"
                         />
+                        
+                        {/* Time Zone Selector positioned below calendar date */}
+                        <div className="mt-4 pt-4 border-t border-gray-200">
+                          <Label className="text-gray-700 font-medium mb-2 block">
+                            Select Your Time Zone
+                          </Label>
+                          <select className="w-full h-10 px-3 py-2 bg-gray-100 border border-gray-200 rounded-md text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                            <option value="America/New_York">Eastern Time (ET)</option>
+                            <option value="America/Chicago">Central Time (CT)</option>
+                            <option value="America/Denver">Mountain Time (MT)</option>
+                            <option value="America/Los_Angeles">Pacific Time (PT)</option>
+                            <option value="America/Anchorage">Alaska Time (AKT)</option>
+                            <option value="Pacific/Honolulu">Hawaii Time (HT)</option>
+                          </select>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
