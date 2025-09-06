@@ -35,5 +35,34 @@
        }
      }
  </style>
+
+<script>
+  function adjustChatWidget() {
+    // Look for the iframe GHL injects
+    const widget = document.querySelector('iframe[src*="leadconnectorhq"]');
+    if (widget) {
+      if (window.innerWidth <= 1024) {
+        // Mobile positioning
+        widget.style.bottom = "60px";
+        widget.style.right = "5px";
+        widget.style.left = "auto"; // prevent left/right conflict
+        widget.style.zIndex = "9999";
+      } else {
+        // Desktop positioning (keep default, or change if needed)
+        widget.style.bottom = "20px";
+        widget.style.right = "20px";
+        widget.style.left = "auto";
+        widget.style.zIndex = "9999";
+      }
+    }
+  }
+
+  // Run after page load and on resize
+  window.addEventListener("load", () => {
+    setTimeout(adjustChatWidget, 1500); // delay to ensure widget is loaded
+  });
+  window.addEventListener("resize", adjustChatWidget);
+</script>
+
   </body>
 </html>
