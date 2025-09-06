@@ -224,20 +224,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Sticky CTA Bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-background border-t shadow-strong">
-        <div className="flex">
-          <CallButton variant="cta" className="flex-1 rounded-none h-14">
-            Call Now
-          </CallButton>
-          <Button variant="cta" className="flex-1 rounded-none h-14" asChild>
-            <Link to="/contact">
-              <Calendar className="h-4 w-4" />
-              Get Quote
-            </Link>
-          </Button>
-        </div>
-      </div>
     </>;
 };
 export default Header;

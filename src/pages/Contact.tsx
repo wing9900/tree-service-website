@@ -148,11 +148,16 @@ const Contact = () => {
                       <CardTitle className="text-2xl font-bold text-gray-900">Schedule Your Service</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
-                      <div className="h-full min-h-[500px] sm:min-h-[600px] lg:min-h-[700px]">
+                      <div className="w-full">
                         <iframe 
                           src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 
-                          style={{ width: '100%', border: 'none', height: '100%', minHeight: '500px' }} 
-                          scrolling="yes" 
+                          style={{ 
+                            width: '100%', 
+                            height: '600px',
+                            border: 'none',
+                            display: 'block'
+                          }} 
+                          scrolling="no" 
                           id="PVAur1QLv9DSfgqPRWzn_1756787087678"
                           title="Book Appointment"
                         />
