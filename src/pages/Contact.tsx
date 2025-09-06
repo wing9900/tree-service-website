@@ -50,11 +50,13 @@ const Contact = () => {
   };
   return <Layout hideCTA={true}>
       {/* Hero Section with Background Image and Overlaid Form */}
-      <section className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center" 
+      <section 
+        className="relative min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: `url(${contactHeroImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center center'
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Dark Overlay */}
@@ -145,9 +147,24 @@ const Contact = () => {
                 <div>
                   <Card className="shadow-2xl bg-white/95 backdrop-blur-sm border-0 h-full">
                     <CardHeader className="pb-4">
-                      <CardTitle className="text-2xl font-bold text-gray-900">Schedule Your Service</CardTitle>
+                      <CardTitle className="text-2xl font-bold text-gray-900">Tree Service Calendar</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 sm:p-6 lg:p-8 pt-4">
+                      {/* Time Zone Selector */}
+                      <div className="mb-4">
+                        <Label className="text-gray-700 font-medium mb-2 block">
+                          Select Your Time Zone
+                        </Label>
+                        <select className="w-full h-10 px-3 py-2 bg-gray-100 border border-gray-200 rounded-md text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                          <option value="America/New_York">Eastern Time (ET)</option>
+                          <option value="America/Chicago">Central Time (CT)</option>
+                          <option value="America/Denver">Mountain Time (MT)</option>
+                          <option value="America/Los_Angeles">Pacific Time (PT)</option>
+                          <option value="America/Anchorage">Alaska Time (AKT)</option>
+                          <option value="Pacific/Honolulu">Hawaii Time (HT)</option>
+                        </select>
+                      </div>
+                      
                       <div className="w-full">
                         <iframe 
                           src="https://api.leadconnectorhq.com/widget/booking/PVAur1QLv9DSfgqPRWzn" 

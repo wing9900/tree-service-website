@@ -1,6 +1,31 @@
 # Version Notes
 
-## Latest Update - January 10, 2025
+## Latest Update - January 10, 2025 (Version 1.3)
+
+### ⚠️ IMPORTANT WARNING ⚠️  
+**This version includes time zone selector, mobile background fixes, and layout improvements. If issues arise, consider reverting to previous version.**
+
+### Changes Made:
+1. **Time Zone Selector Added**:
+   - Added time zone dropdown above the booking calendar on Contact page
+   - Changed calendar header from "Schedule Your Service" to "Tree Service Calendar"
+   - Added 6 US time zones (Eastern, Central, Mountain, Pacific, Alaska, Hawaii)
+2. **Mobile Background Image Fixes**:
+   - Fixed Hero section background image responsiveness for mobile/tablet
+   - Added explicit `objectPosition: 'center center'` style to Hero background
+   - Fixed Contact page background image styling for better mobile display
+   - Removed inline Tailwind classes and used proper CSS styling
+3. **Mobile Layout Improvements**:
+   - Added `whitespace-nowrap` to city/state text in Hero section to keep on same line
+   - Ensured "{{CITY}}, {{STATE}}" stays on one line on mobile devices
+
+### Files Modified:
+- `src/components/sections/HeroSection.tsx` - Background image mobile positioning and city/state layout
+- `src/pages/Contact.tsx` - Time zone selector and background image fixes
+
+---
+
+## Previous Update - January 10, 2025 (Version 1.2)
 
 ### ⚠️ IMPORTANT WARNING ⚠️  
 **This version includes multiple mobile responsiveness fixes. If issues arise, consider reverting to previous version.**

@@ -12,7 +12,10 @@ const HeroSection = () => {
         <img 
           src={heroImage} 
           alt="Beautiful landscaped yard with mature tree and professional garden design" 
-          className="w-full h-full object-cover object-center md:object-center" 
+          className="w-full h-full object-cover object-center sm:object-center md:object-center" 
+          style={{
+            objectPosition: 'center center'
+          }}
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -23,7 +26,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-hero mb-6 animate-slide-up">
             Professional Tree Services in{" "}
-            <span className="text-orange-400">{"{{CITY}}, {{STATE}}"}</span>
+            <span className="text-orange-400 whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
           </h1>
 
           {/* Subheadline */}
