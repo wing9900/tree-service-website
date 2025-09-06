@@ -56,8 +56,12 @@ const OptimizedImage = ({
     return () => observer.disconnect();
   }, [priority, lazy]);
 
-  // Generate WebP source with fallback
+  // Generate WebP source with fallback - skip for lovable-uploads
   const getWebPSource = (originalSrc: string) => {
+    // Don't convert lovable-uploads to WebP as they don't have WebP versions
+    if (originalSrc.includes('lovable-uploads')) {
+      return null;
+    }
     if (originalSrc.includes('.png') || originalSrc.includes('.jpg') || originalSrc.includes('.jpeg')) {
       return originalSrc.replace(/\.(png|jpg|jpeg)$/, '.webp');
     }
@@ -92,11 +96,13 @@ const OptimizedImage = ({
       {/* Actual image */}
       {isInView && (
         <picture>
-          {/* WebP source for modern browsers */}
-          <source 
-            srcSet={getWebPSource(src)} 
-            type="image/webp"
-          />
+          {/* WebP source for modern browsers - only if WebP version exists */}
+          {getWebPSource(src) && (
+            <source 
+              srcSet={getWebPSource(src)} 
+              type="image/webp"
+            />
+          )}
           
           {/* Fallback for older browsers */}
           <img
