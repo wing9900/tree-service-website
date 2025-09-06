@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Phone, Mail, MapPin, Clock, Star, Shield, Award, Send, User, Home } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import contactHeroImage from "@/assets/contact-hero-landscape.jpg";

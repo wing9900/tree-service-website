@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CallButton } from "@/components/ui/call-button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Phone, Calendar } from "lucide-react";
 const heroImage = "/lovable-uploads/f60dd1ab-5124-4ac2-ba31-ad13e87c46b8.png";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
@@ -9,13 +10,14 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <OptimizedImage 
           src={heroImage} 
           alt="Beautiful landscaped yard with mature tree and professional garden design" 
           className="w-full h-full object-cover object-center sm:object-center md:object-center" 
-          style={{
-            objectPosition: 'center center'
-          }}
+          priority={true}
+          lazy={false}
+          aspectRatio="16/9"
+          blur={false}
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
@@ -53,17 +55,17 @@ const HeroSection = () => {
           {/* Value Propositions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center animate-fade-in">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <img src={licensedInsuredBadge} alt="Licensed & Insured certification badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <OptimizedImage src={licensedInsuredBadge} alt="Licensed & Insured certification badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" priority={true} lazy={false} width={80} height={80} />
               <div className="text-lg font-bold text-white mb-1">Licensed & Insured</div>
               <div className="text-white/90 text-sm">Full coverage protection</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <img src={isaArbortistBadge} alt="ISA Certified Arborist badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <OptimizedImage src={isaArbortistBadge} alt="ISA Certified Arborist badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" priority={true} lazy={false} width={80} height={80} />
               <div className="text-lg font-bold text-white mb-1">ISA Certified Arborist</div>
               <div className="text-white/90 text-sm">Professionally trained experts</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <img src={fiveStarBadge} alt="5-star rating badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" />
+              <OptimizedImage src={fiveStarBadge} alt="5-star rating badge" className="w-20 h-20 mx-auto mb-4 rounded-lg object-contain" priority={true} lazy={false} width={80} height={80} />
               <div className="text-lg font-bold text-white mb-1">5-Star Rated</div>
               <div className="text-white/90 text-sm">Customer satisfaction guaranteed</div>
             </div>
