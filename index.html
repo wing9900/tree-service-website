@@ -4,65 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Professional Tree Services in Houston | {{COMPANY_NAME}}</title>
-    <meta name="description" content="Expert tree trimming, removal & emergency services in Houston, Katy, Sugar Land. Licensed arborists, 24/7 emergency response. Call {{PHONE}} for free estimate!" />
+    <meta
+      name="description"
+      content="Expert tree trimming, removal & emergency services in Houston, Katy, Sugar Land. Licensed arborists, 24/7 emergency response. Call {{PHONE}} for free estimate!"
+    />
     <meta name="author" content="Lovable" />
 
     <meta property="og:title" content="aa0faec2-1316-4966-b286-314f201c2820" />
     <meta property="og:description" content="Lovable Generated Project" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      property="og:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      name="twitter:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script 
-  src="https://widgets.leadconnectorhq.com/loader.js"  
-  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
- data-widget-id="68b7c42cb832cc195dbea55a"   > 
- </script>
-  <style>
-     /* Adjust chatbot widget positioning for mobile only */
-     @media (max-width: 1024px) {
-       [data-widget-id="68b7c42cb832cc195dbea55a"] {
-         bottom: 50px !important;
-         right: 50px !important;
-         z-index: 20 !important;
-       }
-     }
- </style>
 
-<script>
-  function adjustChatWidget() {
-    // Look for the iframe GHL injects
-    const widget = document.querySelector('iframe[src*="leadconnectorhq"]');
-    if (widget) {
-      if (window.innerWidth <= 1024) {
-        // Mobile positioning
-        widget.style.bottom = "60px";
-        widget.style.right = "5px";
-        widget.style.left = "auto"; // prevent left/right conflict
-        widget.style.zIndex = "9999";
-      } else {
-        // Desktop positioning (keep default, or change if needed)
-        widget.style.bottom = "20px";
-        widget.style.right = "20px";
-        widget.style.left = "auto";
-        widget.style.zIndex = "9999";
+    <!-- GHL Chat Widget -->
+    <script
+      src="https://widgets.leadconnectorhq.com/loader.js"
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="68b7c42cb832cc195dbea55a"
+    ></script>
+
+    <script>
+      function adjustChatWidget() {
+        // Look for the outer container GoHighLevel injects
+        const widgetContainer = document.querySelector('div[id^="lc_widget_"]');
+        if (widgetContainer) {
+          if (window.innerWidth <= 1024) {
+            // Mobile positioning
+            widgetContainer.style.bottom = "60px";
+            widgetContainer.style.right = "5px";
+            widgetContainer.style.left = "auto";
+            widgetContainer.style.zIndex = "9999";
+          } else {
+            // Desktop positioning
+            widgetContainer.style.bottom = "20px";
+            widgetContainer.style.right = "20px";
+            widgetContainer.style.left = "auto";
+            widgetContainer.style.zIndex = "9999";
+          }
+        }
       }
-    }
-  }
 
-  // Run after page load and on resize
-  window.addEventListener("load", () => {
-    setTimeout(adjustChatWidget, 1500); // delay to ensure widget is loaded
-  });
-  window.addEventListener("resize", adjustChatWidget);
-</script>
-
+      // Run after widget loads and on resize
+      window.addEventListener("load", () => {
+        setTimeout(adjustChatWidget, 2000); // give it time to fully render
+      });
+      window.addEventListener("resize", adjustChatWidget);
+    </script>
   </body>
 </html>
+
