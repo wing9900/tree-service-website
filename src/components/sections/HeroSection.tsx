@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CallButton } from "@/components/ui/call-button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Phone, Calendar } from "lucide-react";
-const heroImage = "/lovable-uploads/212ef122-dce4-4014-8001-dfd8151d9466.png";
+const heroImage = "/lovable-uploads/212ef122-dce4-4014-8001-dfd8151d9466.webp";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
 const isaArbortistBadge = "/lovable-uploads/9399cb6f-2ffd-4ab1-b2c8-5019766af479.png";
 const fiveStarBadge = "/lovable-uploads/be0e589b-9094-4e4f-8107-10a3c354efc0.png";
