@@ -10,16 +10,8 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <OptimizedImage 
-          src={heroImage} 
-          alt="Beautiful landscaped yard with mature tree and professional garden design" 
-          className="w-full h-full object-cover object-center sm:object-center md:object-center" 
-          priority={true}
-          lazy={false}
-          aspectRatio="16/9"
-          blur={false}
-        />
-        <div className="absolute inset-0 bg-black/30" />
+        <OptimizedImage src={heroImage} alt="Beautiful landscaped yard with mature tree and professional garden design" className="w-full h-full object-cover object-center sm:object-center md:object-center" priority={true} lazy={false} aspectRatio="16/9" blur={false} />
+        <div className="absolute inset-0 bg-black/[0.11]" />
       </div>
 
       {/* Content */}
