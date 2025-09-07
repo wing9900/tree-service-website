@@ -256,11 +256,25 @@
   a[href^="tel:"] {
     color: inherit !important;
     text-decoration: none !important;
+    -webkit-text-decoration-color: transparent !important;
+    text-decoration-color: transparent !important;
   }
   
-  a[href^="tel:"]:after {
+  a[href^="tel:"]:after,
+  a[href^="tel:"]:before {
     content: none !important;
     display: none !important;
+  }
+  
+  /* Additional browser phone detection disable */
+  a[href^="tel:"] * {
+    pointer-events: none !important;
+  }
+  
+  /* Disable iOS Safari phone number detection icons */
+  a[href^="tel:"] {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
   }
   
   /* Typography scale */
