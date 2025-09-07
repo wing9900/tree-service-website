@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CallButton } from "@/components/ui/call-button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Phone, Calendar } from "lucide-react";
-const heroImage = "/lovable-uploads/212ef122-dce4-4014-8001-dfd8151d9466.webp";
+const heroImage = "/lovable-uploads/212ef122-dce4-4014-8001-dfd8151d9466.png";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
 const isaArbortistBadge = "/lovable-uploads/9399cb6f-2ffd-4ab1-b2c8-5019766af479.png";
 const fiveStarBadge = "/lovable-uploads/be0e589b-9094-4e4f-8107-10a3c354efc0.png";
@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-hero mb-6 animate-slide-up">
             Professional Tree Services in{" "}
-            <span className="text-emergency whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
+            <span className="text-orange-400 whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
           </h1>
 
           {/* Subheadline */}
@@ -65,7 +65,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Content container ends here */}
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        
+      </div>
     </section>;
 };
 export default HeroSection;
