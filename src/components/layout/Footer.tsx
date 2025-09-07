@@ -129,8 +129,10 @@ const Footer = ({
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+19253894584" className="hover:underline" style={{ textDecoration: 'none' }}>
-                  (925) 389-4584
+                <a href="tel:+19253894584" className="hover:underline select-none" style={{ textDecoration: 'none', userSelect: 'none' }}>
+                  <span style={{ unicodeBidi: 'bidi-override', direction: 'ltr' }}>
+                    (925) 389-4584
+                  </span>
                 </a>
               </div>
               <div className="flex items-center gap-2">

@@ -252,29 +252,41 @@
 }
 
 @layer utilities {
-  /* Disable browser phone number detection styling */
-  a[href^="tel:"] {
+  /* Disable all phone number detection and third-party widgets */
+  a[href^="tel:"],
+  a[href^="tel:"] *,
+  [data-phone],
+  .phone-number {
     color: inherit !important;
     text-decoration: none !important;
     -webkit-text-decoration-color: transparent !important;
     text-decoration-color: transparent !important;
+    position: relative !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
   }
   
   a[href^="tel:"]:after,
-  a[href^="tel:"]:before {
+  a[href^="tel:"]:before,
+  a[href^="tel:"] *:after,
+  a[href^="tel:"] *:before {
     content: none !important;
     display: none !important;
   }
   
-  /* Additional browser phone detection disable */
-  a[href^="tel:"] * {
-    pointer-events: none !important;
+  /* Block third-party phone detection widgets */
+  [class*="phone"],
+  [id*="phone"],
+  [data-widget*="phone"] {
+    pointer-events: auto !important;
   }
   
-  /* Disable iOS Safari phone number detection icons */
-  a[href^="tel:"] {
-    -webkit-touch-callout: none !important;
-    -webkit-user-select: none !important;
+  /* Hide any injected phone icons */
+  a[href^="tel:"] + *,
+  a[href^="tel:"] ~ * {
+    display: none !important;
   }
   
   /* Typography scale */
