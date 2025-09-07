@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-hero mb-6 animate-slide-up">
             Professional Tree Services in{" "}
-            <span className="text-orange-400 whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
+            <span className="text-emergency whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
           </h1>
 
           {/* Subheadline */}
@@ -65,10 +65,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        
-      </div>
+      {/* Content container ends here */}
     </section>;
 };
 export default HeroSection;
