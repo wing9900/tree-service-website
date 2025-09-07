@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CallButton } from "@/components/ui/call-button";
-import { Phone, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 const heroImage = "/lovable-uploads/212ef122-dce4-4014-8001-dfd8151d9466.png";
 const licensedInsuredBadge = "/lovable-uploads/b6487ebe-02dc-4ea5-b3fe-aa797a7b37d1.png";
 const isaArbortistBadge = "/lovable-uploads/9399cb6f-2ffd-4ab1-b2c8-5019766af479.png";
