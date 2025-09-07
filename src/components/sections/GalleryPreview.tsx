@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Link } from "react-router-dom";
 import { Eye, ArrowRight, Image as ImageIcon, MapPin } from "lucide-react";
 
@@ -95,12 +94,10 @@ const GalleryPreview = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative overflow-hidden">
-                    <OptimizedImage
+                    <img
                       src={item.image}
                       alt={`${item.title} - ${item.description}`}
                       className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                      lazy={true}
-                      aspectRatio="16/9"
                     />
                     
                     {/* Overlay */}
@@ -134,12 +131,10 @@ const GalleryPreview = () => {
                 </DialogHeader>
                 <div className="mt-4" style={{ border: 'none', padding: '0', margin: '16px 0 0 0' }}>
                   <div className="w-full" style={{ border: 'none', boxShadow: 'none', outline: 'none', background: 'transparent' }}>
-                    <OptimizedImage
+                    <img
                       src={item.image}
                       alt={`${item.title} - ${item.description}`}
                       className="w-full h-auto max-h-96 object-contain mb-6"
-                      lazy={false}
-                      priority={false}
                     />
                   </div>
                   <DialogDescription className="text-base leading-relaxed whitespace-pre-line">

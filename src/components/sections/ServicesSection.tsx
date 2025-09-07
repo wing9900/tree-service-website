@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Link } from "react-router-dom";
 import { TreePine, Zap, Stethoscope, Axe, TreeDeciduous, Construction, Cog } from "lucide-react";
 const treeTrimmingImg = "/lovable-uploads/07703b17-ad7c-42e2-a727-4057abe7dd4d.png";
@@ -70,12 +69,10 @@ const ServicesSection = () => {
           animationDelay: `${index * 0.1}s`
         }}>
               <div className="relative overflow-hidden">
-                <OptimizedImage 
+                <img 
                   src={service.image} 
                   alt={`${service.title} service demonstration`} 
                   className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
-                  lazy={true}
-                  aspectRatio="16/9"
                 />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <service.icon className="h-12 w-12 text-white" />

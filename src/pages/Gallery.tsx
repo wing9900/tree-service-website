@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { OptimizedImage } from "@/components/ui/optimized-image";
 import { ArrowLeft, Eye, X, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -163,12 +162,10 @@ const Gallery = () => {
               onClick={() => openModal(index)}
             >
               <div className="relative overflow-hidden aspect-square">
-                <OptimizedImage
+                <img
                   src={image.image}
                   alt={`${image.title} - ${image.description}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  lazy={true}
-                  aspectRatio="1/1"
                 />
                 
                 {/* Overlay */}
@@ -232,12 +229,10 @@ const Gallery = () => {
 
                 {/* Image */}
                 <div className="flex items-center justify-center w-full h-[80vh]">
-                  <OptimizedImage
+                  <img
                     src={filteredImages[selectedImage].image}
                     alt={filteredImages[selectedImage].title}
                     className="max-w-full max-h-full object-contain"
-                    lazy={false}
-                    priority={false}
                   />
                 </div>
 
