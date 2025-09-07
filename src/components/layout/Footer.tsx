@@ -140,7 +140,7 @@ const Footer = ({
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
+                <MapPin className="h-6 w-6" />
                 <span>{"{{ADDRESS_LINE}}, {{CITY}}, {{STATE}} {{ZIP}}"}</span>
               </div>
               <div className="flex items-center gap-2">
