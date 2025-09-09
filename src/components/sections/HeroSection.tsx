@@ -9,10 +9,9 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Beautiful landscaped yard with mature tree and professional garden design" className="w-full h-full object-cover object-center sm:object-center md:object-center" />
+        <img src={heroImage} alt="Beautiful landscaped yard with mature tree and professional garden design" className="w-full h-full object-cover object-center hero-mobile-adjust sm:hero-mobile-adjust md:hero-mobile-adjust lg:object-center xl:object-center" />
         <div className="absolute inset-0 bg-black/[0.11]" />
       </div>
-
       {/* Content */}
       <div className="relative z-10 container-custom text-center text-white">
         <div className="max-w-4xl mx-auto">
@@ -21,7 +20,6 @@ const HeroSection = () => {
             Professional Tree Services in{" "}
             <span className="text-orange-400 whitespace-nowrap">{"{{CITY}}, {{STATE}}"}</span>
           </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-slide-up">
             Expert tree trimming, removal, and emergency services. 
@@ -29,7 +27,6 @@ const HeroSection = () => {
               Same-day estimates • Free consultations • 15+ years experience
             </span>
           </p>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
             <CallButton variant="cta" size="xl" className="text-lg">
@@ -42,7 +39,6 @@ const HeroSection = () => {
               </a>
             </Button>
           </div>
-
           {/* Value Propositions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center animate-fade-in">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -63,7 +59,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         
