@@ -249,6 +249,69 @@
     color: hsl(var(--emergency-foreground));
     box-shadow: var(--shadow-cta);
   }
+
+  /* Contact Hero Background - Responsive */
+  .contact-hero-bg {
+    background-image: url('@/assets/contact-hero-landscape.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* Mobile devices (portrait phones, 576px and down) */
+  @media (max-width: 576px) {
+    .contact-hero-bg {
+      background-size: cover;
+      background-position: center 30%;
+      min-height: 100vh;
+    }
+    
+    /* Adjust hero image object positioning for mobile */
+    .hero-mobile-adjust {
+      object-position: center 25% !important;
+    }
+  }
+
+  /* Mobile devices (landscape phones, 576px to 768px) */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .contact-hero-bg {
+      background-size: cover;
+      background-position: center 35%;
+    }
+    
+    .hero-mobile-adjust {
+      object-position: center 30% !important;
+    }
+  }
+
+  /* Tablets (768px to 992px) */
+  @media (min-width: 769px) and (max-width: 992px) {
+    .contact-hero-bg {
+      background-size: cover;
+      background-position: center 40%;
+    }
+    
+    .hero-mobile-adjust {
+      object-position: center 35% !important;
+    }
+  }
+
+  /* Small laptops (992px to 1200px) */
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .contact-hero-bg {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  /* Large screens (1201px and up) - maintain current appearance */
+  @media (min-width: 1201px) {
+    .contact-hero-bg {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
 }
 
 @layer utilities {
