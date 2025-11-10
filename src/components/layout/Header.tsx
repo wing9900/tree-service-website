@@ -67,11 +67,11 @@ const Header = () => {
       {/* Main Header */}
       <header className="bg-background shadow-soft sticky top-0 z-50">
         <div className="container-custom">
-          <div className="flex items-center py-4">
-            {/* Left side: Logo + Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+          <div className="flex items-center justify-between py-4">
+            {/* Left side: Logo + Navigation (Desktop) */}
+            <div className="hidden lg:flex items-center gap-8 flex-1">
               {/* Logo */}
-              <Link to="/" className="flex items-center space-x-3" onClick={e => {
+              <Link to="/" className="flex items-center space-x-3 flex-shrink-0" onClick={e => {
                 // If already on home page, scroll to top
                 if (location.pathname === '/') {
                   e.preventDefault();
@@ -145,7 +145,7 @@ const Header = () => {
             </Link>
 
             {/* CTA Buttons - Desktop */}
-            <div className="hidden lg:flex items-center space-x-3 ml-auto">
+            <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
               <CallButton variant="cta" size="sm">
                 Call Now
               </CallButton>
