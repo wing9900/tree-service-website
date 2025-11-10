@@ -68,62 +68,81 @@ const Header = () => {
       <header className="bg-background shadow-soft sticky top-0 z-50">
         <div className="container-custom">
           <div className="flex items-center justify-between py-4">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3" onClick={e => {
-            // If already on home page, scroll to top
-            if (location.pathname === '/') {
-              e.preventDefault();
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-              });
-            }
-          }}>
-              <div className="text-2xl font-bold text-primary">
-                {"{{COMPANY_NAME}}"}
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map(item => {
-              if (item.href === "/#services") {
-                return <button key={item.name} onClick={e => {
-                  e.preventDefault();
-                  if (location.pathname !== '/') {
-                    navigate('/#services');
-                  } else {
-                    const servicesElement = document.getElementById('services');
-                    if (servicesElement) {
-                      const headerElement = servicesElement.querySelector("h2");
-                      if (headerElement) {
-                        const headerRect = headerElement.getBoundingClientRect();
-                        const absoluteTop = window.pageYOffset + headerRect.top;
-                        window.scrollTo({
-                          top: absoluteTop - 100,
-                          behavior: "smooth"
-                        });
-                      }
-                    }
-                  }
-                }} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
-                      {item.name}
-                    </button>;
-              }
-              return <Link key={item.name} to={item.href} onClick={e => {
-                // If already on this page, scroll to top
-                if (location.pathname === item.href) {
+            {/* Left side: Logo + Navigation */}
+            <div className="hidden lg:flex items-center gap-8">
+              {/* Logo */}
+              <Link to="/" className="flex items-center space-x-3" onClick={e => {
+                // If already on home page, scroll to top
+                if (location.pathname === '/') {
                   e.preventDefault();
                   window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                   });
                 }
-              }} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
+              }}>
+                <div className="text-2xl font-bold text-primary">
+                  {"{{COMPANY_NAME}}"}
+                </div>
+              </Link>
+
+              {/* Desktop Navigation */}
+              <nav className="flex items-center space-x-8">
+                {navigationItems.map(item => {
+                  if (item.href === "/#services") {
+                    return <button key={item.name} onClick={e => {
+                      e.preventDefault();
+                      if (location.pathname !== '/') {
+                        navigate('/#services');
+                      } else {
+                        const servicesElement = document.getElementById('services');
+                        if (servicesElement) {
+                          const headerElement = servicesElement.querySelector("h2");
+                          if (headerElement) {
+                            const headerRect = headerElement.getBoundingClientRect();
+                            const absoluteTop = window.pageYOffset + headerRect.top;
+                            window.scrollTo({
+                              top: absoluteTop - 100,
+                              behavior: "smooth"
+                            });
+                          }
+                        }
+                      }
+                    }} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
+                      {item.name}
+                    </button>;
+                  }
+                  return <Link key={item.name} to={item.href} onClick={e => {
+                    // If already on this page, scroll to top
+                    if (location.pathname === item.href) {
+                      e.preventDefault();
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                      });
+                    }
+                  }} className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground"}`}>
                     {item.name}
                   </Link>;
-            })}
-            </nav>
+                })}
+              </nav>
+            </div>
+
+            {/* Mobile Logo (only visible on mobile) */}
+            <Link to="/" className="flex lg:hidden items-center space-x-3" onClick={e => {
+              // If already on home page, scroll to top
+              if (location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth"
+                });
+              }
+            }}>
+              <div className="text-2xl font-bold text-primary">
+                {"{{COMPANY_NAME}}"}
+              </div>
+            </Link>
 
             {/* CTA Buttons - Desktop */}
             <div className="hidden lg:flex items-center space-x-3">
