@@ -67,7 +67,7 @@ const Header = () => {
       {/* Main Header */}
       <header className="bg-background shadow-soft sticky top-0 z-50">
         <div className="container-custom">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center py-4">
             {/* Left side: Logo + Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               {/* Logo */}
@@ -145,7 +145,7 @@ const Header = () => {
             </Link>
 
             {/* CTA Buttons - Desktop */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="hidden lg:flex items-center space-x-3 ml-auto">
               <CallButton variant="cta" size="sm">
                 Call Now
               </CallButton>
